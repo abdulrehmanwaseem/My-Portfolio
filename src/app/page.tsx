@@ -1,7 +1,88 @@
+"use client";
+
+import { useEffect, useState, Suspense } from "react";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+// import Navbar from "@/components/Navbar";
+// import Landing from "@/components/Landing";
+// import About from "@/components/About";
+// import Projects from "@/components/Projects";
+// import Experience from "@/components/Experience";
+// import Contact from "@/components/Contact";
+import LoadingScreen from "@/components/LoadingScreen";
+import { Canvas } from "@react-three/fiber";
+import ParticleField from "@/components/ParticleField";
+
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLoadingProgress((prev) => {
+        const newProgress = prev + 1;
+        if (newProgress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => setLoading(false), 500);
+          return 100;
+        }
+        return newProgress;
+      });
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingScreen progress={loadingProgress} />;
+  }
+
   return (
-    <div>
-      <p>Test</p>
+    <div className="relative">
+      <div className="canvas-container">
+        <Suspense fallback={null}>
+          <Canvas>
+            <ParticleField count={500} />
+          </Canvas>
+        </Suspense>
+      </div>
+
+      {/* <Navbar /> */}
+
+      <main>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div>
+            <p className="bg-red-400">Testing</p>
+          </div>
+          {/* <Landing />
+          <About />
+          <Projects />
+          <Experience />
+          <Contact /> */}
+        </motion.div>
+      </main>
     </div>
   );
 }

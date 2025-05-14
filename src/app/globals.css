@@ -1,41 +1,61 @@
 @import "tailwindcss";
 
 @theme {
-  colors {
-    --background: #0f0f0f;
-    --secondary: #14213d;
-    --primary: #fca311;
-    --accent: #4895ef;
-    --success: #4cc9f0;
-    --warning: #f77f00;
-    --error: #d62828;
-    --text-primary: #e5e5e5;
-    --text-secondary: #a8a8a8;
+  /* Colors */
+  --color-background: #0f0f0f;
+  --color-secondary: #14213d;
+  --color-primary: #fca311;
+  --color-accent: #4895ef;
+  --color-success: #4cc9f0;
+  --color-warning: #f77f00;
+  --color-error: #d62828;
+  --color-text-primary: #e5e5e5;
+  --color-text-secondary: #a8a8a8;
+
+  /* Font Family */
+  --font-sans: "Space Grotesk", "sans-serif";
+
+  /* Spacing */
+  --spacing-128: 32rem;
+  --spacing-144: 36rem;
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 font-medium transition-all rounded-md bg-primary hover:bg-primary/90 hover:scale-105;
   }
 
-  font-family {
-    --sans: "Space Grotesk", sans-serif;
+  .card {
+    @apply p-6 border rounded-lg shadow-lg bg-secondary border-accent/20 backdrop-blur-sm;
   }
 
-  animation {
-    --float: float 3s ease-in-out infinite;
-    --spin-slow: spin 8s linear infinite;
+  .heading {
+    @apply mb-4 text-4xl font-bold md:text-5xl lg:text-6xl text-text-primary;
   }
 
-  keyframes {
-    float {
-      "0%, 100%": {
-        transform: translateY(0);
-      }
-      "50%": {
-        transform: translateY(-10px);
-      }
-    }
+  .subheading {
+    @apply mb-8 text-xl font-medium md:text-2xl text-primary;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation classes */
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 
-  spacing {
-    --128: 32rem;
-    --144: 36rem;
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
   }
 }
 
@@ -54,6 +74,7 @@ html {
   overflow-x: hidden;
   background-color: #0f0f0f;
   color: #e5e5e5;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 body {
@@ -67,7 +88,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
 }
 
 .section {
@@ -107,23 +128,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #e5a000;
-}
-
-/* Custom utility classes */
-@layer components {
-  .btn {
-    @apply bg-primary text-background px-6 py-3 rounded-md font-medium transition-all hover:bg-opacity-90 hover:scale-105;
-  }
-
-  .card {
-    @apply bg-secondary p-6 rounded-lg shadow-lg border border-accent border-opacity-20 backdrop-blur-sm;
-  }
-
-  .heading {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4;
-  }
-
-  .subheading {
-    @apply text-xl md:text-2xl font-medium text-primary mb-8;
-  }
 }
