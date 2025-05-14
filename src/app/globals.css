@@ -83,7 +83,7 @@ body {
   }
 
   .heading {
-    @apply text-4xl md:text-5xl lg:text-7xl font-bold text-text-primary mb-4;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4;
   }
 
   .subheading {

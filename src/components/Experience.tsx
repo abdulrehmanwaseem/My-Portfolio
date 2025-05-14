@@ -3,7 +3,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import * as THREE from "three";
-
 interface ExperienceItem {
   id: number;
   role: string;
@@ -12,7 +11,6 @@ interface ExperienceItem {
   description: string[];
   technologies: string[];
 }
-
 const experiences: ExperienceItem[] = [
   {
     id: 1,
@@ -53,19 +51,6 @@ const experiences: ExperienceItem[] = [
     ],
     technologies: ["React", "Redux", "SASS", "Webpack", "Jest"],
   },
-  {
-    id: 4,
-    role: "Junior Web Developer",
-    company: "StartupLaunch",
-    duration: "2018 - 2019",
-    description: [
-      "Assisted in developing frontend components for web applications",
-      "Participated in daily stand-ups and agile development processes",
-      "Fixed bugs and implemented new features",
-      "Learned and applied best practices in web development",
-    ],
-    technologies: ["JavaScript", "HTML", "CSS", "jQuery", "Bootstrap"],
-  },
 ];
 
 const ExperienceNode = ({
@@ -102,20 +87,30 @@ const ExperienceNode = ({
 };
 
 const TimelinePath = () => {
-  const pathRef = useRef<THREE.Line>(null!);
+  const width = 18;
   const points = [];
+  const amplitude = 1; // Increased from 0.3 to make the curve more pronounced
 
+  // Generate points for the curve
   for (let i = 0; i <= 50; i++) {
     const t = i / 50;
-    points.push(new THREE.Vector3(t * 12 - 4, Math.sin(t * Math.PI) * 0.3, 0));
+    points.push(
+      new THREE.Vector3(
+        t * width - width / 2,
+        Math.sin(t * Math.PI) * amplitude,
+        0
+      )
+    );
   }
 
-  const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+  // Create a smooth curve through the points
+  const curve = new THREE.CatmullRomCurve3(points);
 
   return (
-    <line ref={pathRef} geometry={lineGeometry}>
-      <lineBasicMaterial attach="material" color="#4895ef" linewidth={2} />
-    </line>
+    <mesh>
+      <tubeGeometry args={[curve, 100, 0.03, 8, false]} />
+      <meshStandardMaterial color="#2088ff" />
+    </mesh>
   );
 };
 
@@ -126,8 +121,16 @@ const TimelineCanvas = ({
   activeIndex: number;
   setActiveIndex: (index: number) => void;
 }) => {
+  const width = 18;
+  const amplitude = 1;
+
   return (
-    <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
+    <Canvas
+      camera={{
+        position: [0, 0, width > 10 ? 10 : 8], // Move camera back for wider timelines
+        fov: 60,
+      }}
+    >
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 10]} intensity={0.8} />
 
@@ -135,8 +138,8 @@ const TimelineCanvas = ({
 
       {experiences.map((_, index) => {
         const t = index / (experiences.length - 1);
-        const x = t * 12 - 4;
-        const y = Math.sin(t * Math.PI) * 0.3;
+        const x = t * width - width / 2;
+        const y = Math.sin(t * Math.PI) * amplitude;
 
         return (
           <group key={index}>

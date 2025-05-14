@@ -5,18 +5,35 @@ interface AvatarProps {
   alt: string;
   size?: number;
 }
-const Avatar = ({ src, alt, size = 50 }: AvatarProps) => {
+
+const Avatar = ({ src, alt, size }: AvatarProps) => {
+  // If a size is provided, use fixed dimensions, otherwise fill the parent
+  if (size) {
+    return (
+      <div
+        style={{
+          width: `${size}px`,
+          height: `${size}px`,
+          borderRadius: "50%",
+          overflow: "hidden",
+          display: "flex",
+        }}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          width={size}
+          height={size}
+          objectFit="cover"
+        />
+      </div>
+    );
+  }
+
+  // Fill parent version
   return (
-    <div
-      style={{
-        width: `${size}px`,
-        height: `${size}px`,
-        borderRadius: "50%",
-        overflow: "hidden",
-        display: "flex",
-      }}
-    >
-      <Image src={src} alt={alt} width={size} height={size} objectFit="cover" />
+    <div className="relative w-full h-full">
+      <Image src={src} alt={alt} layout="fill" objectFit="cover" />
     </div>
   );
 };

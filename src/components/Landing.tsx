@@ -1,13 +1,17 @@
-import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Text3D, Float } from "@react-three/drei";
-import * as THREE from "three";
-import { Database, Server, LayoutGrid, Globe, Laptop } from "lucide-react";
+import {
+  Database,
+  DatabaseZap,
+  Globe,
+  Laptop,
+  LayoutGrid,
+  Server,
+} from "lucide-react";
 
 const TechIcons = () => {
   const icons = [
     { Icon: Database, label: "MongoDB" },
+    { Icon: Database, label: "PostgreSQL" },
     { Icon: Server, label: "Express" },
     { Icon: LayoutGrid, label: "React" },
     { Icon: Server, label: "Node.js" },
@@ -41,7 +45,7 @@ const TechIcons = () => {
 const Landing = () => {
   return (
     <section id="home" className="relative pt-24 overflow-hidden section">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
@@ -56,7 +60,7 @@ const Landing = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="max-w-3xl mx-auto mb-8 text-lg md:text-xl text-text-secondary"
+            className="max-w-2xl mx-auto mb-8 text-lg md:text-lg text-text-secondary"
           >
             Crafting multiplatform applications with modern cutting-edge
             technology
