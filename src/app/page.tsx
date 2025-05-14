@@ -4,12 +4,12 @@ import { useEffect, useState, Suspense } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-// import Navbar from "@/components/Navbar";
-// import Landing from "@/components/Landing";
-// import About from "@/components/About";
-// import Projects from "@/components/Projects";
-// import Experience from "@/components/Experience";
-// import Contact from "@/components/Contact";
+import Navbar from "@/components/Navbar";
+import Landing from "@/components/Landing";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
 import LoadingScreen from "@/components/LoadingScreen";
 import { Canvas } from "@react-three/fiber";
 import ParticleField from "@/components/ParticleField";
@@ -60,27 +60,24 @@ export default function Home() {
       <div className="canvas-container">
         <Suspense fallback={null}>
           <Canvas>
-            <ParticleField count={500} />
+            <ParticleField count={250} />
           </Canvas>
         </Suspense>
       </div>
 
-      {/* <Navbar /> */}
+      <Navbar />
 
-      <main>
+      <main className="relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div>
-            <p className="bg-red-400">Testing</p>
-          </div>
-          {/* <Landing />
+          <Landing />
           <About />
           <Projects />
           <Experience />
-          <Contact /> */}
+          <Contact />
         </motion.div>
       </main>
     </div>
