@@ -1,12 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  Database,
-  DatabaseZap,
-  Globe,
-  Laptop,
-  LayoutGrid,
-  Server,
-} from "lucide-react";
+import { Database, Globe, Laptop, LayoutGrid, Server } from "lucide-react";
 
 const TechIcons = () => {
   const icons = [

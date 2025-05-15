@@ -1,35 +1,44 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Github as GitHub, Linkedin, Mail, Send, MapPin, Phone } from 'lucide-react';
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import {
+  Github as GitHub,
+  Linkedin,
+  Mail,
+  Send,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setFormSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-      
+      setFormData({ name: "", email: "", message: "" });
+
       // Reset form submission status after 5 seconds
       setTimeout(() => setFormSubmitted(false), 5000);
     }, 1500);
@@ -39,21 +48,21 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5 text-primary" />,
       title: "Email",
-      value: "contact@abdulrehman.dev",
-      link: "mailto:contact@abdulrehman.dev"
+      value: "abdulrehmanwork2024@gmail.com",
+      link: "mailto:abdulrehmanwork2024@gmail.com",
     },
     {
       icon: <MapPin className="w-5 h-5 text-primary" />,
       title: "Location",
-      value: "Remote / Worldwide",
-      link: null
+      value: "Hyderabad, Sindh, Pakistan",
+      link: null,
     },
     {
       icon: <Phone className="w-5 h-5 text-primary" />,
       title: "Phone",
-      value: "+1 234 567 8900",
-      link: "tel:+12345678900"
-    }
+      value: "+92 311811 4805",
+      link: "tel:+92 311811 4805",
+    },
   ];
 
   const socialLinks = [
@@ -61,14 +70,14 @@ const Contact = () => {
       platform: "GitHub",
       icon: <GitHub className="w-5 h-5" />,
       link: "https://github.com/abdulrehmanwaseem",
-      username: "abdulrehmanwaseem"
+      username: "abdulrehmanwaseem",
     },
     {
       platform: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
       link: "https://linkedin.com/in/abdulrehmanwaseem",
-      username: "abdulrehmanwaseem"
-    }
+      username: "abdulrehmanwaseem",
+    },
   ];
 
   return (
@@ -83,10 +92,10 @@ const Contact = () => {
         >
           <h2 className="heading">Get In Touch</h2>
           <p className="subheading max-w-2xl mx-auto">
-            Let's collaborate on your next project
+            Let&apos;s collaborate on your next project
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -95,16 +104,23 @@ const Contact = () => {
             viewport={{ once: true }}
             className="card"
           >
-            <h3 className="text-2xl font-bold text-text-primary mb-6">Send a Message</h3>
-            
+            <h3 className="text-2xl font-bold text-text-primary mb-6">
+              Send a Message
+            </h3>
+
             {formSubmitted ? (
               <div className="p-4 bg-success/20 rounded-lg text-center">
-                <p className="text-text-primary">Thanks for your message! I'll get back to you soon.</p>
+                <p className="text-text-primary">
+                  Thanks for your message! I&apos;ll get back to you soon.
+                </p>
               </div>
             ) : (
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-text-secondary mb-1"
+                  >
                     Your Name
                   </label>
                   <input
@@ -117,9 +133,12 @@ const Contact = () => {
                     className="w-full px-4 py-2 bg-background border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-text-secondary mb-1"
+                  >
                     Your Email
                   </label>
                   <input
@@ -132,9 +151,12 @@ const Contact = () => {
                     className="w-full px-4 py-2 bg-background border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-text-secondary mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-text-secondary mb-1"
+                  >
                     Your Message
                   </label>
                   <textarea
@@ -147,7 +169,7 @@ const Contact = () => {
                     className="w-full px-4 py-2 bg-background border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   />
                 </div>
-                
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -158,12 +180,12 @@ const Contact = () => {
                   ) : (
                     <Send className="w-4 h-4 mr-2" />
                   )}
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -172,8 +194,10 @@ const Contact = () => {
             className="flex flex-col justify-between"
           >
             <div className="card mb-6">
-              <h3 className="text-2xl font-bold text-text-primary mb-6">Contact Information</h3>
-              
+              <h3 className="text-2xl font-bold text-text-primary mb-6">
+                Contact Information
+              </h3>
+
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start">
@@ -181,10 +205,12 @@ const Contact = () => {
                       {item.icon}
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-text-secondary">{item.title}</h4>
+                      <h4 className="text-sm font-medium text-text-secondary">
+                        {item.title}
+                      </h4>
                       {item.link ? (
-                        <a 
-                          href={item.link} 
+                        <a
+                          href={item.link}
                           className="text-text-primary hover:text-primary transition-colors"
                         >
                           {item.value}
@@ -197,10 +223,12 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="card">
-              <h3 className="text-2xl font-bold text-text-primary mb-6">Connect With Me</h3>
-              
+              <h3 className="text-2xl font-bold text-text-primary mb-6">
+                Connect With Me
+              </h3>
+
               <div className="space-y-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -214,8 +242,12 @@ const Contact = () => {
                       {social.icon}
                     </div>
                     <div>
-                      <h4 className="text-text-primary font-medium">{social.platform}</h4>
-                      <p className="text-text-secondary text-sm">@{social.username}</p>
+                      <h4 className="text-text-primary font-medium">
+                        {social.platform}
+                      </h4>
+                      <p className="text-text-secondary text-sm">
+                        @{social.username}
+                      </p>
                     </div>
                   </a>
                 ))}
@@ -223,7 +255,7 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
-        
+
         <motion.footer
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -232,7 +264,9 @@ const Contact = () => {
           className="text-center mt-24 text-text-secondary"
         >
           <p>© {new Date().getFullYear()} Abdul Rehman. All rights reserved.</p>
-          <p className="text-sm mt-1">Crafted with React, Three.js, and Tailwind CSS</p>
+          <p className="text-sm mt-1">
+            Crafted with Next.js, Three.js, Tailwind CSS and 💓
+          </p>
         </motion.footer>
       </div>
     </section>

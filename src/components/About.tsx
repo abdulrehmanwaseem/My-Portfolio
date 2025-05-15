@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useRef } from "react";
-import { motion } from "framer-motion";
-import { Canvas, useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { motion } from "framer-motion";
+import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import Avatar from "./Avatar";
 
@@ -48,7 +48,7 @@ const SkillsScene = () => {
     }
 
     return points;
-  }, [skills.length]);
+  }, []);
 
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 65 }}>
@@ -57,7 +57,12 @@ const SkillsScene = () => {
       <pointLight position={[-10, -10, -5]} intensity={0.8} color="#4895ef" />
 
       {skills.map((skill, i) => (
-        <Skill key={i} position={positions[i]} skill={skill} index={i} />
+        <Skill
+          key={i}
+          position={positions[i] as [number, number, number]}
+          skill={skill}
+          index={i}
+        />
       ))}
     </Canvas>
   );
@@ -145,12 +150,12 @@ const About = () => {
             <p className="subheading">Full Stack Developer</p>
             <div className="space-y-4 text-text-secondary">
               <p>
-                I'm Abdul Rehman, a passionate Full Stack Developer whose
+                I&apos;m Abdul Rehman, a passionate Full Stack Developer whose
                 journey began at age 14 in 9th grade. Now at 18, having
-                completed 12th grade, I've transformed that early curiosity into
-                expertise in modern web development, specializing in the MERN
-                stack while mastering Next.js, NestJS, React Native, and other
-                cutting-edge technologies.
+                completed 12th grade, I&apos;ve transformed that early curiosity
+                into expertise in modern web development, specializing in the
+                MERN stack while mastering Next.js, NestJS, React Native, and
+                other cutting-edge technologies.
               </p>
 
               <p>
