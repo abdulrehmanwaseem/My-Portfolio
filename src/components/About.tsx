@@ -1,9 +1,9 @@
 import { Html } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { motion } from "framer-motion";
-import { useMemo, useRef } from "react";
+import Image from "next/image";
+import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
-import Avatar from "./Avatar";
 
 const skills = [
   "JavaScript/TypeScript",
@@ -22,11 +22,16 @@ const skills = [
   "Docker",
 ];
 const SkillsScene = () => {
-  // Generate evenly distributed positions using Fibonacci sphere
+  // Generate evenly distributed positions using Fibonacci sphere with final values
   const positions = useMemo(() => {
     const points = [];
     const phi = Math.PI * (3 - Math.sqrt(5)); // Golden angle
-    const spread = 10; // Controlled spread
+
+    // Final values from Leva controls
+    const spread = 6.5;
+    const verticalFlatten = 0.69;
+    const zOffset = 0.0;
+    const jitter = 0.2;
 
     for (let i = 0; i < skills.length; i++) {
       const y = 1 - (i / (skills.length - 1)) * 2; // Range from 1 to -1
@@ -34,16 +39,15 @@ const SkillsScene = () => {
 
       const theta = phi * i; // Golden angle increment
 
-      // Add some controlled randomness to break perfect symmetry
-      const jitter = 0.2;
+      // Add controlled randomness based on jitter setting
       const jx = (Math.random() - 0.5) * jitter;
       const jy = (Math.random() - 0.5) * jitter;
       const jz = (Math.random() - 0.5) * jitter;
 
       points.push([
         (radius * Math.cos(theta) + jx) * spread,
-        (y + jy) * spread * 0.6, // Flatten vertically a bit
-        (radius * Math.sin(theta) + jz) * spread - 6,
+        (y + jy) * spread * verticalFlatten,
+        (radius * Math.sin(theta) + jz) * spread + zOffset,
       ]);
     }
 
@@ -51,7 +55,7 @@ const SkillsScene = () => {
   }, []);
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 65 }}>
+    <Canvas camera={{ position: [0, 0, 12], fov: 65 }}>
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 10]} intensity={1.2} />
       <pointLight position={[-10, -10, -5]} intensity={0.8} color="#4895ef" />
@@ -80,17 +84,26 @@ const Skill = ({
   const mesh = useRef<THREE.Mesh>(null!);
   const initialPosition = useRef(position);
 
+  // Update initialPosition when position prop changes
+  useEffect(() => {
+    initialPosition.current = position;
+  }, [position]);
+
+  // Final animation values from Leva controls
+  const rotationSpeed = 0.01;
+  const amplitude = 0.36;
+  const baseFrequency = 0.32;
+
   // Different frequencies for different objects
-  const frequency = 0.2 + index * 0.01;
-  const amplitude = 0.15; // How far it moves from center
+  const frequency = baseFrequency + index * 0.01;
 
   useFrame((state) => {
     if (mesh.current) {
       const time = state.clock.getElapsedTime();
 
       // Rotation with varying speeds
-      mesh.current.rotation.x += 0.001 + index * 0.0001;
-      mesh.current.rotation.y += 0.002 + index * 0.0001;
+      mesh.current.rotation.x += rotationSpeed + index * 0.0001;
+      mesh.current.rotation.y += rotationSpeed * 2 + index * 0.0001;
 
       // Orbital movement - each object follows a unique path
       mesh.current.position.x =
@@ -101,8 +114,6 @@ const Skill = ({
       mesh.current.position.z =
         initialPosition.current[2] +
         Math.sin(time * frequency * 0.7) * amplitude;
-
-      // Subtle response to mouse movement
     }
   });
 
@@ -116,16 +127,16 @@ const Skill = ({
         emissiveIntensity={0.4}
       />
       <Html
-        distanceFactor={25}
+        distanceFactor={13}
         position={[0, 0, 0]}
-        className="pointer-events-none" // Prevent HTML interaction from interfering
-        occlude // Hide when behind other objects
+        className="pointer-events-none"
+        occlude
       >
         <div
-          className="bg-secondary/80 backdrop-blur-sm px-2 py-1 text-xs rounded-md whitespace-nowrap text-center"
+          className="px-2 py-1 text-xs text-center rounded-md bg-secondary/80 backdrop-blur-sm whitespace-nowrap"
           style={{
             boxShadow: "0 0 8px rgba(72, 149, 239, 0.2)",
-            transform: "translateX(-50%)", // Center horizontally
+            transform: "translateX(-50%)",
           }}
         >
           {skill}
@@ -134,17 +145,18 @@ const Skill = ({
     </mesh>
   );
 };
+
 const About = () => {
   return (
     <section id="about" className="section">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="card order-2 lg:order-1"
+            className="order-2 card lg:order-1"
           >
             <h2 className="heading">About Me</h2>
             <p className="subheading">Full Stack Developer</p>
@@ -176,12 +188,12 @@ const About = () => {
             </div>
 
             <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Skills</h3>
+              <h3 className="mb-4 text-xl font-semibold">Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="bg-secondary border border-accent text-text-primary px-3 py-1 rounded-full text-sm"
+                    className="px-3 py-1 text-sm border rounded-full bg-secondary border-accent text-text-primary"
                   >
                     {skill}
                   </span>
@@ -195,10 +207,17 @@ const About = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mt-12 mb-5 order-1 lg:order-2" // Added order classes here
+            className="order-1 mt-12 mb-5 lg:order-2"
           >
-            <div className="relative w-full max-w-xs mx-auto aspect-square rounded-full overflow-hidden shadow-xl border-4 border-primary">
-              <Avatar src="/images/me.jpeg" alt="Avatar" />
+            <div className="relative w-full max-w-xs mx-auto overflow-hidden border-4 rounded-full shadow-xl aspect-square border-primary">
+              <Image
+                src="/images/Abdul_Rehman.jpeg"
+                alt="Professional headshot of Abdul Rehman"
+                fill
+                sizes="(max-width: 768px) 100vw, 320px"
+                quality={90}
+                className="object-cover"
+              />
             </div>
 
             <div className="hidden lg:block h-[500px]">
