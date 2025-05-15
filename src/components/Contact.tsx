@@ -82,21 +82,21 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section">
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="w-full max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-12 text-center"
         >
           <h2 className="heading">Get In Touch</h2>
-          <p className="subheading max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto subheading">
             Let&apos;s collaborate on your next project
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -104,12 +104,12 @@ const Contact = () => {
             viewport={{ once: true }}
             className="card"
           >
-            <h3 className="text-2xl font-bold text-text-primary mb-6">
+            <h3 className="mb-6 text-2xl font-bold text-text-primary">
               Send a Message
             </h3>
 
             {formSubmitted ? (
-              <div className="p-4 bg-success/20 rounded-lg text-center">
+              <div className="p-4 text-center rounded-lg bg-success/20">
                 <p className="text-text-primary">
                   Thanks for your message! I&apos;ll get back to you soon.
                 </p>
@@ -119,7 +119,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-text-secondary mb-1"
+                    className="block mb-1 text-sm font-medium text-text-secondary"
                   >
                     Your Name
                   </label>
@@ -130,14 +130,14 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 bg-background border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2 border rounded-md bg-background border-secondary focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-text-secondary mb-1"
+                    className="block mb-1 text-sm font-medium text-text-secondary"
                   >
                     Your Email
                   </label>
@@ -148,14 +148,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 bg-background border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2 border rounded-md bg-background border-secondary focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-text-secondary mb-1"
+                    className="block mb-1 text-sm font-medium text-text-secondary"
                   >
                     Your Message
                   </label>
@@ -166,17 +166,17 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 bg-background border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                    className="w-full px-4 py-2 border rounded-md resize-none bg-background border-secondary focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn w-full flex items-center justify-center"
+                  className="flex items-center justify-center w-full btn"
                 >
                   {isSubmitting ? (
-                    <div className="w-5 h-5 border-2 border-background border-t-transparent rounded-full animate-spin mr-2" />
+                    <div className="w-5 h-5 mr-2 border-2 rounded-full border-background border-t-transparent animate-spin" />
                   ) : (
                     <Send className="w-4 h-4 mr-2" />
                   )}
@@ -193,30 +193,34 @@ const Contact = () => {
             viewport={{ once: true }}
             className="flex flex-col justify-between"
           >
-            <div className="card mb-6">
-              <h3 className="text-2xl font-bold text-text-primary mb-6">
+            <div className="mb-6 card">
+              <h3 className="mb-6 text-2xl font-bold text-text-primary">
                 Contact Information
               </h3>
 
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="p-2 bg-secondary rounded-full mr-4">
+                    <div className="p-2 mr-4 rounded-full bg-secondary">
                       {item.icon}
                     </div>
-                    <div>
+                    <div className="flex-1 min-w-0">
+                      {" "}
+                      {/* Added min-w-0 and flex-1 */}
                       <h4 className="text-sm font-medium text-text-secondary">
                         {item.title}
                       </h4>
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-text-primary hover:text-primary transition-colors"
+                          className="break-all transition-colors text-text-primary hover:text-primary" /* Added break-all */
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-text-primary">{item.value}</p>
+                        <p className="break-all text-text-primary">
+                          {item.value}
+                        </p> /* Added break-all */
                       )}
                     </div>
                   </div>
@@ -225,7 +229,7 @@ const Contact = () => {
             </div>
 
             <div className="card">
-              <h3 className="text-2xl font-bold text-text-primary mb-6">
+              <h3 className="mb-6 text-2xl font-bold text-text-primary">
                 Connect With Me
               </h3>
 
@@ -236,16 +240,16 @@ const Contact = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center p-4 bg-secondary/50 rounded-lg hover:bg-secondary transition-colors"
+                    className="flex items-center p-4 transition-colors rounded-lg bg-secondary/50 hover:bg-secondary"
                   >
-                    <div className="p-2 bg-primary/20 rounded-full mr-4">
+                    <div className="p-2 mr-4 rounded-full bg-primary/20">
                       {social.icon}
                     </div>
                     <div>
-                      <h4 className="text-text-primary font-medium">
+                      <h4 className="font-medium text-text-primary">
                         {social.platform}
                       </h4>
-                      <p className="text-text-secondary text-sm">
+                      <p className="text-sm text-text-secondary">
                         @{social.username}
                       </p>
                     </div>
@@ -261,10 +265,10 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-center mt-24 text-text-secondary"
+          className="mt-24 text-center text-text-secondary"
         >
           <p>© {new Date().getFullYear()} Abdul Rehman. All rights reserved.</p>
-          <p className="text-sm mt-1">
+          <p className="mt-1 text-sm">
             Crafted with Next.js, Three.js, Tailwind CSS and 💓
           </p>
         </motion.footer>

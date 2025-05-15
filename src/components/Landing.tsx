@@ -1,5 +1,14 @@
 import { motion } from "framer-motion";
-import { Database, Globe, Laptop, LayoutGrid, Server } from "lucide-react";
+import {
+  Database,
+  Globe,
+  Laptop,
+  LayoutGrid,
+  Server,
+  Code,
+  Box,
+  FileDown,
+} from "lucide-react";
 
 const TechIcons = () => {
   const icons = [
@@ -12,6 +21,7 @@ const TechIcons = () => {
     { Icon: Server, label: "NestJS" },
     { Icon: LayoutGrid, label: "React Native" },
     { Icon: Laptop, label: "Electron" },
+    { Icon: Box, label: "Three.js" },
   ];
 
   return (
@@ -52,7 +62,7 @@ const Landing = () => {
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
             className="max-w-2xl mx-auto mb-8 text-lg md:text-lg text-text-secondary"
           >
             Crafting multiplatform applications with modern cutting-edge
@@ -65,14 +75,26 @@ const Landing = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <a href="#projects" className="btn">
-              View Projects
+            <a href="#projects" className="flex items-center gap-2 btn">
+              <Code className="w-5 h-5" />
+              <span>View Projects</span>
             </a>
             <a
-              href="#contact"
-              className="bg-transparent border btn border-primary text-primary hover:bg-primary hover:text-background"
+              href="/docs/Abdul_Rehman_CV.pdf"
+              download="Abdul_Rehman_CV.pdf"
+              className="flex items-center gap-2 bg-transparent border btn border-primary text-primary hover:bg-primary hover:text-background"
+              onClick={(e) => {
+                // Optional: Track download event
+                if (typeof window !== "undefined" && window.gtag) {
+                  window.gtag("event", "cv_download", {
+                    event_category: "engagement",
+                    event_label: "CV Download",
+                  });
+                }
+              }}
             >
-              Contact Me
+              <FileDown className="w-5 h-5" />
+              <span>Download CV</span>
             </a>
           </motion.div>
 
