@@ -1,18 +1,17 @@
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
+import { Suspense, useEffect, useState } from "react";
 
-import Navbar from "@/components/Navbar";
-import Landing from "@/components/Landing";
 import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
+import Landing from "@/components/Landing";
 import LoadingScreen from "@/components/LoadingScreen";
-import { Canvas } from "@react-three/fiber";
+import Navbar from "@/components/Navbar";
 import ParticleField from "@/components/ParticleField";
+import Projects from "@/components/Projects";
+import { Canvas } from "@react-three/fiber";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
