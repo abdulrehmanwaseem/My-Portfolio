@@ -18,7 +18,7 @@ declare global {
       params?: {
         event_category?: string;
         event_label?: string;
-        [key: string]: any;
+        [key: string]: string | number | boolean | undefined;
       }
     ) => void;
   }
@@ -98,12 +98,19 @@ const Landing = () => {
               download="Abdul_Rehman_CV.pdf"
               className="flex items-center gap-2 bg-transparent border btn border-primary text-primary hover:bg-primary hover:text-background"
               onClick={() => {
-                if (typeof window !== "undefined" && window?.gtag) {
-                  window?.gtag("event", "cv_download", {
-                    event_category: "engagement",
-                    event_label: "CV Download",
-                  });
-                }
+                const trackDownload = () => {
+                  if (
+                    typeof window !== "undefined" &&
+                    typeof window.gtag === "function"
+                  ) {
+                    window.gtag("event", "cv_download", {
+                      event_category: "engagement",
+                      event_label: "CV Download",
+                    });
+                  }
+                };
+
+                trackDownload();
               }}
             >
               <FileDown className="w-5 h-5" />
