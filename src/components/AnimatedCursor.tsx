@@ -10,7 +10,7 @@ const AnimatedCursorComponent = dynamic(() => import("react-animated-cursor"), {
 
 export default function AnimatedCursor() {
   // Start with null to avoid hydration mismatches
-  const [isMobile, setIsMobile] = useState(null);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     // Check if mobile on mount and when window resizes
