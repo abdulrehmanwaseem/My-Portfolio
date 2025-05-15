@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Space_Grotesk } from "next/font/google";
 
 import "./globals.css";
+import AnimatedCursor from "@/components/AnimatedCursor";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -134,8 +135,10 @@ export default function RootLayout({
         className={`${spaceGrotesk.className} antialiased`}
         suppressHydrationWarning
       >
-        {children}
+        {/* <CustomCursor /> */}
+        <AnimatedCursor />
 
+        {children}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

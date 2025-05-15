@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 html {
@@ -31,6 +32,28 @@ body {
   width: 100%;
   height: 100vh;
   z-index: 1;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #fca311, #e5a000, #fca311);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 8s ease infinite;
+  background-size: 200% 200%;
+  filter: drop-shadow(0 0 2em rgba(252, 163, 17, 0.3));
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .section {
@@ -75,11 +98,11 @@ body {
 /* Custom utility classes */
 @layer components {
   .btn {
-    @apply bg-primary text-background px-6 py-3 rounded-md font-medium transition-all hover:bg-opacity-90 hover:scale-105;
+    @apply bg-primary text-background px-6 py-3 rounded-md font-medium transition-all hover:bg-opacity-90 hover:scale-105 flex items-center justify-center gap-2;
   }
 
   .card {
-    @apply bg-secondary p-6 rounded-lg shadow-lg border border-accent border-opacity-20 backdrop-blur-sm;
+    @apply bg-secondary/80 p-6 rounded-lg shadow-lg border border-accent border-opacity-20 backdrop-blur-sm hover:border-opacity-40 transition-all duration-300;
   }
 
   .heading {
@@ -88,5 +111,70 @@ body {
 
   .subheading {
     @apply text-xl md:text-2xl font-medium text-primary mb-8;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-background/50 border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply relative px-3 py-2 text-text-primary hover:text-primary transition-colors duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-primary before:transition-all before:duration-300 hover:before:w-full;
+  }
+
+  .social-link {
+    @apply flex items-center gap-2 p-3 rounded-lg hover:bg-primary/10 transition-all duration-300;
+  }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(20, 33, 61, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(252, 163, 17, 0.1);
+}
+
+/* Hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(252, 163, 17, 0.3);
+}
+
+/* Loading animation */
+.loading-dots div {
+  animation: loading 1.4s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.loading-dots div:nth-child(1) {
+  animation-delay: -0.3s;
+}
+
+.loading-dots div:nth-child(2) {
+  animation-delay: -0.15s;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }

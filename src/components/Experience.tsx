@@ -189,7 +189,7 @@ const Experience = () => {
           </p>
         </motion.div>
 
-        <div className="mb-16 h-80">
+        <div className="h-80">
           <TimelineCanvas
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
