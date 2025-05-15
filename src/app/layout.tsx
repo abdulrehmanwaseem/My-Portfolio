@@ -12,7 +12,8 @@ const spaceGrotesk = Space_Grotesk({
   preload: true,
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://abdulrehman.dev";
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://abdulrehman-code.vercel.app";
 console.log(process.env.NEXT_PUBLIC_BASE_URL);
 
 export const metadata: Metadata = {
