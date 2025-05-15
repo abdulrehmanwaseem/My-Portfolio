@@ -14,7 +14,7 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    role: "Senior Full Stack Developer",
+    role: "Senior Developer",
     company: "TechNova",
     duration: "2023 - Present",
     description: [
@@ -169,6 +169,68 @@ const TimelineCanvas = ({
   );
 };
 
+const MobileTimeline = ({
+  activeIndex,
+  setActiveIndex,
+}: {
+  activeIndex: number;
+  setActiveIndex: (index: number) => void;
+}) => {
+  return (
+    <div className="relative flex flex-col items-center py-4">
+      {/* Vertical line */}
+      <div className="absolute h-[80%] w-0.5 bg-secondary left-1/2 transform -translate-x-1/2" />
+
+      {experiences.map((experience, index) => (
+        <motion.div
+          key={experience.id}
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="relative z-10 w-full mb-8"
+        >
+          {/* Timeline node */}
+          <div className="flex items-center">
+            {/* Left content - date */}
+            <div className="pr-4 text-sm text-right w-26 text-text-secondary">
+              {experience.duration}
+            </div>
+
+            {/* Center dot */}
+            <button
+              onClick={() => setActiveIndex(index)}
+              className={`w-5 h-5 rounded-full border-2 flex-shrink-0 transition-all duration-300 ${
+                activeIndex === index
+                  ? "bg-primary border-primary scale-125"
+                  : "bg-background border-secondary hover:border-primary"
+              }`}
+              aria-label={`View ${experience.role} experience`}
+            />
+
+            {/* Right content - job title and company */}
+            <div
+              className={`pl-4 transition-all duration-300 ${
+                activeIndex === index
+                  ? "text-primary font-medium"
+                  : "text-text-primary"
+              }`}
+              onClick={() => setActiveIndex(index)}
+            >
+              <div className="font-medium cursor-pointer">
+                {experience.role}
+              </div>
+              <div className="text-sm text-text-secondary">
+                {experience.company}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
+
 const Experience = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeExperience = experiences[activeIndex];
@@ -189,8 +251,17 @@ const Experience = () => {
           </p>
         </motion.div>
 
-        <div className="h-80">
+        {/* 3D timeline for medium screens and up */}
+        <div className="hidden md:block h-80">
           <TimelineCanvas
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+          />
+        </div>
+
+        {/* Mobile timeline for small screens */}
+        <div className="mb-8 md:hidden">
+          <MobileTimeline
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
           />

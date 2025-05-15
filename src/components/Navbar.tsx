@@ -52,12 +52,12 @@ const Navbar = () => {
         scrolled ? "glass shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <a href="#home" className="flex items-center group">
-              <Code className="h-8 w-8 text-primary group-hover:rotate-12 transition-transform duration-300" />
-              <span className="font-semibold text-xl ml-2 gradient-text">
+              <Code className="w-8 h-8 transition-transform duration-300 text-primary group-hover:rotate-12" />
+              <span className="ml-2 text-xl font-semibold gradient-text">
                 Abdul Rehman
               </span>
             </a>
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-4">
+            <div className="flex items-center ml-10 space-x-4">
               {navLinks.map((link) => (
                 <a
                   key={link.id}
@@ -79,22 +79,24 @@ const Navbar = () => {
                   {link.title}
                 </a>
               ))}
-              <div className="h-6 w-px bg-primary/20 mx-2" />
+              <div className="w-px h-6 mx-2 bg-primary/20" />
               <a
                 href="https://github.com/abdulrehmanwaseem"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
+                aria-label="LinkedIn Profile"
               >
-                <Github className="h-5 w-5" />
+                <Github className="w-5 h-5" />
               </a>
               <a
                 href="https://linkedin.com/in/abdulrehmanwaseem"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
+                aria-label="GitHub Profile"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -103,12 +105,13 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
+              aria-label="Menu-Button"
               className="inline-flex items-center justify-center p-2 rounded-md text-text-primary hover:text-primary focus:outline-none"
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className="w-6 h-6" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </div>
@@ -139,22 +142,24 @@ const Navbar = () => {
                 {link.title}
               </a>
             ))}
-            <div className="flex space-x-4 px-3 py-2">
+            <div className="flex px-3 py-2 space-x-4">
               <a
                 href="https://github.com/abdulrehmanwaseem"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
+                aria-label="GitHub Profile"
               >
-                <Github className="h-5 w-5" />
+                <Github className="w-5 h-5" />
               </a>
               <a
                 href="https://linkedin.com/in/abdulrehmanwaseem"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
+                aria-label="LinkedIn Profile"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
