@@ -97,8 +97,7 @@ const Landing = () => {
               href="/docs/Abdul_Rehman_CV.pdf"
               download="Abdul_Rehman_CV.pdf"
               className="flex items-center gap-2 bg-transparent border btn border-primary text-primary hover:bg-primary hover:text-background"
-              onClick={(e) => {
-                // Optional: Track download event
+              onClick={() => {
                 if (typeof window !== "undefined" && window?.gtag) {
                   window?.gtag("event", "cv_download", {
                     event_category: "engagement",
