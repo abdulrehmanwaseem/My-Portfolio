@@ -10,6 +10,20 @@ import {
   FileDown,
 } from "lucide-react";
 
+declare global {
+  interface Window {
+    gtag?: (
+      command: string,
+      action: string,
+      params?: {
+        event_category?: string;
+        event_label?: string;
+        [key: string]: any;
+      }
+    ) => void;
+  }
+}
+
 const TechIcons = () => {
   const icons = [
     { Icon: Database, label: "MongoDB" },
@@ -85,8 +99,8 @@ const Landing = () => {
               className="flex items-center gap-2 bg-transparent border btn border-primary text-primary hover:bg-primary hover:text-background"
               onClick={(e) => {
                 // Optional: Track download event
-                if (typeof window !== "undefined" && window.gtag) {
-                  window.gtag("event", "cv_download", {
+                if (typeof window !== "undefined" && window?.gtag) {
+                  window?.gtag("event", "cv_download", {
                     event_category: "engagement",
                     event_label: "CV Download",
                   });
