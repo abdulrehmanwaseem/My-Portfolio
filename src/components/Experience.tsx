@@ -318,7 +318,7 @@ const Experience = () => {
           {experiences.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full mx-2 transition-colors ${
+              className={`w-[0.85rem] h-[0.85rem] rounded-full mx-2 transition-colors border border-text-secondary ${
                 activeIndex === index ? "bg-primary" : "bg-secondary"
               }`}
               onClick={() => setActiveIndex(index)}

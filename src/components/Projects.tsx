@@ -22,34 +22,6 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Spotlight React Native",
-    description:
-      "Spotlight is a modern social media app built with React Native and Expo, designed to provide a seamless and engaging user experience. With a focus on simplicity and performance, Spotlight enables users to connect, share, and discover content effortlessly.",
-    technologies: ["React Native", "Expo", "Clerk", "Convex", "NativeWind"],
-    githubUrl: "https://github.com/abdulrehmanwaseem/Spotlight-React-Native",
-    demoUrl:
-      "https://expo.dev/accounts/abdulrehman.code1/projects/spot-light/builds/12bb6587-06d8-4e2d-ac69-def0ca923306",
-    imageUrl: "/images/spotlight-react-native.png",
-  },
-  {
-    id: 2,
-    title: "Shop Management System",
-    description:
-      "A comprehensive Shop Management System developed using the PERN stack. It features user authentication, invoice management, financial transaction logging, real-time dashboards, payment status tracking, inventory tracking, automatic cash updates and a dynamic dashboard that visualizes key business metrics.",
-    technologies: [
-      "React",
-      "Redux Tool Kit",
-      "Handsontable",
-      "Express.js",
-      "PostgreSQL",
-      "Prisma",
-    ],
-    githubUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
-    demoUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
-    imageUrl: "/images/shop-management-system.png",
-  },
-  {
-    id: 3,
     title: "My 3D Character Game (CSGO)",
     description:
       "This game features my own 3D face model as the main character, set on a recreated CS Dust map. It includes a custom 3rd person controller and camera view, offering an immersive and personalized gaming experience with a blend of familiar game environments and unique character design.",
@@ -64,6 +36,34 @@ const projects: Project[] = [
     demoUrl: "https://my-3d-character-game.vercel.app/",
     imageUrl: "/images/my-3d-character-game.png",
   },
+  {
+    id: 2,
+    title: "Shop Management System",
+    description:
+      "A comprehensive Shop Management System developed using the PERN stack. It features user authentication, invoice management, financial transaction logging, real-time dashboards, payment status tracking, inventory tracking, automatic cash updates and a dynamic dashboard that visualizes key business metrics.",
+    technologies: [
+      "React",
+      "Redux Tool Kit",
+      "Handsontable",
+      "Express.js",
+      "PostgreSQL",
+    ],
+    githubUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
+    demoUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
+    imageUrl: "/images/shop-management-system.png",
+  },
+  {
+    id: 3,
+    title: "Spotlight React Native",
+    description:
+      "Spotlight is a modern social media app built with React Native and Expo, designed to provide a seamless and engaging user experience. With a focus on simplicity and performance, Spotlight enables users to connect, share, and discover content effortlessly with beautifully designed interface.",
+    technologies: ["React Native", "Expo", "Clerk", "Convex", "NativeWind"],
+    githubUrl: "https://github.com/abdulrehmanwaseem/Spotlight-React-Native",
+    demoUrl:
+      "https://expo.dev/accounts/abdulrehman.code1/projects/spot-light/builds/12bb6587-06d8-4e2d-ac69-def0ca923306",
+    imageUrl: "/images/spotlight-react-native.png",
+  },
+
   {
     id: 4,
     title: "NestJS Microservices Auto Decorators",
@@ -82,11 +82,10 @@ const projects: Project[] = [
     description:
       "This is an interactive 3D visualization demo for an oil refinery platform, designed to showcase the potential of a larger-scale industrial monitoring system. The demo provides a realistic preview of how a comprehensive oil refinery monitoring and management system could function.",
     technologies: [
-      "React Three Ocean",
       "React",
       "Three.js",
+      "React Three Ocean",
       "React-Three/postprocessing",
-      "React-Three/drei",
     ],
     githubUrl: "https://github.com/abdulrehmanwaseem/Oil-Refinery-Platform",
     demoUrl: "https://oil-refinery-platform.vercel.app",
@@ -101,7 +100,7 @@ const projects: Project[] = [
       "React 19",
       "Typescript",
       "Express.js",
-      "TailwindCSS",
+      "Tailwind CSS",
       "Vite",
     ],
     githubUrl: "https://github.com/abdulrehmanwaseem/React19-Serverside-Kit",
@@ -148,44 +147,65 @@ const projects: Project[] = [
   },
   {
     id: 9,
-    title: "3D-Pipe-Screen-Saver",
+    title: "3D Pipe Screen Saver",
     description:
-      "A 3D Pipe Screen Saver built using Electron.js, Three.js, and React. This desktop application demonstrates the integration of 3D graphics with desktop application development.",
-    technologies: ["Electron.js", "Three.js", "React"],
+      "A 3D Pipe Screen Saver (Windows 95) built using Electron.js, Three.js, and React, powered by the Electron Vite build tool. This dynamic desktop application generates mesmerizing, evolving 3D pipe structures, taking you back to the nostalgic Windows 95 screensaver era with a modern touch.",
+    technologies: ["Electron.js", "Three.js", "React", "Typescript", "Vite"],
     githubUrl: "https://github.com/abdulrehmanwaseem/3D-Pipe-Screen-Saver",
-    demoUrl: null,
-    imageUrl: "",
+    demoUrl:
+      "https://github.com/abdulrehmanwaseem/3D-Pipe-Screen-Saver/releases/download/3dScreenSaver/3D.Pipe.Screen.Saver.Setup.1.1.0.exe",
+    imageUrl: "/images/3d-pipe-screen-saver.png",
   },
   {
     id: 10,
-    title: "NextJs-Blogs-App",
+    title: "Blogger",
     description:
-      "A comprehensive blogging platform built with Next.js featuring user authentication with Two-Factor Authentication (2FA), role-based access control, and rich text editing.",
-    technologies: ["Next.js", "JavaScript"],
+      "A comprehensive blogging platform built with Next.js featuring user authentication with Two-Factor Authentication (2FA), role-based access control, and rich text editing. It utilizes PostgreSQL with Prisma ORM for data management and Cloudinary for image storage, supporting commenting, ratings, and content moderation.",
+    technologies: [
+      "Next.js",
+      "Cloudinary",
+      "NextAuth",
+      "React Hook Form",
+      "Prisma",
+    ],
     githubUrl: "https://github.com/abdulrehmanwaseem/NextJs-Blogs-App",
-    demoUrl: null,
-    imageUrl: "",
+    demoUrl: "https://github.com/abdulrehmanwaseem/NextJs-Blogs-App",
+    imageUrl: "/images/blogger.png",
   },
   {
     id: 11,
-    title: "Cloud-File-Management-System",
+    title: "Cloud File Management System",
     description:
-      "A full-featured File Management System built with the MERN stack, featuring secure user authentication, file upload and management, and Cloudinary integration for storage.",
-    technologies: ["MERN Stack", "MongoDB", "Express", "React", "Node.js"],
+      "A full-featured File Management System built with the MERN stack. Features include secure user authentication, file upload and management, Cloudinary integration for storage, Redis-based caching, and email notifications via Nodemailer. The system also includes a RESTful API for CRUD operations and efficient file handling.",
+    technologies: [
+      "MERN",
+      "RTK Query",
+      "BullMQ",
+      "Redis",
+      "Nodemailer",
+      "Cloudinary",
+    ],
     githubUrl:
       "https://github.com/abdulrehmanwaseem/Cloud-File-Management-System",
-    demoUrl: null,
-    imageUrl: "",
+    demoUrl: "https://cloud-file-management-system.vercel.app",
+    imageUrl: "/images/cloud-file-management-system.png",
   },
   {
     id: 12,
-    title: "Chrome-Color-Customizer",
+    title: "Chrome Color Customizer",
     description:
-      "A simple Chrome extension to customize the color of any webpage, allowing users to change background, text, and element colors for better readability and accessibility.",
-    technologies: ["JavaScript", "Chrome Extension"],
+      "A simple Chrome extension to customize the color of any webpage. With this extension, users can change the background, text, and element colors for better readability, accessibility, or style. Great for dark mode enthusiasts or anyone looking to personalize their browsing experience.",
+    technologies: [
+      "React",
+      "Vite",
+      "JavaScript",
+      "Manifest.json",
+      "Typescript",
+    ],
     githubUrl: "https://github.com/abdulrehmanwaseem/Chrome-Color-Customizer",
-    demoUrl: null,
-    imageUrl: "",
+    demoUrl:
+      "https://github.com/abdulrehmanwaseem/Chrome-Webpage-Colorizer-Extension/releases/download/Webpage-Colorizer/webpage-colorizer-extention.zip",
+    imageUrl: "/images/chrome-color-customizer.png",
   },
 ];
 
@@ -201,8 +221,8 @@ const Projects = () => {
   };
 
   return (
-    <section className="px-6 py-16 text-white md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section id="projects" className="section">
+      <div className="w-full max-w-6xl mx-auto">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -216,10 +236,11 @@ const Projects = () => {
             A collection of my recent work and personal projects
           </p>
         </motion.div>
+
         {/* Carousel */}
         <div className="flex flex-col max-w-6xl gap-8 mx-auto md:flex-row md:items-center">
           {/* Left: Image */}
-          <div className="relative flex-shrink-0 w-full h-64 overflow-hidden rounded-lg md:w-1/2 md:h-96 bg-gradient-to-tr from-blue-200 to-blue-50">
+          <div className="relative flex-shrink-0 w-full h-64 overflow-hidden rounded-lg md:w-1/2 md:h-96 bg-gradient-to-tr from-blue-200 to-blue-50 border border-white/10 shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
             <Image
               src={projects[current].imageUrl}
               alt={projects[current].title}
@@ -231,29 +252,61 @@ const Projects = () => {
           </div>
 
           {/* Right: Info */}
-          <div className="flex flex-col gap-4 md:w-1/2">
-            <h3 className="text-xl font-bold">{projects[current].title}</h3>
-            <p className="text-gray-300">{projects[current].description}</p>
-
-            {/* Technologies */}
-            <div className="flex flex-wrap gap-2 mt-2">
+          <div className="flex flex-col gap-5 md:w-1/2">
+            {/* Pagination dots */}
+            <div className="flex items-center gap-3 mb-2">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrent(index)}
+                  aria-label={`Go to project ${index + 1}`}
+                  className={`w-[0.90rem] h-[0.90rem] md:w-5 md:h-5 rounded-full border border-text-secondary transition-all duration-300 ${
+                    current === index
+                      ? "bg-primary scale-125 border-primary"
+                      : "bg-transparent hover:border-white/80 hover:scale-105"
+                  }`}
+                />
+              ))}
+            </div>
+            {/* Title with animation */}
+            <motion.h3
+              key={projects[current].id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-2xl font-bold"
+            >
+              {projects[current].title}
+            </motion.h3>
+            <motion.p
+              key={`desc-${projects[current].id}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              className="text-text-secondary"
+            >
+              {projects[current].description}
+            </motion.p>
+            {/* Technologies with hover effect */}
+            <div className="flex flex-wrap gap-2 mt-3">
+              {" "}
+              {/* Increased margin-top */}
               {projects[current].technologies.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 text-sm text-gray-200 rounded bg-primary/10"
+                  className="px-3 py-1 text-sm transition-all duration-200 rounded bg-secondary text-text-primary hover:bg-secondary/80 hover:scale-105 hover:shadow-md"
                 >
                   {tech}
                 </span>
               ))}
             </div>
-
             {/* Links */}
             <div className="flex gap-4 mt-6">
               <a
                 href={projects[current].githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 px-4 py-2 transition bg-gray-700 rounded hover:bg-gray-800"
+                className="flex items-center gap-2 transition-transform duration-200 btn hover:scale-105 active:scale-95"
               >
                 <Github className="w-5 h-5" />
                 Code
@@ -263,7 +316,7 @@ const Projects = () => {
                   href={projects[current].demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 px-4 py-2 transition bg-blue-500 rounded hover:bg-blue-600"
+                  className="flex items-center gap-2 bg-transparent border btn border-primary text-primary hover:bg-primary hover:text-background transition-all duration-200 hover:scale-105 active:scale-95 hover:shadow-[0_0_10px_rgba(59,130,246,0.3)]"
                 >
                   <ExternalLink className="w-5 h-5" />
                   Live Demo
@@ -278,27 +331,14 @@ const Projects = () => {
           <button
             aria-label="Previous project"
             onClick={prevProject}
-            className="p-3 transition bg-gray-700 rounded-full hover:bg-gray-800"
+            className="p-3 transition-all duration-200 rounded-full bg-secondary hover:bg-secondary/80 hover:scale-110 active:scale-95 hover:shadow-md"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          {/* Pagination dots */}
-          <div className="flex items-center gap-3 mb-2">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrent(index)}
-                aria-label={`Go to project ${index + 1}`}
-                className={`w-4 h-4 rounded-full border border-white transition-colors ${
-                  current === index ? "bg-blue-400" : "bg-transparent"
-                }`}
-              />
-            ))}
-          </div>
           <button
             aria-label="Next project"
             onClick={nextProject}
-            className="p-3 transition bg-gray-700 rounded-full hover:bg-gray-800"
+            className="p-3 transition-all duration-200 rounded-full bg-secondary hover:bg-secondary/80 hover:scale-110 active:scale-95 hover:shadow-md"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
