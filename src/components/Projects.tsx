@@ -22,7 +22,18 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "My 3D Character Game (CSGO)",
+    title: "📱 Spotlight React Native",
+    description:
+      "Spotlight is a modern social media app built with React Native and Expo, designed to provide a seamless and engaging user experience. With a focus on simplicity and performance, Spotlight enables users to connect, share, and discover content effortlessly with beautifully designed interface.",
+    technologies: ["React Native", "Expo", "Clerk", "Convex", "NativeWind"],
+    githubUrl: "https://github.com/abdulrehmanwaseem/Spotlight-React-Native",
+    demoUrl:
+      "https://expo.dev/accounts/abdulrehman.code1/projects/spot-light/builds/12bb6587-06d8-4e2d-ac69-def0ca923306",
+    imageUrl: "/images/spotlight-react-native.png",
+  },
+  {
+    id: 2,
+    title: "🎮 My 3D Character Game (CSGO)",
     description:
       "This game features my own 3D face model as the main character, set on a recreated CS Dust map. It includes a custom 3rd person controller and camera view, offering an immersive and personalized gaming experience with a blend of familiar game environments and unique character design.",
     technologies: [
@@ -37,81 +48,21 @@ const projects: Project[] = [
     imageUrl: "/images/my-3d-character-game.png",
   },
   {
-    id: 2,
-    title: "Shop Management System",
-    description:
-      "A comprehensive Shop Management System developed using the PERN stack. It features user authentication, invoice management, financial transaction logging, real-time dashboards, payment status tracking, inventory tracking, automatic cash updates and a dynamic dashboard that visualizes key business metrics.",
-    technologies: [
-      "React",
-      "Redux Tool Kit",
-      "Handsontable",
-      "Express.js",
-      "PostgreSQL",
-    ],
-    githubUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
-    demoUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
-    imageUrl: "/images/shop-management-system.png",
-  },
-  {
     id: 3,
-    title: "Spotlight React Native",
+    title: "🌀 3D Pipe Screen Saver",
     description:
-      "Spotlight is a modern social media app built with React Native and Expo, designed to provide a seamless and engaging user experience. With a focus on simplicity and performance, Spotlight enables users to connect, share, and discover content effortlessly with beautifully designed interface.",
-    technologies: ["React Native", "Expo", "Clerk", "Convex", "NativeWind"],
-    githubUrl: "https://github.com/abdulrehmanwaseem/Spotlight-React-Native",
+      "A 3D Pipe Screen Saver (Windows 95) built using Electron.js, Three.js, and React, powered by the Electron Vite build tool. This dynamic desktop application generates mesmerizing, evolving 3D pipe structures, taking you back to the nostalgic Windows 95 screensaver era with a modern touch.",
+    technologies: ["Electron.js", "Three.js", "React", "Typescript", "Vite"],
+    githubUrl: "https://github.com/abdulrehmanwaseem/3D-Pipe-Screen-Saver",
     demoUrl:
-      "https://expo.dev/accounts/abdulrehman.code1/projects/spot-light/builds/12bb6587-06d8-4e2d-ac69-def0ca923306",
-    imageUrl: "/images/spotlight-react-native.png",
+      "https://github.com/abdulrehmanwaseem/3D-Pipe-Screen-Saver/releases/download/3dScreenSaver/3D.Pipe.Screen.Saver.Setup.1.1.0.exe",
+    imageUrl: "/images/3d-pipe-screen-saver.png",
   },
-
   {
     id: 4,
-    title: "NestJS Microservices Auto Decorators",
+    title: "📝 Blogs App (NestJS-GraphQL-Next.js)",
     description:
-      "It eliminates boilerplate code in NestJS microservice applications by providing intelligent decorators that automatically generate message patterns and handle message sending operations. This package improves developer productivity, reduces errors, and enforces consistent communication patterns across distributed systems.",
-    technologies: ["NestJS", "Node.js", "Typesc ript", "ClientProxy"],
-    githubUrl:
-      "https://github.com/abdulrehmanwaseem/nestjs-microservice-auto-decorators",
-    demoUrl:
-      "https://www.npmjs.com/package/nestjs-microservice-auto-decorators",
-    imageUrl: "/images/nestjs-microservice-auto-decorators.png",
-  },
-  {
-    id: 5,
-    title: "Oil Refinery Platform",
-    description:
-      "This is an interactive 3D visualization demo for an oil refinery platform, designed to showcase the potential of a larger-scale industrial monitoring system. The demo provides a realistic preview of how a comprehensive oil refinery monitoring and management system could function.",
-    technologies: [
-      "React",
-      "Three.js",
-      "React Three Ocean",
-      "React-Three/postprocessing",
-    ],
-    githubUrl: "https://github.com/abdulrehmanwaseem/Oil-Refinery-Platform",
-    demoUrl: "https://oil-refinery-platform.vercel.app",
-    imageUrl: "/images/oil-refinery-platform.png",
-  },
-  {
-    id: 6,
-    title: "⚡ React19 Serverside Kit",
-    description:
-      "A minimal and modern React 19 Server-Side Rendering (SSR) starter using Vite, TypeScript, Tailwind CSS, and Express. This template leverages React 19’s new streaming SSR API with renderToPipeableStream for optimized performance. Perfect for learning and building SSR-based applications with React.",
-    technologies: [
-      "React 19",
-      "Typescript",
-      "Express.js",
-      "Tailwind CSS",
-      "Vite",
-    ],
-    githubUrl: "https://github.com/abdulrehmanwaseem/React19-Serverside-Kit",
-    demoUrl: "https://github.com/abdulrehmanwaseem/React19-Serverside-Kit",
-    imageUrl: "/images/react19-serverside-kit.png",
-  },
-  {
-    id: 7,
-    title: "Blogs App (NestJS-Prisma-GraphQL-Next.js)",
-    description:
-      "A full-stack, industry-standard application using NestJS (Prisma + GraphQL) for the backend and Next.js for the frontend. It follows best practices for modular architecture, security, and performance. It follows best practices for modular architecture, performance, and security.",
+      "A full-stack, industry-standard application using NestJS (Prisma + GraphQL) for the backend and Next.js for the frontend. Performant API layer. Security is enforced with JWT-based authentication and optional two-factor authentication (2FA) and seamless QR-code for Google Authenticator. It follows secure architecture.",
     technologies: [
       "NestJS",
       "Next.js",
@@ -127,8 +78,67 @@ const projects: Project[] = [
     imageUrl: "/images/nestjs-prisma-graphql-next.js.png",
   },
   {
+    id: 5,
+    title: "🏭 Oil Refinery Platform",
+    description:
+      "This is an interactive 3D visualization demo for an oil refinery platform, designed to showcase the potential of a larger-scale industrial monitoring system. The demo provides a realistic preview of how a comprehensive oil refinery monitoring and management system could function. Featuring realistic water physics and dynamic lighting.",
+    technologies: [
+      "React",
+      "Three.js",
+      "React Three Ocean",
+      "React-Three/postprocessing",
+    ],
+    githubUrl: "https://github.com/abdulrehmanwaseem/Oil-Refinery-Platform",
+    demoUrl: "https://oil-refinery-platform.vercel.app",
+    imageUrl: "/images/oil-refinery-platform.png",
+  },
+  {
+    id: 6,
+    title: "⚡ React19 Serverside Kit",
+    description:
+      "A minimal and modern React 19 Server-Side Rendering (SSR) starter using Vite, TypeScript, Tailwind CSS, and Express. This template leverages React 19's new streaming SSR API with renderToPipeableStream for optimized performance. Perfect for learning and building SSR-based applications with React.",
+    technologies: [
+      "React 19",
+      "Typescript",
+      "Express.js",
+      "Tailwind CSS",
+      "Vite",
+    ],
+    githubUrl: "https://github.com/abdulrehmanwaseem/React19-Serverside-Kit",
+    demoUrl: "https://github.com/abdulrehmanwaseem/React19-Serverside-Kit",
+    imageUrl: "/images/react19-serverside-kit.png",
+  },
+  {
+    id: 7,
+    title: "🛒 Shop Management System",
+    description:
+      "A comprehensive Shop Management System developed using the PERN stack. It features user authentication, invoice management, financial transaction logging, real-time dashboards, payment status tracking, inventory tracking, automatic cash updates and a dynamic dashboard that visualizes key business metrics.",
+    technologies: [
+      "React",
+      "Redux Tool Kit",
+      "Handsontable",
+      "Express.js",
+      "PostgreSQL",
+    ],
+    githubUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
+    demoUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
+    imageUrl: "/images/shop-management-system.png",
+  },
+  {
     id: 8,
-    title: "Electron License Distribution Template",
+    title: "🚀 NestJS Microservices Auto Decorators",
+    description:
+      "It eliminates boilerplate code in NestJS microservice applications by providing intelligent decorators that automatically generate message patterns and handle message sending operations. This package improves developer productivity, reduces errors, and enforces consistent communication patterns across distributed systems.",
+    technologies: ["NestJS", "Node.js", "Typescript", "ClientProxy"],
+    githubUrl:
+      "https://github.com/abdulrehmanwaseem/nestjs-microservice-auto-decorators",
+    demoUrl:
+      "https://www.npmjs.com/package/nestjs-microservice-auto-decorators",
+    imageUrl: "/images/nestjs-microservice-auto-decorators.png",
+  },
+  {
+    id: 9,
+    title: "🔐 Electron License Distribution Template",
     description:
       "A modern TypeScript-based template for securely distributing Electron applications with integrated licensing and code protection. This project leverages modern tools like Electron Vite, Keygen.sh, Sentry.io and Bytenode to simplify the process of building, licensing, and securing your application.",
     technologies: [
@@ -146,35 +156,8 @@ const projects: Project[] = [
     imageUrl: "/images/electron-license-distribution-kit.png",
   },
   {
-    id: 9,
-    title: "3D Pipe Screen Saver",
-    description:
-      "A 3D Pipe Screen Saver (Windows 95) built using Electron.js, Three.js, and React, powered by the Electron Vite build tool. This dynamic desktop application generates mesmerizing, evolving 3D pipe structures, taking you back to the nostalgic Windows 95 screensaver era with a modern touch.",
-    technologies: ["Electron.js", "Three.js", "React", "Typescript", "Vite"],
-    githubUrl: "https://github.com/abdulrehmanwaseem/3D-Pipe-Screen-Saver",
-    demoUrl:
-      "https://github.com/abdulrehmanwaseem/3D-Pipe-Screen-Saver/releases/download/3dScreenSaver/3D.Pipe.Screen.Saver.Setup.1.1.0.exe",
-    imageUrl: "/images/3d-pipe-screen-saver.png",
-  },
-  {
     id: 10,
-    title: "Blogger",
-    description:
-      "A comprehensive blogging platform built with Next.js featuring user authentication with Two-Factor Authentication (2FA), role-based access control, and rich text editing. It utilizes PostgreSQL with Prisma ORM for data management and Cloudinary for image storage, supporting commenting, ratings, and content moderation.",
-    technologies: [
-      "Next.js",
-      "Cloudinary",
-      "NextAuth",
-      "React Hook Form",
-      "Prisma",
-    ],
-    githubUrl: "https://github.com/abdulrehmanwaseem/NextJs-Blogs-App",
-    demoUrl: "https://github.com/abdulrehmanwaseem/NextJs-Blogs-App",
-    imageUrl: "/images/blogger.png",
-  },
-  {
-    id: 11,
-    title: "Cloud File Management System",
+    title: "☁️ Cloud File Management System",
     description:
       "A full-featured File Management System built with the MERN stack. Features include secure user authentication, file upload and management, Cloudinary integration for storage, Redis-based caching, and email notifications via Nodemailer. The system also includes a RESTful API for CRUD operations and efficient file handling.",
     technologies: [
@@ -191,8 +174,24 @@ const projects: Project[] = [
     imageUrl: "/images/cloud-file-management-system.png",
   },
   {
+    id: 11,
+    title: "✍️ Blogger",
+    description:
+      "A comprehensive blogging platform built with Next.js featuring user authentication with Two-Factor Authentication (2FA), role-based access control, and rich text editing. It utilizes PostgreSQL with Prisma ORM for data management and Cloudinary for image storage, supporting commenting, ratings, and content moderation.",
+    technologies: [
+      "Next.js",
+      "Cloudinary",
+      "NextAuth",
+      "React Hook Form",
+      "Prisma",
+    ],
+    githubUrl: "https://github.com/abdulrehmanwaseem/NextJs-Blogs-App",
+    demoUrl: "https://github.com/abdulrehmanwaseem/NextJs-Blogs-App",
+    imageUrl: "/images/blogger.png",
+  },
+  {
     id: 12,
-    title: "Chrome Color Customizer",
+    title: "🎨 Chrome Color Customizer",
     description:
       "A simple Chrome extension to customize the color of any webpage. With this extension, users can change the background, text, and element colors for better readability, accessibility, or style. Great for dark mode enthusiasts or anyone looking to personalize their browsing experience.",
     technologies: [
@@ -237,15 +236,34 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Carousel */}
         <div className="flex flex-col max-w-6xl gap-8 mx-auto md:flex-row md:items-center">
           {/* Left: Image */}
-          <div className="relative flex-shrink-0 w-full h-64 overflow-hidden rounded-lg md:w-1/2 md:h-96 bg-gradient-to-tr from-blue-200 to-blue-50 border border-white/10 shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
+          {/* Image Container with Exact Transparency Checkerboard Pattern */}
+          <div className="relative flex-shrink-0 w-full h-64 overflow-hidden rounded-lg md:w-1/2 md:h-96 border border-text-primary/20 shadow-[0_0_30px_rgba(59,130,246,0.25)] transition-all duration-300 hover:shadow-[0_0_50px_rgba(59,130,246,0.5)]">
+            {/* Dark Gray Checkerboard Background (exact match to image) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `
+        linear-gradient(45deg, #2a2a2a 25%, transparent 25%), 
+        linear-gradient(-45deg, #2a2a2a 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #2a2a2a 75%), 
+        linear-gradient(-45deg, transparent 75%, #2a2a2a 75%)`,
+                backgroundColor: "#3a3a3a",
+                backgroundSize: "16px 16px",
+                backgroundPosition: "0 0, 0 8px, 8px -8px, -8px 0px",
+              }}
+            ></div>
+
+            {/* Subtle vignette effect to match the image */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/20"></div>
+
+            {/* Actual Image */}
             <Image
               src={projects[current].imageUrl}
               alt={projects[current].title}
               fill
-              className="object-cover"
+              className="relative z-10 object-contain"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
               priority
             />
