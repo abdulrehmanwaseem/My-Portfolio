@@ -211,7 +211,7 @@ const About = () => {
           >
             <div className="relative w-full max-w-xs mx-auto overflow-hidden border-4 rounded-full shadow-xl aspect-square border-primary">
               <Image
-                src="/images/Abdul_Rehman.jpeg"
+                src="/images/abdul-rehman.jpeg"
                 alt="Professional headshot of Abdul Rehman"
                 fill
                 sizes="(max-width: 768px) 100vw, 320px"
