@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Code,
-  ExternalLink,
-  Github,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
