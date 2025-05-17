@@ -62,7 +62,7 @@ const TechIcons = () => {
 const Landing = () => {
   return (
     <section id="home" className="relative pt-24 overflow-hidden section">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl pt-10 mx-auto md:pt-0">
         <div className="text-center">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
@@ -94,8 +94,8 @@ const Landing = () => {
               <span>View Projects</span>
             </a>
             <a
-              href="/docs/Abdul_Rehman_CV.pdf"
-              download="Abdul_Rehman_CV.pdf"
+              href="/docs/abdul-rehman-cv.pdf"
+              download="abdul-rehman-cv.pdf"
               className="flex items-center gap-2 bg-transparent border btn border-primary text-primary hover:bg-primary hover:text-background"
               onClick={() => {
                 const trackDownload = () => {
