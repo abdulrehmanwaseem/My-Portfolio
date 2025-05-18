@@ -1,13 +1,15 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
-  Github as GitHub,
-  Linkedin,
   Mail,
   Send,
   MapPin,
   Phone,
+  Github as GitHub,
+  Linkedin,
 } from "lucide-react";
+
+const GETFORM_ENDPOINT = "https://getform.io/f/adrgynqa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,25 +25,30 @@ const Contact = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formRef.current) return;
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const payload = new FormData(formRef.current);
+    try {
+      const res = await fetch(GETFORM_ENDPOINT, {
+        method: "POST",
+        body: payload,
+      });
+      if (!res.ok) throw new Error("Submission failed");
       setFormSubmitted(true);
       setFormData({ name: "", email: "", message: "" });
-
-      // Reset form submission status after 5 seconds
+      formRef.current.reset();
       setTimeout(() => setFormSubmitted(false), 5000);
-    }, 1500);
+    } catch {
+      alert("Oops! Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -115,7 +122,17 @@ const Contact = () => {
                 </p>
               </div>
             ) : (
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+              <form
+                ref={formRef}
+                onSubmit={handleSubmit}
+                action={GETFORM_ENDPOINT}
+                method="POST"
+                className="space-y-4"
+              >
+                {/* honeypot */}
+                <input type="hidden" name="_gotcha" value="" />
+
+                {/* Name */}
                 <div>
                   <label
                     htmlFor="name"
@@ -134,6 +151,7 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* Email */}
                 <div>
                   <label
                     htmlFor="email"
@@ -152,6 +170,7 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* Message */}
                 <div>
                   <label
                     htmlFor="message"
@@ -197,30 +216,27 @@ const Contact = () => {
               <h3 className="mb-6 text-2xl font-bold text-text-primary">
                 Contact Information
               </h3>
-
               <div className="space-y-4">
-                {contactInfo.map((item, index) => (
-                  <div key={index} className="flex items-start">
+                {contactInfo.map((item, i) => (
+                  <div key={i} className="flex items-start">
                     <div className="p-2 mr-4 rounded-full bg-secondary">
                       {item.icon}
                     </div>
                     <div className="flex-1 min-w-0">
-                      {" "}
-                      {/* Added min-w-0 and flex-1 */}
                       <h4 className="text-sm font-medium text-text-secondary">
                         {item.title}
                       </h4>
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="break-all transition-colors text-text-primary hover:text-primary" /* Added break-all */
+                          className="break-all transition-colors text-text-primary hover:text-primary"
                         >
                           {item.value}
                         </a>
                       ) : (
                         <p className="break-all text-text-primary">
                           {item.value}
-                        </p> /* Added break-all */
+                        </p>
                       )}
                     </div>
                   </div>
@@ -232,11 +248,10 @@ const Contact = () => {
               <h3 className="mb-6 text-2xl font-bold text-text-primary">
                 Connect With Me
               </h3>
-
               <div className="space-y-4">
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social, i) => (
                   <a
-                    key={index}
+                    key={i}
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
