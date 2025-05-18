@@ -30,6 +30,7 @@ const experiences: ExperienceItem[] = [
       "Redux",
       "Node.js",
       "Express",
+      "Handontable Excel Table",
       "PostgreSQL",
       "Prisma",
       "JWT",
@@ -45,7 +46,14 @@ const experiences: ExperienceItem[] = [
       "Delivered structured online training sessions focused on full stack web development for university students",
       "Created comprehensive curriculum materials including (JS-LifeCycle) Graph, coding challenges and real-world project assignments that increased student engagement",
     ],
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "Web Development"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Redux",
+      "Web Development",
+    ],
   },
   {
     id: 3,
