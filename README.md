@@ -81,5 +81,8 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📫 Contact
 
-Live Link: https://abdulrehman-code.vercel.app
-Email: abdulrehmanwaseem2024@gmail.com
+For any questions or issues, feel free to contact [Abdul Rehman](mailto:abdulrehman.code1@gmail.com).
+
+## 🚨 Live Link
+
+https://abdulrehman-code.vercel.app
