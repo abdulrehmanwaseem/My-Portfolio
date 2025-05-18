@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Project {
   id: number;
@@ -43,6 +43,22 @@ const projects: Project[] = [
   },
   {
     id: 3,
+    title: "🛒 Shop Management System",
+    description:
+      "A comprehensive Shop Management System developed using the PERN stack. It features user authentication, invoice management, financial transaction logging, real-time dashboards, payment status tracking, inventory tracking, automatic cash updates and a dynamic dashboard that visualizes key business metrics.",
+    technologies: [
+      "React",
+      "Redux Tool Kit",
+      "Handsontable",
+      "Express.js",
+      "PostgreSQL",
+    ],
+    githubUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
+    demoUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
+    imageUrl: "/images/shop-management-system.png",
+  },
+  {
+    id: 4,
     title: "🌀 3D Pipe Screen Saver",
     description:
       "A 3D Pipe Screen Saver (Windows 95) built using Electron.js, Three.js, and React, powered by the Electron Vite build tool. This dynamic desktop application generates mesmerizing, evolving 3D pipe structures, taking you back to the nostalgic Windows 95 screensaver era with a modern touch.",
@@ -53,7 +69,7 @@ const projects: Project[] = [
     imageUrl: "/images/3d-pipe-screen-saver.png",
   },
   {
-    id: 4,
+    id: 5,
     title: "📝 Blogs App (NestJS-GraphQL-Next.js)",
     description:
       "A full-stack, industry-standard application using NestJS (Prisma + GraphQL) for the backend and Next.js for the frontend. Performant API layer. Security is enforced with JWT-based authentication and optional two-factor authentication (2FA) and seamless QR-code for Google Authenticator. It follows secure architecture.",
@@ -72,7 +88,7 @@ const projects: Project[] = [
     imageUrl: "/images/nestjs-prisma-graphql-next.js.png",
   },
   {
-    id: 5,
+    id: 6,
     title: "🏭 Oil Refinery Platform",
     description:
       "This is an interactive 3D visualization demo for an oil refinery platform, designed to showcase the potential of a larger-scale industrial monitoring system. The demo provides a realistic preview of how a comprehensive oil refinery monitoring and management system could function. Featuring realistic water physics and dynamic lighting.",
@@ -87,7 +103,7 @@ const projects: Project[] = [
     imageUrl: "/images/oil-refinery-platform.png",
   },
   {
-    id: 6,
+    id: 7,
     title: "⚡ React19 Serverside Kit",
     description:
       "A minimal and modern React 19 Server-Side Rendering (SSR) starter using Vite, TypeScript, Tailwind CSS, and Express. This template leverages React 19's new streaming SSR API with renderToPipeableStream for optimized performance. Perfect for learning and building SSR-based applications with React.",
@@ -102,22 +118,7 @@ const projects: Project[] = [
     demoUrl: "https://github.com/abdulrehmanwaseem/React19-Serverside-Kit",
     imageUrl: "/images/react19-serverside-kit.png",
   },
-  {
-    id: 7,
-    title: "🛒 Shop Management System",
-    description:
-      "A comprehensive Shop Management System developed using the PERN stack. It features user authentication, invoice management, financial transaction logging, real-time dashboards, payment status tracking, inventory tracking, automatic cash updates and a dynamic dashboard that visualizes key business metrics.",
-    technologies: [
-      "React",
-      "Redux Tool Kit",
-      "Handsontable",
-      "Express.js",
-      "PostgreSQL",
-    ],
-    githubUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
-    demoUrl: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
-    imageUrl: "/images/shop-management-system.png",
-  },
+
   {
     id: 8,
     title: "🚀 NestJS Microservices Auto Decorators",
@@ -203,6 +204,15 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
+  if (typeof window === "undefined") return;
+
+  useEffect(() => {
+    projects.forEach((project) => {
+      const img = new window.Image();
+      img.src = project.imageUrl;
+    });
+  }, []);
+
   const [current, setCurrent] = useState(0);
 
   const prevProject = () => {
@@ -256,7 +266,8 @@ const Projects = () => {
             <Image
               key={projects[current].imageUrl}
               src={projects[current].imageUrl}
-              priority
+              priority={projects[current].id === 1}
+              loading="eager"
               fill
               alt={projects[current].title}
               className="relative z-10 object-contain"
