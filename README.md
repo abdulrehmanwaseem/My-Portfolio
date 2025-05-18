@@ -7,9 +7,6 @@ A modern, interactive portfolio website built with Next.js and Three.js, featuri
   <img src="https://github.com/user-attachments/assets/4e4cf6f8-efec-4787-a2ad-85f9955b6449" width="50%" />
 </p>
 
-![Screenshot 2025-05-18 134353](https://github.com/user-attachments/assets/472f9f46-88a6-4d12-8191-08eca2e53c1b)
-![image]()
-
 
 ## ✨ Features
 
