@@ -2,8 +2,6 @@
 
 A modern, interactive portfolio website built with Next.js and Three.js, featuring stunning 3D animations and smooth transitions.
 
-![Portfolio Preview]("https://github.com/user-attachments/assets28709176-22d4-4875-8f61-48f8b77e937b")
-
 ## ✨ Features
 
 - 🎨 Modern and responsive design
