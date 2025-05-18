@@ -14,42 +14,56 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    role: "Senior Developer",
-    company: "TechNova",
-    duration: "2023 - Present",
+    role: "POS Software Developer",
+    company: "Self-Employed",
+    duration: "Nov 2023 - Apr 2024",
     description: [
-      "Lead the development of a major e-commerce platform serving 100K+ monthly users",
-      "Implemented CI/CD pipelines reducing deployment time by 40%",
-      "Mentored junior developers and conducted code reviews",
-      "Optimized database queries resulting in 60% faster page loads",
+      "Built a comprehensive Shop Management System using the PERN stack",
+      "Implemented user authentication, invoice management, financial transaction logging, real-time dashboards, and inventory tracking",
+      "Developed customer and vendor management with complete transaction history",
+      "Created payment status tracking system with automatic updates",
+      "Built responsive UI with full CRUD operations via RESTful API",
+      "Weekly improvements and new features to enhance usability",
     ],
-    technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker"],
+    technologies: [
+      "React",
+      "Redux",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "JWT",
+    ],
   },
   {
     id: 2,
-    role: "Full Stack Developer",
-    company: "WebSolutions Inc.",
-    duration: "2021 - 2023",
+    role: "Web Development Instructor",
+    company: "Self-Employed (University-Level-Students  )",
+    duration: "May 2024 - Jun 2025",
     description: [
-      "Developed and maintained multiple client web applications",
-      "Created RESTful APIs and microservices architecture",
-      "Implemented authentication systems and security best practices",
-      "Collaborated with design team to create responsive UI components",
+      "Taught HTML, CSS, JavaScript, React.js with hands-on project-based learning",
+      "Delivered structured online training sessions focused on full stack web development for university students",
+      "Created comprehensive curriculum materials including (JS-LifeCycle) Graph, coding challenges and real-world project assignments that increased student engagement",
     ],
-    technologies: ["React", "Express", "PostgreSQL", "TypeScript", "Redis"],
+    technologies: ["HTML", "CSS", "JavaScript", "React.js", "Web Development"],
   },
   {
     id: 3,
-    role: "Frontend Developer",
-    company: "Digital Creations",
-    duration: "2019 - 2021",
+    role: "Freelancing & IT Skills Trainer",
+    company: "E.Zone Academy",
+    duration: "Mar 2025 - Jul 2025",
     description: [
-      "Built interactive user interfaces using React and Redux",
-      "Worked with design team to implement pixel-perfect layouts",
-      "Optimized application performance and loading times",
-      "Integrated third-party APIs and payment gateways",
+      "Conducted in-person workshops and training on how to start and grow a freelancing career",
+      "Taught students how to build freelance profiles on platforms like Upwork and Fiverr, write winning proposals, and manage client relationships",
+      "Mentored over 25+ aspiring students with individualized feedback, resulting in securing their first client within 3 months",
     ],
-    technologies: ["React", "Redux", "SASS", "Webpack", "Jest"],
+    technologies: [
+      "Freelancing",
+      "Upwork",
+      "Fiverr",
+      "Client Management",
+      "Proposal Writing",
+    ],
   },
 ];
 
@@ -157,7 +171,7 @@ const TimelineCanvas = ({
                     ? "bg-primary text-background scale-110"
                     : "bg-secondary text-text-primary hover:bg-secondary/80"
                 }`}
-                style={{ minWidth: "140px", textAlign: "center" }}
+                style={{ minWidth: "180px", textAlign: "center" }}
               >
                 {experiences[index].duration}
               </div>
