@@ -1,13 +1,13 @@
-import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
-  Mail,
-  Send,
-  MapPin,
-  Phone,
   Github as GitHub,
   Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
 } from "lucide-react";
+import { useRef, useState } from "react";
 
 const GETFORM_ENDPOINT = "https://getform.io/f/adrgynqa";
 
