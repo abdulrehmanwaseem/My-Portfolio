@@ -214,6 +214,7 @@ const About = () => {
                 src="/images/abdul-rehman.jpeg"
                 alt="Professional headshot of Abdul Rehman"
                 fill
+                priority
                 sizes="(max-width: 768px) 100vw, 320px"
                 quality={90}
                 className="object-cover"

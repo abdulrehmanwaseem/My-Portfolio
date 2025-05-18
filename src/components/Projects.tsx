@@ -254,12 +254,13 @@ const Projects = () => {
 
             {/* Actual Image */}
             <Image
+              key={projects[current].imageUrl}
               src={projects[current].imageUrl}
-              alt={projects[current].title}
+              priority
               fill
+              alt={projects[current].title}
               className="relative z-10 object-contain"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-              priority
             />
           </div>
 
