@@ -204,15 +204,6 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
-  if (typeof window === "undefined") return;
-
-  useEffect(() => {
-    projects.forEach((project) => {
-      const img = new window.Image();
-      img.src = project.imageUrl;
-    });
-  }, []);
-
   const [current, setCurrent] = useState(0);
 
   const prevProject = () => {
@@ -222,6 +213,15 @@ const Projects = () => {
   const nextProject = () => {
     setCurrent((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
   };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    projects.forEach((project) => {
+      const img = new window.Image();
+      img.src = project.imageUrl;
+    });
+  }, []);
 
   return (
     <section id="projects" className="section">
