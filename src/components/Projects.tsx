@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Code,
+  ExternalLink,
+  Github,
+} from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -367,6 +373,24 @@ const Projects = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <a
+            href="https://github.com/abdulrehmanwaseem"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center mx-auto btn w-fit"
+          >
+            <Code className="w-5 h-5 mr-2" />
+            <span>View More on GitHub</span>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
