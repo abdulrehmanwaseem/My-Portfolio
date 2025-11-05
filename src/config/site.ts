@@ -29,9 +29,10 @@ export const MAIN_NAV: NavItem[] = [
   },
 ];
 
-export const GITHUB_USERNAME = "ncdai";
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com";
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";
+export const GITHUB_USERNAME = "abdulrehmanwaseem";
+export const SOURCE_CODE_GITHUB_REPO = "abdulrehmanwaseem/My-New-Portfolio";
+export const SOURCE_CODE_GITHUB_URL =
+  "https://github.com/abdulrehmanwaseem/chanhdai.com";
 
 export const UTM_PARAMS = {
   utm_source: "chanhdai.com",

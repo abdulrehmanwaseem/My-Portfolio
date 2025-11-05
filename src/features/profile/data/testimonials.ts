@@ -2,13 +2,12 @@ import type { Testimonial } from "../types/testimonials";
 
 export const TESTIMONIALS_1: Testimonial[] = [
   {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1783856060249595904/8TfcCN0r_400x400.jpg",
-    authorName: "Guillermo Rauch",
-    authorBio: "CEO @Vercel",
-    url: "https://x.com/rauchg/status/1978913158514237669",
+    authorAvatar: "https://avatars.githubusercontent.com/u/229644532",
+    authorName: "Faraz Mahmood",
+    authorBio: "Founder @forrof.io",
+    url: "https://www.forrof.io",
     quote:
-      "awesome. Love the components, especially slide-to-unlock. Great job",
+      "Your attention to detail and commitment to delivering quality work are truly commendable",
   },
   {
     authorAvatar:

@@ -31,35 +31,16 @@ export function TeckStack() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={tech.title}
+                    className="transition-transform hover:scale-110"
                   >
-                    {tech.theme ? (
-                      <>
-                        <Image
-                          src={`https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}-light.svg`}
-                          alt={`${tech.title} light icon`}
-                          width={32}
-                          height={32}
-                          className="hidden [html.light_&]:block"
-                          unoptimized
-                        />
-                        <Image
-                          src={`https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}-dark.svg`}
-                          alt={`${tech.title} dark icon`}
-                          width={32}
-                          height={32}
-                          className="hidden [html.dark_&]:block"
-                          unoptimized
-                        />
-                      </>
-                    ) : (
-                      <Image
-                        src={`https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}.svg`}
-                        alt={`${tech.title} icon`}
-                        width={32}
-                        height={32}
-                        unoptimized
-                      />
-                    )}
+                    <Image
+                      src={tech.iconUrl}
+                      alt={`${tech.title} icon`}
+                      width={32}
+                      height={32}
+                      unoptimized
+                      className="h-8 w-8 object-contain"
+                    />
                     <span className="sr-only">{tech.title}</span>
                   </a>
                 </SimpleTooltip>

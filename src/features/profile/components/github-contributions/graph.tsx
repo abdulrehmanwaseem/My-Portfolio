@@ -65,7 +65,7 @@ export function GitHubContributionGraph({
         <ContributionGraphTotalCount>
           {({ totalCount, year }) => (
             <div className="text-muted-foreground">
-              {totalCount.toLocaleString("en")} contributions in {year} on{" "}
+              {totalCount.toLocaleString("en")} contributions in {year + 1} on{" "}
               <a
                 className="font-medium underline underline-offset-4"
                 href={`https://github.com/${GITHUB_USERNAME}`}

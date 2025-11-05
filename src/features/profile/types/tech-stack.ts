@@ -1,11 +1,5 @@
 /**
  * A technology item displayed in the Tech Stack section.
- *
- * Icon file resolution:
- * - Default: /public/tech-stack-icons/[key].svg
- * - Themed (when `theme === true`):
- *   - Dark:  /public/tech-stack-icons/[key]-dark.svg
- *   - Light: /public/tech-stack-icons/[key]-light.svg
  */
 export type TechStack = {
   /** Unique identifier used to resolve icon files. */
@@ -16,6 +10,8 @@ export type TechStack = {
   href: string;
   /** Category tags used for grouping/filtering. */
   categories: string[];
+  /** CDN URL for the technology icon. */
+  iconUrl: string;
   /** If true, use theme-specific icons for dark/light mode. */
   theme?: boolean;
 };
