@@ -1,0 +1,150 @@
+---
+title: Testimonials Marquee
+description: A testimonials marquee component for showcasing user feedback in a scrolling format.
+image: https://assets.chanhdai.com/images/blog/testimonials-marquee.webp
+category: components
+icon: testimonials-marquee
+new: true
+createdAt: 2025-11-02
+updatedAt: 2025-11-02
+---
+
+<ComponentPreview
+  className="**:data-[slot=buttons]:pr-4 **:data-[slot=preview]:px-0"
+  name="testimonials-marquee-demo-01"
+  openInV0Url="https://chanhdai.com/r/testimonials-marquee-block-01.json"
+  codeCollapsible
+/>
+
+## Installation
+
+<CodeTabs className="gap-0">
+
+<TabsListInstallType />
+
+<TabsContent value="cli" className="[&>figure]:mb-0">
+
+```bash
+npx shadcn add @ncdai/testimonials-marquee
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies</Step>
+
+```bash
+npm install clsx tailwind-merge react-fast-marquee
+```
+
+<Step>Add a cn helper</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible={false}
+/>
+
+<Step>Copy and paste the following code into your project</Step>
+
+<ComponentSource
+  name="testimonials-marquee"
+  title="components/ncdai/testimonials-marquee.tsx"
+  showLineNumbers
+/>
+
+<ComponentSource
+  src="src/components/kibo-ui/marquee/index.tsx"
+  title="components/kibo-ui/marquee.tsx"
+  showLineNumbers
+/>
+
+<Step>Update the import paths to match your project setup</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Marquee,
+  MarqueeContent,
+  MarqueeFade,
+  MarqueeItem,
+} from "@/components/kibo-ui/marquee";
+
+import {
+  Testimonial,
+  TestimonialAuthor,
+  TestimonialAuthorBio,
+  TestimonialAuthorInfo,
+  TestimonialAuthorName,
+  TestimonialAvatar,
+  TestimonialAvatarImg,
+  TestimonialAvatarRing,
+  TestimonialQuote,
+  TestimonialVerifiedBadge,
+} from "@/components/ncdai/testimonials-marquee";
+```
+
+```tsx
+<Marquee>
+  <MarqueeFade />
+  <MarqueeFade />
+
+  <MarqueeContent>
+    <MarqueeItem>
+      <Testimonial>
+        <TestimonialQuote />
+
+        <TestimonialAuthor>
+          <TestimonialAvatar>
+            <TestimonialAvatarImg />
+            <TestimonialAvatarRing />
+          </TestimonialAvatar>
+
+          <TestimonialAuthorName>
+            <TestimonialVerifiedBadge />
+          </TestimonialAuthorName>
+
+          <TestimonialAuthorBio />
+        </TestimonialAuthor>
+      </Testimonial>
+    </MarqueeItem>
+    ...
+  </MarqueeContent>
+</Marquee>
+```
+
+## API Reference
+
+- [Marquee](https://www.kibo-ui.com/components/marquee)
+- [React FAST Marquee](https://www.react-fast-marquee.com)
+
+## Examples
+
+### Single Row
+
+<ComponentPreview
+  className="**:data-[slot=buttons]:pr-4 **:data-[slot=preview]:px-0"
+  name="testimonials-marquee-demo-01"
+  openInV0Url="https://chanhdai.com/r/testimonials-marquee-block-01.json"
+  codeCollapsible
+/>
+
+### Multiple Rows
+
+<ComponentPreview
+  className="**:data-[slot=buttons]:pr-4 **:data-[slot=preview]:px-0"
+  name="testimonials-marquee-demo-02"
+  openInV0Url="https://chanhdai.com/r/testimonials-marquee-block-02.json"
+  codeCollapsible
+/>

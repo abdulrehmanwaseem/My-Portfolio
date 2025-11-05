@@ -1,0 +1,176 @@
+---
+title: Slide to Unlock
+description: A sleek, interactive slider inspired by the classic iPhone OS "slide to unlock" gesture.
+image: https://assets.chanhdai.com/images/blog/slide-to-unlock.webp
+category: components
+icon: slide-to-unlock
+new: true
+createdAt: 2025-10-08
+updatedAt: 2025-10-09
+---
+
+<ComponentPreview
+  name="slide-to-unlock-demo-01"
+  openInV0Url="https://chanhdai.com/r/slide-to-unlock-block-01.json"
+  codeCollapsible
+/>
+
+> "awesome. Love the components, especially slide-to-unlock. Great job"<br/>
+> — [Guillermo Rauch](https://x.com/rauchg/status/1978913158514237669), CEO & Founder at [Vercel](https://vercel.com)
+
+## Installation
+
+<CodeTabs className="gap-0">
+
+<TabsListInstallType />
+
+<TabsContent value="cli" className="[&>figure]:mb-0">
+
+```bash
+npx shadcn add @ncdai/slide-to-unlock
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies</Step>
+
+```bash
+npm install motion clsx tailwind-merge
+```
+
+<Step>Add a cn helper</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible={false}
+/>
+
+<Step>Copy and paste the following code into your project</Step>
+
+<ComponentSource
+  name="shimmering-text"
+  title="components/ncdai/shimmering-text.tsx"
+  showLineNumbers
+/>
+
+<ComponentSource
+  name="slide-to-unlock"
+  title="components/ncdai/slide-to-unlock.tsx"
+  showLineNumbers
+/>
+
+<Step>Update the import paths to match your project setup</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  SlideToUnlock,
+  SlideToUnlockHandle,
+  SlideToUnlockText,
+  SlideToUnlockTrack,
+} from "@/components/ncdai/slide-to-unlock";
+
+import { ShimmeringText } from "@/component/ncdai/shimmering-text";
+```
+
+```tsx
+<SlideToUnlock>
+  <SlideToUnlockTrack>
+    <SlideToUnlockText>
+      <ShimmeringText />
+    </SlideToUnlockText>
+    <SlideToUnlockHandle />
+  </SlideToUnlockTrack>
+</SlideToUnlock>
+```
+
+## API Reference
+
+### SlideToUnlock
+
+The root component that provides context for all child components.
+
+| Prop          | Type         | Default | Description                                                  |
+| ------------- | ------------ | ------- | ------------------------------------------------------------ |
+| `handleWidth` | `number`     | `56`    | Width of the draggable handle in pixels.                     |
+| `onUnlock`    | `() => void` |         | Callback function triggered when the handle reaches the end. |
+| `className`   | `string`     |         | Additional CSS classes to apply to the root element.         |
+
+### SlideToUnlockTrack
+
+The container that holds the text and handle components.
+
+| Prop        | Type     | Description                                           |
+| ----------- | -------- | ----------------------------------------------------- |
+| `className` | `string` | Additional CSS classes to apply to the track element. |
+
+### SlideToUnlockText
+
+The text label that fades out as the handle is dragged.
+
+| Prop        | Type                                                         | Description                                                   |
+| ----------- | ------------------------------------------------------------ | ------------------------------------------------------------- |
+| `children`  | `ReactNode \| (props: { isDragging: boolean }) => ReactNode` | Text content or render function that receives dragging state. |
+| `className` | `string`                                                     | Additional CSS classes to apply to the text element.          |
+
+### SlideToUnlockHandle
+
+The draggable handle element.
+
+| Prop        | Type        | Default      | Description                                            |
+| ----------- | ----------- | ------------ | ------------------------------------------------------ |
+| `children`  | `ReactNode` | `ArrowRight` | Custom icon or content to display inside the handle.   |
+| `className` | `string`    |              | Additional CSS classes to apply to the handle element. |
+
+### ShimmeringText
+
+An animated text component that creates a shimmering effect by sequentially animating each character's color.
+
+| Prop        | Type      | Default | Description                                                                                  |
+| ----------- | --------- | ------- | -------------------------------------------------------------------------------------------- |
+| `text`      | `string`  |         | The text content to display with the shimmering effect.                                      |
+| `duration`  | `number`  | `1`     | The duration (in seconds) for each character's shimmer animation cycle.                      |
+| `isStopped` | `boolean` | `false` | Controls whether the animation is stopped. When true, characters return to their base color. |
+| `className` | `string`  |         | Additional CSS classes to apply to the root span element.                                    |
+
+## Examples
+
+### Default
+
+<ComponentPreview
+  className="mt-4"
+  name="slide-to-unlock-demo-01"
+  openInV0Url="https://chanhdai.com/r/slide-to-unlock-block-01.json"
+  codeCollapsible
+/>
+
+### Custom Color
+
+<ComponentPreview
+  className="mt-4"
+  name="slide-to-unlock-demo-02"
+  openInV0Url="https://chanhdai.com/r/slide-to-unlock-block-02.json"
+  codeCollapsible
+/>
+
+### Custom Handle
+
+<ComponentPreview
+  className="mt-4"
+  name="slide-to-unlock-demo-03"
+  openInV0Url="https://chanhdai.com/r/slide-to-unlock-block-03.json"
+  codeCollapsible
+/>
