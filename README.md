@@ -5,9 +5,9 @@ A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase
 Check out the live site: [abdulrehman-code](https://abdulrehman-code.vercel.app)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1759581475">
-  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1759581475">
-  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1759581475" alt="Screenshot">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/be67ffb8-2511-4f5c-912e-270266ef928a">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/609c66b3-4f89-46d5-8de9-0f8bf18529cb">
+  <img src="https://github.com/user-attachments/assets/609c66b3-4f89-46d5-8de9-0f8bf18529cb" alt="Screenshot">
 </picture>
 
 ## Overview
