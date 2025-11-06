@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { Suspense } from "react";
 import type { WebSite, WithContext } from "schema-dts";
 
 import { Providers } from "@/components/providers";

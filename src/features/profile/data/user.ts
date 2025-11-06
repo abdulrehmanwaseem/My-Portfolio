@@ -35,15 +35,15 @@ export const USER: User = {
     // website: "https://github.com/abdulrehmanwaseem",
   ],
   about: `
-Hello, World! I'm Abdul Rehman — a passionate Full Stack Developer whose journey began at age 14 in 9th grade. Now at 18, having completed 12th grade, I've transformed that early curiosity into expertise in modern web development, specializing in the MERN stack while mastering Next.js, NestJS, React Native, Electron, and 3D technologies.
+  Hello World! I am Abdul Rehman a passionate Full Stack Developer whose journey began at age 14 in 9th grade. Now at 18, having completed 12th grade, I've transformed that early curiosity into expertise in modern web development, specializing in the MERN stack while mastering Next.js, NestJS, React Native, Electron, and 3D technologies.
 
-What some might view as a limitation—my age—I see as my greatest advantage. Starting early has given me the freedom to learn, experiment, and build a foundation that sets me apart, combining practical experience with theoretical knowledge.
+  What some might view my age as a limitation But i see as my greatest advantage. Starting early has given me the freedom to learn, experiment and build a foundation that sets me apart, combining practical experience with theoretical knowledge.
 
-I specialize in building high-quality web, mobile, desktop, and 3D applications using React, TypeScript, Node.js, and modern technologies. From building a comprehensive Shop Management System using the PERN stack to creating immersive 3D games with Three.js and React Three Fiber, I love turning ideas into reality.
+  I specialize in building high-quality web, mobile, desktop, and 3D applications using React, TypeScript, Node.js, and modern technologies. From building a comprehensive Shop Management System using the PERN stack to creating immersive 3D games with Three.js and React Three Fiber, I love turning ideas into reality.
 
-Currently developing a SaaS Shop Management System and exploring System Design, I aim to eventually venture into AI. My mission remains clear: creating software that delivers exceptional user experiences while constantly adapting to stay at the forefront of technology.
+  Currently developing a SaaS Shop Management System and exploring System Design, I aim to eventually venture into AI. My mission remains clear: creating software that delivers exceptional user experiences while constantly adapting to stay at the forefront of technology.
 
-Let's connect and collaborate!
+  Let's connect and collaborate!
 `,
   avatar: "/images/me.png",
   ogImage: "/images/og-image.png",
