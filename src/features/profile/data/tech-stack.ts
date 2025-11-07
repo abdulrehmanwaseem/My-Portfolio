@@ -72,6 +72,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Language"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg",
+    theme: true,
   },
   {
     key: "react",
@@ -88,6 +89,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework", "Library"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
+    theme: true,
   },
   {
     key: "expressjs",
@@ -96,6 +98,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework", "Library"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+    theme: true,
   },
   {
     key: "nextjs2",
@@ -147,6 +150,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework", "Library"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg",
+    theme: true,
   },
   {
     key: "redux",
@@ -163,6 +167,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework", "Library"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+    theme: true,
   },
   {
     key: "pandas",
@@ -322,7 +327,6 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Tools", "AI"],
     iconUrl:
       "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
-    theme: true,
   },
   {
     key: "freecodecamp",
@@ -337,6 +341,7 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.udemy.com/",
     categories: ["Others"],
     iconUrl: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+    theme: true,
   },
   {
     key: "upwork",
@@ -385,6 +390,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Others"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+    theme: true,
   },
   {
     key: "render",
@@ -400,5 +406,6 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Others"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    theme: true,
   },
 ];

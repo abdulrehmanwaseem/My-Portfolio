@@ -1,0 +1,201 @@
+---
+title: Shop Management System - Full-Stack POS Solution
+description: A comprehensive Point of Sale system built with the PERN stack, featuring invoice management, real-time dashboards, and inventory tracking.
+image: /images/blogs/shop-management-system.png
+category: projects
+new: true
+createdAt: 2024-05-10
+updatedAt: 2024-10-20
+---
+
+Managing a small retail business involves juggling invoices, inventory, customers, and financial records — all while trying to serve customers efficiently. I built a **Shop Management System** to solve these exact challenges, creating a full-featured POS that streamlines daily operations.
+
+<FramedImage
+  src="/images/blogs/shop-management-system.png"
+  alt="Shop Management System Dashboard"
+/>
+
+## The Challenge
+
+Traditional shop management involves:
+
+- Manual invoice creation and tracking
+- Spreadsheet-based inventory management
+- Disconnected customer and vendor records
+- No real-time financial visibility
+- Difficulty tracking payment statuses
+
+Small businesses deserve better tools without enterprise-level costs.
+
+## The Solution
+
+**Shop Management System** is a comprehensive POS built with the **PERN stack** (PostgreSQL, Express, React, Node.js) that handles everything from invoicing to inventory tracking.
+
+### Core Features
+
+**📊 Real-Time Dashboard**
+
+Get instant insights into your business:
+
+- Total inventory count and stock status
+- Daily, weekly, and monthly sales/revenue
+- Purchase and expense tracking
+- Visual performance indicators
+
+**🧾 Complete Invoice Management**
+
+Create, download, and print invoices for:
+
+- Sales transactions
+- Purchase orders
+- Business expenses
+- Track payment status: Paid, Partial, Unpaid
+
+**📦 Smart Inventory Tracking**
+
+- Real-time stock level monitoring
+- Automated low-stock alerts
+- Product details and categorization
+- Reorder suggestions
+
+**👥 Customer & Vendor Management**
+
+- Store contact information (names, phones, addresses)
+- Track one-time and recurring relationships
+- Access complete transaction history
+- Better communication and service
+
+**💰 Financial Transaction Logging**
+
+- Daily/weekly/monthly balance tracking
+- Complete audit trail of all transactions
+- Expected vs. actual balance reports
+- Identify discrepancies quickly
+
+**⚡ Payment Status Tracking**
+
+- Automatic payment status updates
+- Alerts for unpaid invoices
+- Partial payment handling
+- Avoid overdue payment issues
+
+## Tech Stack
+
+```tsx
+// Frontend
+- React with Redux for state management
+- Responsive, intuitive UI design
+- Client-side routing and validation
+
+// Backend
+- Node.js + Express RESTful API
+- JWT-based authentication
+- Comprehensive CRUD operations
+
+// Database
+- PostgreSQL for reliable data storage
+- Prisma ORM for type-safe queries
+- Optimized database schema
+
+// Security
+- JSON Web Tokens (JWT)
+- Secure password hashing
+- Role-based access control
+```
+
+## Architecture Highlights
+
+**Type Safety Throughout**
+
+- TypeScript on both frontend and backend
+- Prisma schema for database type generation
+- Redux toolkit for predictable state management
+
+**Performance Optimized**
+
+- Efficient database queries with Prisma
+- Optimistic UI updates with Redux
+- Lazy loading and code splitting
+
+**Scalable Design**
+
+- RESTful API architecture
+- Modular component structure
+- Environment-based configuration
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/abdulrehmanwaseem/Shop-Management-System.git
+
+# Install client dependencies
+cd client
+npm install
+
+# Install server dependencies
+cd ../server
+npm install
+
+# Set up environment variables
+# Create .env files in both client and server directories
+
+# Run the application
+npm run dev
+```
+
+## Environment Configuration
+
+**Client (.env)**
+
+```bash
+VITE_SERVER_BASE_URL=your_server_api_url
+```
+
+**Server (.env)**
+
+```bash
+PORT=your_port_value
+DATABASE_URL=your_database_url
+JWT_SECRET=your_jwt_secret_value
+JWT_EXPIRES_IN=your_jwt_expires_in_value
+```
+
+## Continuous Improvement
+
+This project is actively maintained with:
+
+- Weekly bug fixes and improvements
+- New reporting features
+- Performance optimizations
+- Enhanced user experience
+
+Since initial development, the system has undergone rigorous testing and regular updates to ensure reliability and add requested features.
+
+## Live Demo
+
+Check out the live application: [shop-management-system-pos.vercel.app](https://shop-management-system-pos.vercel.app)
+
+## Open Source
+
+The project is available on [GitHub](https://github.com/abdulrehmanwaseem/Shop-Management-System) under the MIT License. Contributions, feedback, and feature requests are welcome!
+
+## Real-World Impact
+
+This system demonstrates:
+
+- Full-stack development capabilities
+- Database design and optimization
+- Authentication and authorization
+- State management at scale
+- Production-ready deployment
+
+Perfect for small retail businesses looking for an affordable, feature-rich POS solution.
+
+## Conclusion
+
+Building this Shop Management System taught me valuable lessons about designing software for real-world business needs — balancing feature richness with usability, ensuring data integrity, and creating interfaces that non-technical users can navigate confidently.
+
+If you're looking for a comprehensive POS solution or want to see full-stack PERN development in action, check out the live demo and source code!
+
+Built with ❤️ for small businesses.

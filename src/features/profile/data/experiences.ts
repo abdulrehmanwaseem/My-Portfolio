@@ -2,54 +2,73 @@ import type { Experience } from "../types/experiences";
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: "simplamo",
-    companyName: "Simplamo Enterprise JSC",
-    companyLogo: "https://assets.chanhdai.com/images/companies/simplamo.webp",
+    id: "forrof",
+    companyName: "Forrof.io",
+    companyLogo: "https://avatars.githubusercontent.com/u/229644532",
     positions: [
       {
-        id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
-        title: "Senior Frontend Developer",
+        id: "forrof-fullstack-dev",
+        title: "Senior Fullstack Developer",
         employmentPeriod: {
-          start: "10.2022",
+          start: "07.2025",
         },
         employmentType: "Full-time",
         icon: "code",
-        description: `- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.
-- Develop [Whiteboards](https://help.simplamo.com/features/whiteboard/overview?ref=IN-926722) with real-time collaboration.
-- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo with seamless integration.
-- Develop interactive chart and analytics widgets for the [Dashboard](https://help.simplamo.com/features/dashboard/overview) to enhance data visualization.
-- Develop and maintain core features to enhance functionality and user experience.
-- Ensure UI/UX consistency and adherence to standards.
-- Implement robust frontend solutions for web and mobile platforms.
-- Analyze technical capabilities and provide optimal solutions.`,
+        description: `- Develop scalable SaaS applications using modern web technologies.
+- Build cross-platform applications with React Native and Electron.
+- Architect and develop full-stack solutions with the MERN stack.
+- Design and implement RESTful APIs with Node.js and Express.
+- Build responsive, performant frontend applications with Next.js and React.
+- Implement real-time features with WebSockets and event-driven architecture.
+- Integrate third-party APIs and services for enhanced functionality.
+- Collaborate with cross-functional teams in a remote environment.
+- Optimize application performance and ensure code quality.`,
         skills: [
-          "TypeScript",
-          "Next.js",
+          "MERN Stack",
+          "React.js",
           "React Native",
-          "MobX",
-          "MobX-State-Tree",
-          "Tailwind CSS",
-          "Dify",
-          "Zalo Mini App",
-          "Agile",
-          "Teamwork",
-          "Research",
+          "Next.js",
+          "NestJS",
+          "Electron",
+          "TypeScript",
+          "MongoDB",
+          "Express.js",
+          "PostgreSQL",
+          "RESTful APIs",
+          "SaaS Development",
+          "Remote Work",
           "Problem-solving",
         ],
         isExpanded: true,
       },
       {
-        id: "cedd7adb-4118-4085-9983-ae00530b49e2",
-        title: "UI Design Lead",
+        id: "forrof-3d-specialist",
+        title: "3D Web Specialist",
         employmentPeriod: {
-          start: "10.2022",
+          start: "07.2025",
         },
         employmentType: "Full-time",
-        icon: "design",
-        description: `- Ensure UI/UX consistency and high-quality standards.
-- Design intuitive, user-focused interfaces aligned with business goals.
-- Define and establish a cohesive UI style for Simplamo.`,
-        skills: ["Creativity", "UI/UX Design", "Figma"],
+        icon: "code",
+        description: `
+- Implement immersive 3D web experiences using Three.js and WebGL.
+- Create interactive 3D visualizations and animations for web applications.
+- Optimize 3D rendering performance for smooth user experiences.
+- Develop custom shaders and materials for advanced visual effects.
+- Integrate 3D models and assets from Blender and other design tools.
+- Build responsive 3D interfaces that work across devices.
+- Implement physics simulations and interactive 3D controls.`,
+        skills: [
+          "Three.js",
+          "WebGL",
+          "Rapier Physics Engine",
+          "3D Web Development",
+          "React Three Fiber",
+          "GLSL Shaders",
+          "Blender",
+          "3D Modeling",
+          "Performance Optimization",
+          "Interactive Design",
+        ],
       },
     ],
     isCurrentEmployer: true,
@@ -239,13 +258,13 @@ In-house Project: [ZaDark](https://zadark.com)
     positions: [
       {
         id: "c47f5903-88ae-4512-8a50-0b91b0cf99b6",
-        title: "University of Science — VNUHCM",
+        title: "University of Sindh — Jamshoro",
         employmentPeriod: {
-          start: "08.2018",
-          end: "2026",
+          start: "01.2026",
+          end: "2030",
         },
         icon: "education",
-        description: `- Currently studying for a Bachelor's degree in Information Systems.
+        description: `- Currently studying for a Bachelor's degree in Data Science.
 - Language Proficiency: B1 English Level.
 - Achieved several awards, including:
   - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
@@ -267,10 +286,10 @@ In-house Project: [ZaDark](https://zadark.com)
       },
       {
         id: "70131ed8-36d9-4e54-8c78-eaed18240eca",
-        title: "Ly Tu Trong High School for the Gifted — Can Tho City",
+        title: "FG Degree College Cant - Hyderabad",
         employmentPeriod: {
-          start: "08.2015",
-          end: "06.2018",
+          start: "08.2023",
+          end: "06.2025",
         },
         icon: "education",
         description: `- Student of the Specialized Computer Science Program.
@@ -301,10 +320,10 @@ In-house Project: [ZaDark](https://zadark.com)
       },
       {
         id: "36c4c6fb-02d0-48c0-8947-fda6e9a24af7",
-        title: "Thuan Hung Secondary School",
+        title: "New Banat Higher Secondary School",
         employmentPeriod: {
           start: "08.2011",
-          end: "06.2015",
+          end: "06.2023",
         },
         icon: "education",
         description: `- Recognized as the most outstanding student of the district.

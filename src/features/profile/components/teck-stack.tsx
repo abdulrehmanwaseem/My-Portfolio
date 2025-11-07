@@ -39,7 +39,10 @@ export function TeckStack() {
                       width={32}
                       height={32}
                       unoptimized
-                      className="h-8 w-8 object-contain"
+                      className={cn(
+                        "h-8 w-8 object-contain",
+                        tech.theme && "dark:invert"
+                      )}
                     />
                     <span className="sr-only">{tech.title}</span>
                   </a>
