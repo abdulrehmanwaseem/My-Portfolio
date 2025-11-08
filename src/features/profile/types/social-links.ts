@@ -6,4 +6,6 @@ export type SocialLink = {
   description?: string;
   /** External profile URL opened when the item is clicked. */
   href: string;
+
+  padding?: boolean;
 };

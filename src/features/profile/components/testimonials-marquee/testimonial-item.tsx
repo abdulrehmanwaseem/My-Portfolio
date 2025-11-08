@@ -18,6 +18,7 @@ export function TestimonialItem({
   authorBio,
   url,
   quote,
+  theme,
 }: TestimonialType) {
   return (
     <Testimonial>
@@ -27,7 +28,11 @@ export function TestimonialItem({
 
       <TestimonialAuthor className="border-edge">
         <TestimonialAvatar>
-          <TestimonialAvatarImg src={authorAvatar} alt={authorName} />
+          <TestimonialAvatarImg
+            theme={theme}
+            src={authorAvatar}
+            alt={authorName}
+          />
           <TestimonialAvatarRing />
         </TestimonialAvatar>
 

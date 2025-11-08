@@ -23,4 +23,6 @@ export type Certification = {
    * Public verification URL or link to the certificate document. Used as the anchor href.
    */
   credentialURL: string;
+
+  theme?: boolean;
 };

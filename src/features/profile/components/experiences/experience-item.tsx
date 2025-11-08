@@ -8,15 +8,15 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
   return (
     <div className="screen-line-after space-y-4 py-4">
       <div className="flex items-center gap-3">
-        <div className="flex size-6 shrink-0 items-center justify-center select-none">
+        <div className="flex size-7 shrink-0 items-center justify-center select-none">
           {experience.companyLogo ? (
             <Image
               src={experience.companyLogo}
               alt={experience.companyName}
-              width={24}
-              height={24}
+              width={28}
+              height={28}
               quality={100}
-              className="rounded-full"
+              className={`rounded-full ${experience.theme && "not-dark:invert"}`}
               unoptimized
               aria-hidden
             />

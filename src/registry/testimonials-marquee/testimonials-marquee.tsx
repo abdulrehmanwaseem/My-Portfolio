@@ -71,12 +71,17 @@ export function TestimonialAvatarImg({
   className,
   src,
   alt,
+  theme,
   ...props
-}: React.ComponentProps<"img">) {
+}: React.ComponentProps<"img"> & { theme?: boolean }) {
   return (
     <img
       data-slot="avatar-img"
-      className={cn("size-8 rounded-full select-none", className)}
+      className={cn(
+        theme && "not-dark:invert",
+        "size-8 rounded-full select-none",
+        className
+      )}
       src={src}
       alt={alt}
       {...props}

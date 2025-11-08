@@ -15,6 +15,7 @@ export function CertificationItem({
 }: {
   className?: string;
   certification: Certification;
+  theme?: boolean;
 }) {
   return (
     <a
@@ -30,7 +31,7 @@ export function CertificationItem({
           width={32}
           height={32}
           quality={100}
-          className="mx-4 flex size-6 shrink-0 select-none"
+          className={`mx-4 flex size-6 shrink-0 select-none ${certification.theme && "not-dark:invert"}`}
           unoptimized
           aria-hidden
         />

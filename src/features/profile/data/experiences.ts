@@ -4,7 +4,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "forrof",
     companyName: "Forrof.io",
-    companyLogo: "https://avatars.githubusercontent.com/u/229644532",
+    companyLogo: "/images/forrof.svg",
     positions: [
       {
         id: "forrof-fullstack-dev",
@@ -17,10 +17,9 @@ export const EXPERIENCES: Experience[] = [
         description: `- Develop scalable SaaS applications using modern web technologies.
 - Build cross-platform applications with React Native and Electron.
 - Architect and develop full-stack solutions with the MERN stack.
-- Design and implement RESTful APIs with Node.js and Express.
+- Design and implement RESTful APIs with Node.js, Express.js and NestJS
 - Build responsive, performant frontend applications with Next.js and React.
-- Implement real-time features with WebSockets and event-driven architecture.
-- Integrate third-party APIs and services for enhanced functionality.
+- Integrate third-party APIs and real-time features using WebSockets.
 - Collaborate with cross-functional teams in a remote environment.
 - Optimize application performance and ensure code quality.`,
         skills: [
@@ -51,7 +50,6 @@ export const EXPERIENCES: Experience[] = [
         icon: "code",
         description: `
 - Implement immersive 3D web experiences using Three.js and WebGL.
-- Create interactive 3D visualizations and animations for web applications.
 - Optimize 3D rendering performance for smooth user experiences.
 - Develop custom shaders and materials for advanced visual effects.
 - Integrate 3D models and assets from Blender and other design tools.
@@ -72,133 +70,70 @@ export const EXPERIENCES: Experience[] = [
       },
     ],
     isCurrentEmployer: true,
+    theme: true,
   },
   {
-    id: "quaric",
-    companyName: "Quaric Co., Ltd.",
-    companyLogo: "https://assets.chanhdai.com/images/companies/quaric.svg",
+    id: "ezone-academy",
+    companyName: "E.Zone Academy",
+    companyLogo:
+      "https://ui-avatars.com/api/?name=E.Zone+Academy&background=4F46E5&color=fff&size=200",
     positions: [
       {
-        id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
-        title: "Design Engineer",
+        id: "ezone-freelancing-trainer",
+        title: "Freelancing & IT Skills Trainer",
         employmentPeriod: {
-          start: "03.2024",
+          start: "03.2025",
+          end: "06.2025",
         },
         employmentType: "Part-time",
-        icon: "code",
-        description: `- Created Quaric Brand Identity.
-- Created the Quaric Design System to standardize design practices and accelerate development.
-
-In-house Project: [Quaric Website](https://quaric.com)
-- Designed the UI/UX for Quaric Website, delivering a seamless experience.
-- Developed online ordering to streamline purchases.
-- Integrated VNPAY-QR for secure transactions.
-- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.
-
-In-house Project: [ZaDark](https://zadark.com)
-- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.
-- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox — with 20k+ active users via Chrome Web Store (as of Sep 2025).`,
+        icon: "education",
+        description: `- Conducted in-person workshops and training on how to start and grow a freelancing career.
+- Taught students how to build freelance profiles on platforms like Upwork and Fiverr.
+- Trained students on writing winning proposals and managing client relationships effectively.
+- Provided hands-on guidance on freelancing best practices and career development.`,
         skills: [
-          "Next.js",
-          "Strapi",
-          "Auth0",
-          "VNPAY-QR",
-          "Docker",
-          "NGINX",
-          "Google Cloud",
-          "Docusaurus",
-          "Extension",
-          "UI/UX Design",
-          "UX Writing",
-          "Design System",
-          "Brand Design",
-          "Figma",
-          "Research",
+          "Training & Mentoring",
+          "Freelancing",
+          "Upwork",
+          "Fiverr",
+          "Client Management",
+          "Professional Development",
+          "Communication Skills",
+          "Career Coaching",
         ],
-        isExpanded: true,
-      },
-      {
-        id: "991692c4-7d02-4666-8d31-933c4831768d",
-        title: "Founder & Director",
-        employmentPeriod: {
-          start: "03.2024",
-        },
-        employmentType: "Part-time",
-        icon: "idea",
-        description: `- Lead and manage the company's strategy.
-- Oversee technical teams and product development.
-- Manage relationships with customers and partners.`,
-        skills: ["Business Ownership", "Business Law", "Business Tax"],
       },
     ],
-    isCurrentEmployer: true,
   },
   {
-    id: "tungtung",
-    companyName: "Tung Tung JSC",
-    companyLogo: "https://assets.chanhdai.com/images/companies/tungtung.webp",
+    id: "web-dev-instructor",
+    companyName: "Frontend Development Course",
+    companyLogo:
+      "https://ui-avatars.com/api/?name=Frontend+Course&background=10B981&color=fff&size=200",
     positions: [
       {
-        id: "3e831244-8d8c-41e2-b2ce-7f3946956afd",
-        title: "Web Developer",
+        id: "web-dev-instructor-online",
+        title: "Web Development Instructor",
         employmentPeriod: {
-          start: "2020",
-          end: "2022",
+          start: "04.2024",
+          end: "06.2025",
         },
-        employmentType: "Full-time",
-        description: `- Built a scalable design system for consistency and efficiency.
-- Built a complex rich-text editor based on ProseMirror and Slate for customizable content creation.
-- Integrated APIs with the Backend Team to enhance functionality.`,
-        icon: "code",
+        employmentType: "Part-time",
+        icon: "education",
+        description: `- Taught HTML, CSS, JavaScript, and React.js with hands-on project-based learning.
+- Delivered structured online training sessions focused on full-stack web development.
+- Provided one-on-one mentoring to university students pursuing web development careers.
+- Designed curriculum covering modern web development practices and industry standards.`,
         skills: [
-          "React",
-          "Redux",
-          "Storybook",
-          "Lerna",
-          "Agile",
-          "Teamwork",
-          "Research",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React.js",
+          "Online Teaching",
+          "Curriculum Design",
+          "Project-Based Learning",
+          "Mentoring",
+          "Full-Stack Development",
         ],
-      },
-      {
-        id: "13bd34c3-db84-4fad-8132-a6c89a42957e",
-        title: "Mobile Developer",
-        employmentPeriod: {
-          start: "2019",
-          end: "2020",
-        },
-        employmentType: "Full-time",
-        description: `- Rebuilt the app with React Native for better UX and performance.
-- Integrated MoMo and in-app purchases for seamless payments.
-- Optimized deployment for staging and production.
-- Published on App Store and Google Play, ensuring compliance.`,
-        icon: "code",
-        skills: [
-          "React Native",
-          "Redux",
-          "MoMo Payment API",
-          "App Store",
-          "Google Play Store",
-          "App Center",
-          "Agile",
-          "Teamwork",
-          "Research",
-        ],
-      },
-      {
-        id: "73151add-7adf-4035-a237-b5803ceb5478",
-        title: "UI/UX Designer",
-        employmentPeriod: {
-          start: "2018",
-          end: "2019",
-        },
-        employmentType: "Full-time",
-        description: `- Designed a Landing Page for enterprise clients.
-- Redesigned the Online Quiz Platform for a modern look on web and mobile.
-- Redesigned the Pricing interface for individual customers.
-- Enhanced UX by improving usability, navigation, and user flow.`,
-        icon: "design",
-        skills: ["UI/UX Design", "Sketch"],
       },
     ],
   },
@@ -210,44 +145,65 @@ In-house Project: [ZaDark](https://zadark.com)
         id: "f0becfba-057d-40db-b252-739e1654faa1",
         title: "Full-stack Developer",
         employmentPeriod: {
-          start: "2018",
-          end: "2020",
+          start: "2024",
         },
         employmentType: "Part-time",
-        description: `- Built an order management website with real-time delivery tracking.
-- Developed an e-commerce site for bird's nest products.
-- Created a map to display monitoring station data.
-- Designed a customizable WordPress landing page.`,
+        description: `**Key Projects:**
+
+- **Fynosign** - Built complete e-signature SaaS platform with PDF signing, Stripe subscriptions, OAuth, AI document insights, and audit trails. Deployed on AWS EC2.
+- **LoopIQ** - Built healthcare management platform frontend using React, Redux Toolkit, and RTK Query with FastAPI integration.
+- **Zas Dashboard** - Developed employment analytics platform consuming Spanish labor market APIs (100k+ rows) with data visualization.
+- **RallyTyper** - Resolved deployment issues, built admin dashboard with CMS, optimized React build on WordPress hosting.
+- **Khrimisay** - Fixed PWA cookie persistence, RTK Query caching issues, authentication bugs, and UI/UX problems on Next.js messaging platform.
+- **Space Facts Explorer** - Rebuilt iOS app from Rork.ai to Expo React Native, designed assets, managed App Store deployment and rejections.`,
         icon: "code",
         skills: [
-          "Laravel",
           "React",
+          "Next.js",
+          "React Native",
+          "Redux Toolkit",
+          "TypeScript",
+          "Node.js",
           "Express.js",
-          "Socket.IO",
+          "NestJS",
           "MongoDB",
-          "Firebase",
-          "WordPress",
-          "Docker",
-          "NGINX",
+          "PostgreSQL",
+          "AWS",
+          "Stripe",
+          "OAuth",
+          "PWA",
+          "Expo",
+          "PDF.js",
+          "RTK Query",
+          "API Integration",
         ],
       },
       {
         id: "0eecdfcb-028d-41f4-93e9-1269ba7eff7e",
-        title: "Graphic & UI/UX Designer",
+        title: "UI/UX & 3D Engineer",
         employmentPeriod: {
-          start: "2018",
-          end: "2019",
+          start: "2023",
         },
         employmentType: "Part-time",
-        description: "Designed logos, posters, ads, and UI.",
+        description: `**Key Projects:**
+
+- **Oil Refinery Platform** - Built interactive 3D visualization using React Three Fiber and Three.js for industrial monitoring system with real-time asset monitoring, health scoring, and dynamic camera controls.
+- **Fitreps** - Redesigned subscription UI/UX with custom CSS on Material UI. Built subscription modals (desktop) and swipeable drawers (mobile). Developed dark mode from scratch.
+- **Truer EHR Dashboard** - Designed and built Electronic Health Record dashboard UI with OAuth authentication, patient CRUD operations, dashboard stats, and API integration with Supabase.
+- **Stall Bedding Calculator** - Designed and built responsive calculator with pure HTML/CSS/JavaScript for horse stall bedding estimation across multiple stores with cost calculations.
+- **EdTech Platform** - Designed multi-step authentication UI with AWS Cognito, implemented clean registration flows replacing prop drilling with structured state management.`,
         icon: "design",
         skills: [
-          "Creativity",
+          "Three.js",
+          "React Three Fiber",
+          "WebGL",
+          "3D Visualization",
           "UI/UX Design",
-          "Graphic Design",
-          "Sketch",
-          "Adobe Photoshop",
-          "Adobe Illustrator",
+          "Figma",
+          "Material UI",
+          "Custom CSS",
+          "Dark Mode Design",
+          "Responsive Design",
         ],
       },
     ],
@@ -264,57 +220,46 @@ In-house Project: [ZaDark](https://zadark.com)
           end: "2030",
         },
         icon: "education",
-        description: `- Currently studying for a Bachelor's degree in Data Science.
-- Language Proficiency: B1 English Level.
-- Achieved several awards, including:
-  - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
-  - 2nd Prize — Business Startup Competition 2019`,
+        description: `- Currently studying for a Bachelor's degree in Data Science.`,
         skills: [
-          "C++",
-          "Java",
           "Python",
+          "Machine Learning",
+          "Data Analysis",
+          "Statistics",
+          "NumPy",
+          "Pandas",
+          "Scikit-learn",
+          "TensorFlow",
+          "SQL",
           "Data Structures",
           "Algorithms",
-          "Advanced Databases",
-          "Systems Design",
-          "Distributed Systems",
-          "Software Engineering",
+          "Linear Algebra",
           "Self-learning",
           "Teamwork",
-          "Presentation",
         ],
       },
       {
         id: "70131ed8-36d9-4e54-8c78-eaed18240eca",
         title: "FG Degree College Cant - Hyderabad",
         employmentPeriod: {
-          start: "08.2023",
+          start: "07.2023",
           end: "06.2025",
         },
         icon: "education",
-        description: `- Student of the Specialized Computer Science Program.
-- Granted direct admission to university due to achieving 3rd Prize at the national level.
-- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:
-  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)
-  - 1st Prize — Can Tho City Science and Engineering Fair 2018
-  - Creativity Award — Binh Duong Hackathon 2017
-  - Consolation Prize — National Youth and Children's Creativity Contest 2016
-  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Can Tho City Youth and Children's Creativity Contest 2016
-  - 3rd Prize — National Young Informatics Contest 2016
-- Achieved the title of Outstanding Student from Grade 10-12.
-- Selected for the National Excellent Student Contest in Informatics for two consecutive years during high school.
-- Honored on the school's "Hall of Fame" for academic achievements.
-- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.
-- Developed websites based on Laravel framework.
-- Built websites with PHP and MySQL, following the MVC architecture.`,
+        description: `- Student of the Intermediate in Computer Science (ICS) Program.
+- Participated in provincial coding project competition, developed a 3D web-based airplane game.
+  - Achieved 2nd position at FG Public School Cantt Exhibition for project showcase.
+- Learned C and C++ programming with strong foundation in computer science fundamentals.
+- Maintained good academic standing throughout intermediate studies.`,
         skills: [
-          "Algorithms",
+          "C Programming",
           "C++",
-          "PHP",
-          "MySQL",
-          "Laravel",
-          "Node.js",
-          "Pandoc",
+          "Algorithms",
+          "Game Development",
+          "Problem Solving",
+          "Web Development",
+          "Three.js",
+          "Project Development",
           "Self-learning",
         ],
       },
@@ -322,25 +267,13 @@ In-house Project: [ZaDark](https://zadark.com)
         id: "36c4c6fb-02d0-48c0-8947-fda6e9a24af7",
         title: "New Banat Higher Secondary School",
         employmentPeriod: {
-          start: "08.2011",
-          end: "06.2023",
+          start: "02.2011",
+          end: "05.2023",
         },
         icon: "education",
-        description: `- Recognized as the most outstanding student of the district.
-- Achieved numerous awards at city and national levels:
-  - Consolation Prize — National Young Informatics Contest 2015
-  - Consolation Prize — National Young Informatics Contest 2014
-  - 1st Prize — Can Tho City Young Informatics Contest 2014
-- Achieved the title of Outstanding Student from Grade 6-9.
-- Developed websites using the open-source NukeViet CMS.`,
-        skills: [
-          "Pascal",
-          "NukeViet",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "Self-learning",
-        ],
+        description: `- Recognized as the most outstanding student of the section.
+- Developed websites using the html, css, js.`,
+        skills: ["HTML", "CSS", "JavaScript", "Self-learning", "Teamwork"],
       },
     ],
   },

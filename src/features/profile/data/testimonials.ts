@@ -2,114 +2,123 @@ import type { Testimonial } from "../types/testimonials";
 
 export const TESTIMONIALS_1: Testimonial[] = [
   {
-    authorAvatar: "https://avatars.githubusercontent.com/u/229644532",
+    authorAvatar: "/images/forrof.svg",
     authorName: "Faraz Mahmood",
     authorBio: "Founder @forrof.io",
     url: "https://www.forrof.io",
     quote:
       "Your attention to detail and commitment to delivering quality work are truly commendable",
+    theme: true,
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1756766826736893952/6Gvg6jha_400x400.jpg",
-    authorName: "OrcDev",
-    authorBio: "Creator of 8bitcn.com",
-    url: "https://x.com/theorcdev/status/1980378575170859446",
+      "https://ui-avatars.com/api/?name=RallyTyper&background=4F46E5&color=fff",
+    authorName: "RallyTyper Team",
+    authorBio: "Free Online Typing Game",
+    url: "https://rallytyper.com",
     quote:
-      "Seriously, this is one of the best portfolio templates I've ever seen.",
+      "Abdul solved our unclear deployment setup and built a complete admin dashboard with CMS. His problem-solving skills are exceptional!",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1954573702768504833/LW-j7iTr_400x400.jpg",
-    authorName: "Sahaj",
-    authorBio: "Creator of tweakcn.com",
-    url: "https://x.com/iamsahaj_xyz/status/1982814244501381239",
+      "https://ui-avatars.com/api/?name=Khrimisay&background=10B981&color=fff",
+    authorName: "Khrimisay Dev Team",
+    authorBio: "Messaging Platform",
+    url: "https://dev.khrimisay.com",
     quote:
-      "remember seeing it on @mannupaaji's review. it's one of the best looking ones I've seen",
+      "Fixed critical PWA cookie issues and login bugs that had been blocking us for weeks. Great debugging skills and reliable developer.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1923813473240203264/owJG92AC_400x400.jpg",
-    authorName: "Steven Tey",
-    authorBio: "Founder @Dub.co",
-    url: "https://x.com/steventey/status/1936934909370830924",
-    quote: "whoa, this is really dope – needs to get added to @shadcn UI 👀",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1868745200010428416/jKSU2o_W_400x400.jpg",
-    authorName: "Kap",
-    authorBio: "Head of Developer Community @Vercel",
-    url: "https://x.com/kapehe_ok/status/1948104774358106612",
-    quote: "one of my favorite projects that submitted! you are crushing it!",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1962676904013492224/crWj9Gfa_400x400.jpg",
-    authorName: "Jean P.D. Meijer",
-    authorBio: "Building analog.now",
-    url: "https://x.com/initjean/status/1948159885960438151",
+      "https://ui-avatars.com/api/?name=Space+Facts&background=8B5CF6&color=fff",
+    authorName: "Space Facts Explorer Client",
+    authorBio: "iOS Educational App",
+    url: "https://apps.apple.com/us/app/space-facts-explorer/id6749238944",
     quote:
-      "congrats you deserve it! react wheel picker is so smooth, its insane 🐐",
+      "Turned my 9-year-old's dream into reality! Handled everything from code migration to App Store deployment. My son loves sharing it with friends!",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1679831765744259073/hoVtsOZ9_400x400.jpg",
-    authorName: "GitHub Projects Community",
-    authorBio: "UNOFFICIAL, but followed by @github",
-    url: "https://x.com/GithubProjects/status/1931034244337271044",
+      "https://ui-avatars.com/api/?name=Fynosign&background=F59E0B&color=fff",
+    authorName: "Fynosign Team",
+    authorBio: "E-Signature Platform",
+    url: "https://fynosign.com",
     quote:
-      "Everything you'd want in a picker, minus the styling headaches. Awesome job!",
+      "Built our entire SaaS platform end-to-end. Solved the hardest challenge of PDF signing workflows with legal compliance. Production-ready and scalable!",
+  },
+  {
+    authorAvatar:
+      "https://ui-avatars.com/api/?name=Truer+EHR&background=EF4444&color=fff",
+    authorName: "Truer EHR Team",
+    authorBio: "Healthcare Dashboard",
+    url: "https://ehr-dashboard-nine.vercel.app",
+    quote:
+      "Excellent frontend work with complex API integrations. Set up authentication smoothly and delivered stable patient management features.",
+  },
+  {
+    authorAvatar:
+      "https://ui-avatars.com/api/?name=Fitreps&background=EC4899&color=fff",
+    authorName: "Fitreps Team",
+    authorBio: "Fitness Platform",
+    url: "https://www.fitreps.com",
+    quote:
+      "Redesigned our subscription UI from boring to modern. Even created dark mode from scratch when Figma design didn't include it. Great attention to detail!",
   },
 ];
 
 export const TESTIMONIALS_2: Testimonial[] = [
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg",
-    authorName: "Manu Arora",
-    authorBio: "Creator of ui.aceternity.com",
-    url: "https://x.com/mannupaaji/status/1944755561117163597",
-    quote: "Great work on the portfolio",
+      "https://ui-avatars.com/api/?name=Stall+Bedding&background=059669&color=fff",
+    authorName: "Bedding Calculator Client",
+    authorBio: "Horse Stall Calculator",
+    url: "https://bedding-calculator.netlify.app",
+    quote:
+      "Delivered exactly what I needed with pure HTML/CSS/JS. Made the complex calculations simple and the design fully responsive. Very practical tool!",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1913274259985854464/rWnStpCJ_400x400.jpg",
-    authorName: "Max Prilutskiy",
-    authorBio: "Creator of Lingo.dev",
-    url: "https://x.com/MaxPrilutskiy/status/1923952193893466379",
-    quote: "i like your style! :)",
+      "https://ui-avatars.com/api/?name=Zas+Dashboard&background=0EA5E9&color=fff",
+    authorName: "Zas Analytics Team",
+    authorBio: "Employment Analytics",
+    url: "https://zas-dashboard-v12n.vercel.app",
+    quote:
+      "Transformed 100k+ rows of Spanish labor statistics into clear insights. Handled huge datasets efficiently and made complex data accessible.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1900513355447603200/mDqwmkZT_400x400.jpg",
-    authorName: "Aaron",
-    authorBio: "Founding Design Engineer @Mail0",
-    url: "https://x.com/aaronmahlke/status/1955606729657344490",
-    quote: "super cool portfolio!",
+      "https://ui-avatars.com/api/?name=Precision&background=6366F1&color=fff",
+    authorName: "Precision Platform Team",
+    authorBio: "Real Estate Due Diligence",
+    url: "#",
+    quote:
+      "Rebuilt our CSV/Excel module to handle complex industry datasets. Drastically reduced upload errors and improved data accuracy for our brokers.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1333329963383103489/ee7VrWQy_400x400.jpg",
-    authorName: "jordwalke",
-    authorBio: "Creator of React",
-    url: "https://x.com/jordwalke/status/1937165909778657589",
-    quote: "Looks great.\nAlso, cool wheel picker!",
+      "https://ui-avatars.com/api/?name=Lead+Smart&background=F97316&color=fff",
+    authorName: "Lead Smart Team",
+    authorBio: "Affiliate Marketing Dashboard",
+    url: "#",
+    quote:
+      "Cleaned up our messy codebase and integrated all APIs seamlessly. The dashboard is now much more maintainable and user-friendly.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1875548702971985920/Fp6h28Es_400x400.jpg",
-    authorName: "Yonaries",
-    authorBio: "Making orabrowser.com",
-    url: "https://x.com/YonathanDejene/status/1984529637309886639",
-    quote: "incredible portfolio i've seen by far",
+      "https://ui-avatars.com/api/?name=EdTech&background=14B8A6&color=fff",
+    authorName: "EdTech Platform Team",
+    authorBio: "Learning Management System",
+    url: "#",
+    quote:
+      "Refactored our complex multi-step auth flow with Redux Toolkit. Eliminated props drilling and made the registration system much cleaner.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1927419360492011520/bitKDhjx_400x400.jpg",
-    authorName: "Zaid",
-    authorBio: "Creator of scira.ai",
-    url: "https://x.com/zaidmukaddam/status/1984599685974409374",
-    quote: "super clean",
+      "https://ui-avatars.com/api/?name=LoopIQ&background=8B5CF6&color=fff",
+    authorName: "LoopIQ Team",
+    authorBio: "Healthcare Management",
+    url: "https://www.loopiq.xyz",
+    quote:
+      "Solid frontend engineer who delivers clean, scalable components. Great collaboration on API integration and production deployments.",
   },
 ];

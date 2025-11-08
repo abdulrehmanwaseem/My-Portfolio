@@ -4,7 +4,13 @@ import Image from "next/image";
 import type { SocialLink } from "@/features/profile/types/social-links";
 import { cn } from "@/lib/utils";
 
-export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
+export function SocialLinkItem({
+  icon,
+  title,
+  description,
+  href,
+  padding,
+}: SocialLink) {
   return (
     <a
       className={cn(
@@ -18,7 +24,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
     >
       <div className="relative size-12 shrink-0">
         <Image
-          className="rounded-xl"
+          className={`rounded-xl object-contain ${padding && "p-[7px]"}`}
           src={icon}
           alt={title}
           width={48}

@@ -9,4 +9,6 @@ export type Testimonial = {
   url: string;
   /** The testimonial text content or recommendation message */
   quote: string;
+
+  theme?: boolean;
 };
