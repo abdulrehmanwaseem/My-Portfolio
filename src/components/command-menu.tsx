@@ -65,8 +65,8 @@ const MENU_LINKS: CommandLinkItem[] = [
     icon: RssIcon,
   },
   {
-    title: "Components",
-    href: "/components",
+    title: "Products",
+    href: "/products/shopflow",
     icon: Icons.react,
   },
 ];
@@ -268,12 +268,12 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
 
           <CommandSeparator />
 
-          <CommandLinkGroup
+          {/* <CommandLinkGroup
             heading="Components"
             links={componentLinks}
             fallbackIcon={Icons.react}
             onLinkSelect={handleOpenLink}
-          />
+          /> */}
 
           <CommandSeparator />
 

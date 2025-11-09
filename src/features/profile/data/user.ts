@@ -28,11 +28,8 @@ export const USER: User = {
     {
       title: "Founder",
       company: "ShopFlow",
-      website: "https://github.com/abdulrehmanwaseem/Shop-Management-System",
+      website: "/products/shopflow",
     },
-    // title: "POS Software Developer",
-    // company: "Self-Employed",
-    // website: "https://github.com/abdulrehmanwaseem",
   ],
   about: `
   Hello World! I am Abdul Rehman a passionate Full Stack Developer whose journey began at age 14 in 9th grade. Now at 18, having completed 12th grade, I've transformed that early curiosity into expertise in modern web development, specializing in the MERN stack while mastering Next.js, NestJS, React Native, Electron, and 3D technologies.

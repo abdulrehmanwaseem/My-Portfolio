@@ -24,9 +24,13 @@ export const MAIN_NAV: NavItem[] = [
     href: "/blog",
   },
   {
-    title: "Components",
-    href: "/components",
+    title: "Products",
+    href: "/products/shopflow",
   },
+  // {
+  //   title: "Components",
+  //   href: "/components",
+  // },
 ];
 
 export const GITHUB_USERNAME = "abdulrehmanwaseem";
