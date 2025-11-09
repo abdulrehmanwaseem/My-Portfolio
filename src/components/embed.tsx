@@ -23,8 +23,8 @@ export function YouTubeEmbed({
 
 export function FramedImage({ ...props }: React.ComponentProps<"img">) {
   return (
-    <figure className="relative [&_img]:rounded-lg">
-      {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+    <figure className="relative mx-auto [&_img]:mx-auto [&_img]:rounded-lg">
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <img {...props} />
       <div className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-black/10 ring-inset dark:ring-white/10" />
     </figure>
