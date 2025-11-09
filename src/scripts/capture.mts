@@ -4,10 +4,12 @@ import path from "node:path";
 import type { Browser } from "puppeteer-core";
 import puppeteer from "puppeteer-core";
 
+// Windows Chrome paths
 const executablePath =
-  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+  process.env.CHROME_PATH ||
+  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const url = process.env.URL || "http://localhost:1408";
-const outputDir = path.join(process.cwd(), ".ncdai/screenshots");
+const outputDir = path.join(process.cwd(), ".abdulrehman/screenshots");
 
 const SIZE = {
   // Full HD

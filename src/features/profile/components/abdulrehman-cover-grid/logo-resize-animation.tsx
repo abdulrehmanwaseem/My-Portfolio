@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 
-import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { AbdulRehmanMark } from "@/components/abdulrehman-mark";
 
 const variants = {
   show: {
@@ -65,7 +65,7 @@ export function LogoResizeAnimation({
         {Math.round(width)}x{Math.round(width / 2)}
       </motion.div>
 
-      <ChanhDaiMark className="size-full text-black dark:text-white" />
+      <AbdulRehmanMark className="size-full text-black dark:text-white" />
     </motion.div>
   );
 }

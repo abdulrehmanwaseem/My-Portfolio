@@ -15,7 +15,7 @@ export const USER: User = {
     "Desktop Application Developer",
   ],
   address: "Hyderabad City, Pakistan",
-  phoneNumber: "KzkyIDMxMTgxMSA0ODA1", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  phoneNumber: "KzkyMzExODExNDgwNQ==", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "YWJkdWxyZWhtYW53b3JrMjAyNEBnbWFpbC5jb20=", // base64 encoded
   website: "https://abdulrehman-code.vercel.app",
   jobTitle: "Fullstack Developer",
@@ -46,7 +46,7 @@ export const USER: User = {
   Let's connect and collaborate!
 `,
   avatar: "/images/me.png",
-  ogImage: "/images/og-image.png",
+  ogImage: "/images/og-image-light.png",
   namePronunciationUrl: "/audio/abdulrehman.mp3",
   keywords: [
     "abdul rehman",
