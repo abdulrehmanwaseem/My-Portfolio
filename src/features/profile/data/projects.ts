@@ -22,7 +22,6 @@ export const PROJECTS: Project[] = [
 - Handsontable for dynamic data grids`,
     logo: "https://api.dicebear.com/7.x/shapes/svg?seed=Shop+Management+System",
   },
-
   {
     id: "zombie-invasion-game",
     title: "3D Zombie Invasion Game",

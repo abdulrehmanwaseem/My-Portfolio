@@ -1,17 +1,24 @@
-import React from "react";
-
 import { Button } from "@/components/ui/button";
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 
 import { Icons } from "./icons";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
-export function NavItemGitHub() {
+export async function NavItemGitHub() {
   return (
-    <Button variant="outline" size="icon" asChild>
-      <a href={SOURCE_CODE_GITHUB_URL} target="_blank" rel="noopener">
-        <Icons.github />
-        <span className="sr-only">GitHub</span>
-      </a>
-    </Button>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button variant="ghost" size="icon" asChild>
+          <a href={SOURCE_CODE_GITHUB_URL} target="_blank" rel="noopener">
+            <Icons.github />
+            <span className="sr-only">GitHub</span>
+          </a>
+        </Button>
+      </TooltipTrigger>
+
+      <TooltipContent>
+        <p>Coding since 14y/o</p>
+      </TooltipContent>
+    </Tooltip>
   );
 }

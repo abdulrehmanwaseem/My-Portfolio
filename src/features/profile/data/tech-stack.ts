@@ -22,8 +22,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Python",
     href: "https://www.python.org/",
     categories: ["Language"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/python.svg",
   },
   {
     key: "html5",
@@ -60,10 +59,9 @@ export const TECH_STACK: TechStack[] = [
   {
     key: "nodejs",
     title: "Node.js",
-    href: "https://nodejs.org/",
+    href: "https://nodejs.org",
     categories: ["Runtime Environment"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/nodejs.svg",
   },
   {
     key: "markdown",
@@ -176,6 +174,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework", "Library"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+    theme: true,
   },
   {
     key: "tailwindcss",
@@ -206,7 +205,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Motion",
     href: "https://motion.dev/",
     categories: ["Library", "Animation"],
-    iconUrl: "https://avatars.githubusercontent.com/u/151537628?s=200&v=4",
+    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/motion.svg",
   },
   {
     key: "tanstack",
@@ -217,14 +216,6 @@ export const TECH_STACK: TechStack[] = [
     theme: true,
   },
   {
-    key: "antd",
-    title: "Ant Design",
-    href: "https://ant.design/",
-    categories: ["Library", "UI Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/antdesign/antdesign-original.svg",
-  },
-  {
     key: "react-router",
     title: "React Router",
     href: "https://reactrouter.com/",
@@ -233,13 +224,13 @@ export const TECH_STACK: TechStack[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg",
     theme: true,
   },
-  {
-    key: "react-navigation",
-    title: "React Navigation",
-    href: "https://reactnavigation.org/",
-    categories: ["Library", "Navigation"],
-    iconUrl: "https://reactnavigation.org/img/spiro.svg",
-  },
+  // {
+  //   key: "react-navigation",
+  //   title: "React Navigation",
+  //   href: "https://reactnavigation.org/",
+  //   categories: ["Library", "Navigation"],
+  //   iconUrl: "https://reactnavigation.org/img/spiro.svg",
+  // },
   {
     key: "git",
     title: "Git",
@@ -253,8 +244,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Docker",
     href: "https://www.docker.com/",
     categories: ["Containerization"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/docker.svg",
   },
   {
     key: "mysql",
@@ -326,7 +316,8 @@ export const TECH_STACK: TechStack[] = [
     href: "https://chatgpt.com/",
     categories: ["Tools", "AI"],
     iconUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+      "https://assets.chanhdai.com/images/tech-stack-icons/chatgpt-light.svg",
+    theme: true,
   },
   {
     key: "freecodecamp",
@@ -334,6 +325,7 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.freecodecamp.org/",
     categories: ["Others"],
     iconUrl: "https://avatars.githubusercontent.com/u/9892522?s=200&v=4",
+    theme: true,
   },
   {
     key: "udemy",
@@ -360,14 +352,6 @@ export const TECH_STACK: TechStack[] = [
       "https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/fiverr-128.png",
   },
   {
-    key: "reddit",
-    title: "Reddit",
-    href: "https://www.reddit.com/",
-    categories: ["Others"],
-    iconUrl:
-      "https://www.redditstatic.com/desktop2x/img/favicon/favicon-32x32.png",
-  },
-  {
     key: "stackoverflow",
     title: "Stack Overflow",
     href: "https://stackoverflow.com/",
@@ -375,23 +359,7 @@ export const TECH_STACK: TechStack[] = [
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stackoverflow/stackoverflow-original.svg",
   },
-  {
-    key: "canva",
-    title: "Canva",
-    href: "https://www.canva.com/",
-    categories: ["Others"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
-  },
-  {
-    key: "vercel",
-    title: "Vercel",
-    href: "https://vercel.com/",
-    categories: ["Others"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
-    theme: true,
-  },
+
   {
     key: "render",
     title: "Render",

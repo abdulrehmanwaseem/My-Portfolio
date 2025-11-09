@@ -1,13 +1,14 @@
 "use client";
 
-import { MoonStarIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 
 import { META_THEME_COLORS } from "@/config/site";
 import { useMetaColor } from "@/hooks/use-meta-color";
 import { useSound } from "@/hooks/use-sound";
 
+import { MoonIcon } from "./animated-icons/moon";
+import { SunMediumIcon } from "./animated-icons/sun-medium";
 import { Button } from "./ui/button";
 
 export function ToggleTheme() {
@@ -29,7 +30,7 @@ export function ToggleTheme() {
 
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       size="icon"
       onClick={switchTheme}
       // onClick={() => {
@@ -37,8 +38,8 @@ export function ToggleTheme() {
       //   document.startViewTransition(switchTheme);
       // }}
     >
-      <MoonStarIcon className="hidden [html.dark_&]:block" />
-      <SunIcon className="hidden [html.light_&]:block" />
+      <MoonIcon className="relative hidden after:absolute after:-inset-2 [html.dark_&]:block" />
+      <SunMediumIcon className="relative hidden after:absolute after:-inset-2 [html.light_&]:block" />
       <span className="sr-only">Toggle Theme</span>
     </Button>
   );

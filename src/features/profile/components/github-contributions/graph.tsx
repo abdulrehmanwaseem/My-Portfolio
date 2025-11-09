@@ -74,6 +74,10 @@ export function GitHubContributionGraph({
               >
                 GitHub
               </a>
+              <span className="text-muted-foreground/70">
+                {" "}
+                and 1,000+ on private client repos
+              </span>
               .
             </div>
           )}
