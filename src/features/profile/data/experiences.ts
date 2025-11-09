@@ -73,6 +73,45 @@ export const EXPERIENCES: Experience[] = [
     theme: true,
   },
   {
+    id: "pos-software-developer",
+    companyName: "Self-Employed",
+    companyLogo:
+      "https://api.dicebear.com/7.x/shapes/svg?seed=POS+Shop+Management",
+    positions: [
+      {
+        id: "pos-dev-self-employed",
+        title: "POS Software Developer",
+        employmentPeriod: {
+          start: "11.2023",
+          end: "04.2024",
+        },
+        employmentType: "Self-Employed",
+        icon: "code",
+        description: `- Built comprehensive Shop Management System using PERN stack (PostgreSQL, Express, React, Node.js).
+- Developed complete invoice management system with financial transaction logging.
+- Created real-time dashboards for sales analytics and inventory tracking.
+- Built customer and vendor management with complete transaction history.
+- Implemented payment status tracking system with automatic updates.
+- Integrated Handontable for Excel-like data entry and manipulation.
+- Delivered weekly improvements and new features to enhance system usability.`,
+        skills: [
+          "React",
+          "Redux",
+          "Node.js",
+          "Express.js",
+          "PostgreSQL",
+          "Prisma",
+          "JWT",
+          "Handontable",
+          "RESTful APIs",
+          "PERN Stack",
+          "Real-time Dashboards",
+          "Inventory Management",
+        ],
+      },
+    ],
+  },
+  {
     id: "web-dev-instructor",
     companyName: "Frontend Development Course",
     companyLogo:
