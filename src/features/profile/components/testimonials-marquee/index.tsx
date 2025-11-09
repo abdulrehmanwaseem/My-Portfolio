@@ -26,7 +26,7 @@ export function TestimonialsMarquee() {
             .sort((a, b) => a.authorName.localeCompare(b.authorName))
             .map((item) => (
               <MarqueeItem
-                key={item.url}
+                key={item.authorName}
                 className="mx-0 h-full w-xs border-r border-edge"
               >
                 <TestimonialItem {...item} />
@@ -46,7 +46,7 @@ export function TestimonialsMarquee() {
             .sort((a, b) => a.authorName.localeCompare(b.authorName))
             .map((item) => (
               <MarqueeItem
-                key={item.url}
+                key={item.authorName}
                 className="mx-0 h-full w-xs border-r border-edge"
               >
                 <TestimonialItem {...item} />

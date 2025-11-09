@@ -12,7 +12,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
   },
   {
     authorAvatar:
-      "https://ui-avatars.com/api/?name=RallyTyper&background=4F46E5&color=fff",
+      "https://robohash.org/RallyTyper?set=set1&bgset=bg1&size=64x64",
     authorName: "RallyTyper Team",
     authorBio: "Free Online Typing Game",
     url: "https://rallytyper.com",
@@ -21,7 +21,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
   },
   {
     authorAvatar:
-      "https://ui-avatars.com/api/?name=Khrimisay&background=10B981&color=fff",
+      "https://robohash.org/Khrimisay?set=set2&bgset=bg2&size=64x64",
     authorName: "Khrimisay Dev Team",
     authorBio: "Messaging Platform",
     url: "https://dev.khrimisay.com",
@@ -30,7 +30,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
   },
   {
     authorAvatar:
-      "https://ui-avatars.com/api/?name=Space+Facts&background=8B5CF6&color=fff",
+      "https://robohash.org/SpaceFacts?set=set3&bgset=bg1&size=64x64",
     authorName: "Space Facts Explorer Client",
     authorBio: "iOS Educational App",
     url: "https://apps.apple.com/us/app/space-facts-explorer/id6749238944",
@@ -38,8 +38,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
       "Turned my 9-year-old's dream into reality! Handled everything from code migration to App Store deployment. My son loves sharing it with friends!",
   },
   {
-    authorAvatar:
-      "https://ui-avatars.com/api/?name=Fynosign&background=F59E0B&color=fff",
+    authorAvatar: "https://robohash.org/Fynosign?set=set4&bgset=bg2&size=64x64",
     authorName: "Fynosign Team",
     authorBio: "E-Signature Platform",
     url: "https://fynosign.com",
@@ -47,8 +46,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
       "Built our entire SaaS platform end-to-end. Solved the hardest challenge of PDF signing workflows with legal compliance. Production-ready and scalable!",
   },
   {
-    authorAvatar:
-      "https://ui-avatars.com/api/?name=Truer+EHR&background=EF4444&color=fff",
+    authorAvatar: "https://robohash.org/TruerEHR?set=set1&bgset=bg2&size=64x64",
     authorName: "Truer EHR Team",
     authorBio: "Healthcare Dashboard",
     url: "https://ehr-dashboard-nine.vercel.app",
@@ -56,8 +54,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
       "Excellent frontend work with complex API integrations. Set up authentication smoothly and delivered stable patient management features.",
   },
   {
-    authorAvatar:
-      "https://ui-avatars.com/api/?name=Fitreps&background=EC4899&color=fff",
+    authorAvatar: "https://robohash.org/Fitreps?set=set2&bgset=bg1&size=64x64",
     authorName: "Fitreps Team",
     authorBio: "Fitness Platform",
     url: "https://www.fitreps.com",
@@ -69,7 +66,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
 export const TESTIMONIALS_2: Testimonial[] = [
   {
     authorAvatar:
-      "https://ui-avatars.com/api/?name=Stall+Bedding&background=059669&color=fff",
+      "https://robohash.org/StallBedding?set=set3&bgset=bg2&size=64x64",
     authorName: "Bedding Calculator Client",
     authorBio: "Horse Stall Calculator",
     url: "https://bedding-calculator.netlify.app",
@@ -78,7 +75,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
   },
   {
     authorAvatar:
-      "https://ui-avatars.com/api/?name=Zas+Dashboard&background=0EA5E9&color=fff",
+      "https://robohash.org/ZasDashboard?set=set4&bgset=bg1&size=64x64",
     authorName: "Zas Analytics Team",
     authorBio: "Employment Analytics",
     url: "https://zas-dashboard-v12n.vercel.app",
@@ -87,34 +84,32 @@ export const TESTIMONIALS_2: Testimonial[] = [
   },
   {
     authorAvatar:
-      "https://ui-avatars.com/api/?name=Precision&background=6366F1&color=fff",
+      "https://robohash.org/Precision?set=set1&bgset=bg1&size=64x64",
     authorName: "Precision Platform Team",
     authorBio: "Real Estate Due Diligence",
-    url: "#",
+    url: "/internal-project",
     quote:
       "Rebuilt our CSV/Excel module to handle complex industry datasets. Drastically reduced upload errors and improved data accuracy for our brokers.",
   },
   {
     authorAvatar:
-      "https://ui-avatars.com/api/?name=Lead+Smart&background=F97316&color=fff",
+      "https://robohash.org/LeadSmart?set=set2&bgset=bg2&size=64x64",
     authorName: "Lead Smart Team",
     authorBio: "Affiliate Marketing Dashboard",
-    url: "#",
+    url: "/internal-project",
     quote:
       "Cleaned up our messy codebase and integrated all APIs seamlessly. The dashboard is now much more maintainable and user-friendly.",
   },
   {
-    authorAvatar:
-      "https://ui-avatars.com/api/?name=EdTech&background=14B8A6&color=fff",
+    authorAvatar: "https://robohash.org/EdTech?set=set3&bgset=bg1&size=64x64",
     authorName: "EdTech Platform Team",
     authorBio: "Learning Management System",
-    url: "#",
+    url: "/internal-project",
     quote:
       "Refactored our complex multi-step auth flow with Redux Toolkit. Eliminated props drilling and made the registration system much cleaner.",
   },
   {
-    authorAvatar:
-      "https://ui-avatars.com/api/?name=LoopIQ&background=8B5CF6&color=fff",
+    authorAvatar: "https://robohash.org/LoopIQ?set=set4&bgset=bg2&size=64x64",
     authorName: "LoopIQ Team",
     authorBio: "Healthcare Management",
     url: "https://www.loopiq.xyz",

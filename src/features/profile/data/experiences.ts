@@ -73,38 +73,6 @@ export const EXPERIENCES: Experience[] = [
     theme: true,
   },
   {
-    id: "ezone-academy",
-    companyName: "E.Zone Academy",
-    companyLogo:
-      "https://ui-avatars.com/api/?name=E.Zone+Academy&background=4F46E5&color=fff&size=200",
-    positions: [
-      {
-        id: "ezone-freelancing-trainer",
-        title: "Freelancing & IT Skills Trainer",
-        employmentPeriod: {
-          start: "03.2025",
-          end: "06.2025",
-        },
-        employmentType: "Part-time",
-        icon: "education",
-        description: `- Conducted in-person workshops and training on how to start and grow a freelancing career.
-- Taught students how to build freelance profiles on platforms like Upwork and Fiverr.
-- Trained students on writing winning proposals and managing client relationships effectively.
-- Provided hands-on guidance on freelancing best practices and career development.`,
-        skills: [
-          "Training & Mentoring",
-          "Freelancing",
-          "Upwork",
-          "Fiverr",
-          "Client Management",
-          "Professional Development",
-          "Communication Skills",
-          "Career Coaching",
-        ],
-      },
-    ],
-  },
-  {
     id: "web-dev-instructor",
     companyName: "Frontend Development Course",
     companyLogo:
@@ -138,6 +106,38 @@ export const EXPERIENCES: Experience[] = [
     ],
   },
   {
+    id: "ezone-academy",
+    companyName: "E.Zone Academy",
+    companyLogo:
+      "https://ui-avatars.com/api/?name=E.Zone+Academy&background=4F46E5&color=fff&size=200",
+    positions: [
+      {
+        id: "ezone-freelancing-trainer",
+        title: "Freelancing & IT Skills Trainer",
+        employmentPeriod: {
+          start: "03.2025",
+          end: "06.2025",
+        },
+        employmentType: "Part-time",
+        icon: "education",
+        description: `- Conducted in-person workshops and training on how to start and grow a freelancing career.
+- Taught students how to build freelance profiles on platforms like Upwork and Fiverr.
+- Trained students on writing winning proposals and managing client relationships effectively.
+- Provided hands-on guidance on freelancing best practices and career development.`,
+        skills: [
+          "Training & Mentoring",
+          "Freelancing",
+          "Upwork",
+          "Fiverr",
+          "Client Management",
+          "Communication Skills",
+          "Career Coaching",
+        ],
+      },
+    ],
+  },
+
+  {
     id: "freelance",
     companyName: "Freelance",
     positions: [
@@ -145,65 +145,77 @@ export const EXPERIENCES: Experience[] = [
         id: "f0becfba-057d-40db-b252-739e1654faa1",
         title: "Full-stack Developer",
         employmentPeriod: {
-          start: "2024",
+          start: "2025",
         },
         employmentType: "Part-time",
         description: `**Key Projects:**
 
-- **Fynosign** - Built complete e-signature SaaS platform with PDF signing, Stripe subscriptions, OAuth, AI document insights, and audit trails. Deployed on AWS EC2.
-- **LoopIQ** - Built healthcare management platform frontend using React, Redux Toolkit, and RTK Query with FastAPI integration.
-- **Zas Dashboard** - Developed employment analytics platform consuming Spanish labor market APIs (100k+ rows) with data visualization.
-- **RallyTyper** - Resolved deployment issues, built admin dashboard with CMS, optimized React build on WordPress hosting.
-- **Khrimisay** - Fixed PWA cookie persistence, RTK Query caching issues, authentication bugs, and UI/UX problems on Next.js messaging platform.
-- **Space Facts Explorer** - Rebuilt iOS app from Rork.ai to Expo React Native, designed assets, managed App Store deployment and rejections.`,
+- **[Fynosign](https://fynosign.com)** - Built complete e-signature SaaS platform with PDF signing workflows (pdf-lib), Stripe subscriptions, OAuth, Gemini AI insights, and audit trails. Deployed on AWS EC2.
+
+- **[LoopIQ](https://www.loopiq.xyz)** - Developed healthcare management platform frontend with React, Redux Toolkit, and RTK Query. Integrated FastAPI backend for patient workflows and SLA tracking.
+
+- **[RallyTyper](https://rallytyper.com)** - Resolved unclear deployment setup, built admin dashboard with blog CMS, retrieved MySQL credentials from WordPress config, and optimized React build.
+
+- **[Khrimisay](https://dev.khrimisay.com)** - Fixed critical PWA cookie persistence causing mobile logouts. Resolved RTK Query caching issues, authentication bugs (OTP, navigation), and UI/UX problems.
+
+- **[Space Facts Explorer](https://apps.apple.com/us/app/space-facts-explorer/id6749238944)** - Extracted app from Rork.ai and rebuilt as Expo React Native project. Managed complete App Store deployment, designed assets with Figma/Canva, overcame rejections.
+
+- **[Zas Dashboard](https://zas-dashboard-v12n.vercel.app)** - Built employment analytics platform consuming Spanish labor APIs (100k+ rows). Transformed Spanish variables to English, built interactive stats with filters.
+
+- **[Precision](/internal-project)** - Rebuilt CSV/Excel module for real estate platform (MERN). Implemented flexible parsing, validation, and error reporting for complex industry datasets.
+
+- **[Lead Smart](/internal-project)** - Integrated backend APIs into React TypeScript frontend. Rebuilt dashboard UI with real-time metrics, cleaned codebase, unified styling.`,
         icon: "code",
         skills: [
           "React",
-          "Next.js",
           "React Native",
           "Redux Toolkit",
           "TypeScript",
           "Node.js",
-          "Express.js",
           "NestJS",
+          "FastAPI",
           "MongoDB",
           "PostgreSQL",
-          "AWS",
+          "AWS EC2",
           "Stripe",
           "OAuth",
-          "PWA",
           "Expo",
-          "PDF.js",
-          "RTK Query",
+          "pdf-lib",
           "API Integration",
         ],
+        isExpanded: true,
       },
       {
         id: "0eecdfcb-028d-41f4-93e9-1269ba7eff7e",
         title: "UI/UX & 3D Engineer",
         employmentPeriod: {
-          start: "2023",
+          start: "2024",
         },
         employmentType: "Part-time",
         description: `**Key Projects:**
 
-- **Oil Refinery Platform** - Built interactive 3D visualization using React Three Fiber and Three.js for industrial monitoring system with real-time asset monitoring, health scoring, and dynamic camera controls.
-- **Fitreps** - Redesigned subscription UI/UX with custom CSS on Material UI. Built subscription modals (desktop) and swipeable drawers (mobile). Developed dark mode from scratch.
-- **Truer EHR Dashboard** - Designed and built Electronic Health Record dashboard UI with OAuth authentication, patient CRUD operations, dashboard stats, and API integration with Supabase.
-- **Stall Bedding Calculator** - Designed and built responsive calculator with pure HTML/CSS/JavaScript for horse stall bedding estimation across multiple stores with cost calculations.
-- **EdTech Platform** - Designed multi-step authentication UI with AWS Cognito, implemented clean registration flows replacing prop drilling with structured state management.`,
+- **[Oil Refinery Platform](https://oil-refinery.vercel.app)** - Built interactive 3D visualization with React Three Fiber and Three.js. Implemented realistic lighting, water physics, and real-time monitoring concepts.
+
+- **[Fitreps](https://www.fitreps.com)** - Redesigned subscription UI/UX with custom CSS on legacy Material UI (no Tailwind). Built modals and drawers. Developed dark mode from scratch.
+
+- **[Truer EHR Dashboard](https://ehr-dashboard-nine.vercel.app)** - Built EHR dashboard UI with OAuth authentication (Google + Supabase). Implemented patient CRUD, dashboard stats, and API integration.
+
+- **[Stall Bedding Calculator](https://bedding-calculator.netlify.app)** - Built responsive calculator with pure HTML/CSS/JS. Replicated AI design, made fully responsive, implemented volume calculations with store-specific pricing.
+
+- **[EdTech Platform](/internal-project)** - Designed multi-step auth UI with AWS Cognito. Refactored flow replacing prop drilling with Redux Toolkit for clean parent/child registration data management.`,
         icon: "design",
         skills: [
           "Three.js",
           "React Three Fiber",
-          "WebGL",
-          "3D Visualization",
           "UI/UX Design",
           "Figma",
           "Material UI",
           "Custom CSS",
           "Dark Mode Design",
           "Responsive Design",
+          "Redux Toolkit",
+          "AWS Cognito",
+          "Supabase",
         ],
       },
     ],
