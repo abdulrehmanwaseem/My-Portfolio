@@ -1,5 +1,5 @@
 {
-  "name": "abdulrehman-code",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "description": "A minimal, pixel-perfect developer portfolio, blog and products.",
   "homepage": "https://abdulrehman-code.vercel.app",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdulrehmanwaseem/my-new-portfolio.git"
+    "url": "git+https://github.com/abdulrehmanwaseem/My-Portfolio.git"
   },
   "scripts": {
     "dev": "next dev -p 1408",
