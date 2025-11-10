@@ -1,6 +1,6 @@
 # [abdulrehman-code](https://abdulrehman-code.vercel.app)
 
-A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase my work as a Design Engineer.
+A minimal, pixel-perfect dev portfolio, blog and products to showcase my work as a Fullstack developer.
 
 Check out the live site: [abdulrehman-code](https://abdulrehman-code.vercel.app)
 
@@ -56,10 +56,6 @@ Licensed under the [MIT license](./LICENSE).
 
 You're free to use my code! Just make sure to <ins>remove all my personal information</ins> before publishing your website. It's awesome to see my code being useful to someone!
 
-## Star History
-
-[![Star History](https://starchart.cc/ncdai/chanhdai.com.svg?variant=adaptive)](https://starchart.cc/ncdai/chanhdai.com)
-
 ## Acknowledgments
 
 - [React](https://react.dev)
@@ -72,5 +68,3 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 - [Lucide](https://lucide.dev)
 - [Fumadocs](https://fumadocs.dev)
 - And many other open-source libraries used in `package.json`
-
-<!-- GitAds-Verify: QICCAB4PFWV9MHUGPGPN5B2I8SAXLAOK -->
