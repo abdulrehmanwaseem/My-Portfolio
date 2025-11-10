@@ -7,7 +7,7 @@ export const USER: User = {
   username: "abdulrehmanwaseem",
   gender: "male",
   pronouns: "he/him",
-  bio: "Full Stack Developer | Crafting multiplatform applications with modern cutting-edge technology",
+  bio: "Creating with code. Small details matter.",
   flipSentences: [
     "Fullstack Web Developer",
     "Mobile App Developer",
