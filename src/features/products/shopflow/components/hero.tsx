@@ -17,7 +17,7 @@ export function ShopFlowHero() {
 
         <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           ShopFlow
-          <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             {" "}
             Complete Shop
           </span>

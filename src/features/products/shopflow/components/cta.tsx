@@ -7,7 +7,7 @@ export function ShopFlowCTA() {
   return (
     <section className="py-20 md:py-32">
       <div className="mx-auto max-w-4xl">
-        <div className="relative overflow-hidden rounded-2xl border bg-gradient-to-br from-primary/10 via-primary/5 to-background p-12 md:p-16">
+        <div className="relative overflow-hidden rounded-2xl border bg-linear-to-br from-primary/10 via-primary/5 to-background p-12 md:p-16">
           <div className="relative z-10 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Ready to Streamline Your Shop Operations?

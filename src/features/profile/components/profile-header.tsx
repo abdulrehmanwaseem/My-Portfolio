@@ -10,7 +10,7 @@ export function ProfileHeader() {
   return (
     <div className="screen-line-after flex border-x border-edge">
       <div className="shrink-0 border-r border-edge">
-        <div className="mx-[2px] my-[3px]">
+        <div className="mx-[0.5px] my-[3px]">
           {}
           <img
             className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
