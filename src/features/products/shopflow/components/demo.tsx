@@ -13,10 +13,13 @@ export function ShopFlowDemo() {
 
           <div className="relative overflow-hidden rounded-xl border bg-background shadow-2xl">
             <video
-              className="aspect-video w-full"
+              className="aspect-auto w-full"
               controls
+              autoPlay
+              // muted
+              playsInline
               preload="metadata"
-              poster="/images/products/shopflow-poster.jpg"
+              poster="/images/products/shopflow.png"
             >
               <source src="/video/shopflow-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.

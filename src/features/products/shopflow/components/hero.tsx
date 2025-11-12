@@ -27,8 +27,8 @@ export function ShopFlowHero() {
 
         <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
           A comprehensive PERN stack solution for managing your shop operations.
-          Real-time dashboards, inventory tracking, invoice management, and
-          financial analytics — all in one place.
+          Real-time dashboards, inventory tracking, invoice management and
+          financial analytics all in one place.
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

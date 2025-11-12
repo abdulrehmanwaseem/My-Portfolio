@@ -16,11 +16,11 @@ const products = [
     id: "shopflow",
     name: "ShopFlow",
     description:
-      "A comprehensive PERN stack shop management system with real-time dashboards, inventory tracking, and financial analytics.",
+      "A comprehensive PERN stack shop management system with real-time dashboards, inventory tracking and financial analytics.",
     href: "/products/shopflow",
     status: "Live",
     tech: ["React", "Node.js", "PostgreSQL", "TypeScript"],
-    image: "/images/blogs/shop-management-system.png",
+    image: "/images/blogs/shopflow.png",
   },
 ];
 
