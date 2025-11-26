@@ -13,16 +13,16 @@ export function SiteFooter() {
         </p>
 
         <p className="mb-4 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
-          Built by{" "}
-          <a
+          Built by a {""}
+          {/* <a
             className="link"
             href="https://www.linkedin.com/in/abdulrehmanwaseem"
             target="_blank"
             rel="noopener"
           >
             abdul rehman
-          </a>
-          . The source code is available on{" "}
+          </a> */}
+          human. The source code is available on{" "}
           <a
             className="link"
             href={SOURCE_CODE_GITHUB_URL}
