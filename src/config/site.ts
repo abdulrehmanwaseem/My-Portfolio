@@ -39,7 +39,7 @@ export const SOURCE_CODE_GITHUB_URL =
   "https://github.com/abdulrehmanwaseem/My-Portfolio";
 
 export const UTM_PARAMS = {
-  utm_source: "abdulrehman-code.vercel.app",
+  utm_source: "https://abdulrehmanwaseem.me",
   utm_medium: "portfolio_website",
   utm_campaign: "referral",
 };

@@ -16,8 +16,8 @@ export const USER: User = {
   ],
   address: "Hyderabad City, Pakistan",
   phoneNumber: "KzkyMzExODExNDgwNQ==", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
-  email: "YWJkdWxyZWhtYW53b3JrMjAyNEBnbWFpbC5jb20=", // base64 encoded
-  website: "https://abdulrehman-code.vercel.app",
+  email: "Y29udGFjdEBhYmR1bHJlaG1hbndhc2VlbS5tZQ==", // base64 encoded
+  website: "https://abdulrehmanwaseem.me",
   jobTitle: "Fullstack Developer",
   jobs: [
     {

@@ -2,17 +2,17 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "description": "A minimal, pixel-perfect developer portfolio, blog and products.",
-  "homepage": "https://abdulrehman-code.vercel.app",
+  "homepage": "https://abdulrehmanwaseem.me",
   "license": "MIT",
   "author": {
     "name": "Abdul Rehman",
-    "email": "abdulrehmanwork2024@gmail.com",
+    "email": "contact@abdulrehmanwaseem.me",
     "url": "https://github.com/abdulrehmanwaseem"
   },
   "contributors": [
     {
       "name": "Abdul Rehman",
-      "email": "abdulrehmanwork2024@gmail.com",
+      "email": "contact@abdulrehmanwaseem.me",
       "url": "https://github.com/abdulrehmanwaseem"
     }
   ],

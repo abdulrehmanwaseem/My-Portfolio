@@ -1,10 +1,10 @@
-# AI Agent Guidelines for abdulrehman-code.vercel.app
+# AI Agent Guidelines for https://abdulrehmanwaseem.me
 
-This guide provides essential information for AI agents working with the abdulrehman-code.vercel.app codebase - a Next.js dev portfolio, blog, and component registry website.
+This guide provides essential information for AI agents working with the https://abdulrehmanwaseem.me codebase - a Next.js dev portfolio, blog, and component registry website.
 
 ## Project Overview
 
-**abdulrehman-code.vercel.app** is a minimal, pixel-perfect dev portfolio, component registry, and blog built with modern web technologies. It serves as:
+**https://abdulrehmanwaseem.me** is a minimal, pixel-perfect dev portfolio, component registry, and blog built with modern web technologies. It serves as:
 
 - Personal portfolio for Nguyen Chanh Dai (@ncdai)
 - Component registry using shadcn/ui system

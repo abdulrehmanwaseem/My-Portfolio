@@ -1,8 +1,8 @@
-# [abdulrehman-code](https://abdulrehman-code.vercel.app)
+# [abdulrehmanwaseem](https://abdulrehmanwaseem.me)
 
 A minimal, pixel-perfect dev portfolio, blog and products to showcase my work as a Fullstack developer.
 
-Check out the live site: [abdulrehman-code](https://abdulrehman-code.vercel.app)
+Check out the live site: [abdulrehmanwaseem](https://abdulrehmanwaseem.me)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/be67ffb8-2511-4f5c-912e-270266ef928a">
