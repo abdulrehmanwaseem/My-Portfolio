@@ -39,13 +39,13 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
     screenshots: [
       {
-        src: "https://assets.chanhdai.com/images/screenshot-mobile-dark.webp",
+        src: "/images/screenshots/screenshot-desktop-light.png",
         type: "image/webp",
         sizes: "440x956",
         form_factor: "narrow",
       },
       {
-        src: "https://assets.chanhdai.com/images/screenshot-mobile-light.webp",
+        src: "/images/screenshots/screenshot-mobile-light.png",
         type: "image/webp",
         sizes: "440x956",
         form_factor: "narrow",
