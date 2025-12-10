@@ -8,14 +8,17 @@ export const USER: User = {
   gender: "male",
   pronouns: "he/him",
   bio: "Creating with code. Small details matter.",
+  timeZone: "Asia/Karachi",
   flipSentences: [
     "Fullstack Web Developer",
     "Mobile App Developer",
     "3D Web Developer",
     "Desktop Application Developer",
   ],
-  address: "Hyderabad City, Pakistan",
-  phoneNumber: "KzkyMzExODExNDgwNQ==", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  address: "Karachi City, Pakistan",
+  phoneNumber: "KzkyMzExODExNDgwNQ==", // E.164 format, base64 encoded (https://t.io.vn/
+  secondPhoneNumber: "Kzk3MSA1NSA1NjMgMzI4OQ==",
+  // base64-string-converter)
   email: "Y29udGFjdEBhYmR1bHJlaG1hbndhc2VlbS5tZQ==", // base64 encoded
   website: "https://abdulrehmanwaseem.me",
   jobTitle: "Fullstack Developer",
@@ -32,15 +35,15 @@ export const USER: User = {
     },
   ],
   about: `
-  Hello World! I am Abdul Rehman a passionate Full Stack Developer whose journey began at age 14 in 9th grade. Now at 18, having completed 12th grade, I've transformed that early curiosity into expertise in modern web development, specializing in the MERN stack while mastering Next.js, NestJS, React Native, Electron, and 3D technologies.
-
-  What some might view my age as a limitation But i see as my greatest advantage. Starting early has given me the freedom to learn, experiment and build a foundation that sets me apart, combining practical experience with theoretical knowledge.
-
-  I specialize in building high-quality web, mobile, desktop, and 3D applications using React, TypeScript, Node.js, and modern technologies. From building a comprehensive Shop Management System using the PERN stack to creating immersive 3D games with Three.js and React Three Fiber, I love turning ideas into reality.
-
-  Currently developing a SaaS Shop Management System and exploring System Design, I aim to eventually venture into AI. My mission remains clear: creating software that delivers exceptional user experiences while constantly adapting to stay at the forefront of technology.
-
-  Let's connect and collaborate!
+- **Fullstack Developer** with **4+ years of experience**, started coding at age 14; known for clean architecture and attention to detail.
+- Expertise in **MERN stack**, **Next.js**, **NestJS**, **React Native**, **Electron**, and **3D technologies**; building scalable web, mobile, desktop, and immersive 3D applications.
+- Now at **18 years old**, what some view as a limitation, I see as my greatest advantage—starting early gave me the freedom to learn, experiment and build a strong foundation combining practical experience with theoretical knowledge.
+- Creator of [ShopFlow](/products/shopflow): modern SaaS shop management system
+  - Built with **PERN stack** (PostgreSQL, Express, React, Node.js) and **Prisma ORM**
+  - Invoice management (purchases, sales, expenses), inventory tracking and payment status monitoring
+  - Real-time dashboard with financial insights and automated low-stock alerts
+- **Passionate** about exploring new technologies and turning ideas into reality through polished, production-ready projects. Currently exploring **System Design** and aiming to venture into **AI**.
+- **Mission:** Creating software that delivers exceptional user experiences while constantly adapting to stay at the forefront of technology.
 `,
   avatar: "/images/me.png",
   ogImage: "/images/og-image-light.png",

@@ -16,6 +16,7 @@ export type User = {
   address: string;
   /** E.164 format, base64 encoded (https://t.io.vn/base64-string-converter) */
   phoneNumber: string;
+  secondPhoneNumber: string;
   /** base64 encoded (https://t.io.vn/base64-string-converter) */
   email: string;
   /** Personal/homepage URL */
@@ -38,6 +39,8 @@ export type User = {
   namePronunciationUrl: string;
   /** SEO keywords list for metadata */
   keywords: string[];
+  /** Time zone in IANA format (e.g., "Asia/Ho_Chi_Minh") */
+  timeZone: string;
   /** Profile/site start date in YYYY-MM-DD */
   dateCreated: string;
 };

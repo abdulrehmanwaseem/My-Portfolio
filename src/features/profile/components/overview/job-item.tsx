@@ -7,45 +7,46 @@ import {
 import { UTM_PARAMS } from "@/config/site";
 import { addQueryParams } from "@/utils/url";
 
-import { IntroItem } from "./intro-item";
+import {
+  IntroItem,
+  IntroItemContent,
+  IntroItemIcon,
+  IntroItemLink,
+} from "./intro-item";
 
 function getJobIcon(title: string) {
   if (/(developer|engineer)/i.test(title)) {
-    return CodeXmlIcon;
+    return <CodeXmlIcon />;
   }
 
   if (/(founder|co-founder)/i.test(title)) {
-    return LightbulbIcon;
+    return <LightbulbIcon />;
   }
 
-  return BriefcaseBusinessIcon;
+  return <BriefcaseBusinessIcon />;
 }
 
-export function JobItem({
-  title,
-  company,
-  website,
-}: {
+type JobItemProps = {
   title: string;
   company: string;
   website: string;
-}) {
+};
+
+export function JobItem({ title, company, website }: JobItemProps) {
   return (
-    <IntroItem
-      icon={getJobIcon(title)}
-      content={
-        <>
-          {title} @
-          <a
-            className="ml-0.5 font-medium underline-offset-4 hover:underline"
-            href={addQueryParams(website, UTM_PARAMS)}
-            target="_blank"
-            rel="noopener"
-          >
-            {company}
-          </a>
-        </>
-      }
-    />
+    <IntroItem>
+      <IntroItemIcon>{getJobIcon(title)}</IntroItemIcon>
+
+      <IntroItemContent>
+        {title} @
+        <IntroItemLink
+          className="ml-0.5 font-medium"
+          href={addQueryParams(website, UTM_PARAMS)}
+          aria-label={`${company} website`}
+        >
+          {company}
+        </IntroItemLink>
+      </IntroItemContent>
+    </IntroItem>
   );
 }

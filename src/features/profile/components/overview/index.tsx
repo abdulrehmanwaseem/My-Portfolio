@@ -4,8 +4,14 @@ import { USER } from "@/features/profile/data/user";
 import { urlToName } from "@/utils/url";
 
 import { Panel, PanelContent } from "../panel";
+import { CurrentLocalTimeItem } from "./current-local-time-item";
 import { EmailItem } from "./email-item";
-import { IntroItem } from "./intro-item";
+import {
+  IntroItem,
+  IntroItemContent,
+  IntroItemIcon,
+  IntroItemLink,
+} from "./intro-item";
 import { JobItem } from "./job-item";
 import { PhoneItem } from "./phone-item";
 
@@ -14,34 +20,65 @@ export function Overview() {
     <Panel>
       <h2 className="sr-only">Overview</h2>
 
-      <PanelContent className="space-y-2">
-        {USER.jobs.map((job, index) => {
-          return (
-            <JobItem
-              key={index}
-              title={job.title}
-              company={job.company}
-              website={job.website}
-            />
-          );
-        })}
-
-        <IntroItem icon={MapPinIcon} content={USER.address} />
-
-        <PhoneItem phoneNumber={USER.phoneNumber} />
-
-        <EmailItem email={USER.email} />
-
-        <IntroItem
-          icon={GlobeIcon}
-          content={urlToName(USER.website)}
-          href={USER.website}
+      <PanelContent className="space-y-2.5">
+        <JobItem
+          title={USER.jobs[0].title}
+          company={USER.jobs[0].company}
+          website={USER.jobs[0].website}
         />
 
-        <IntroItem
-          icon={USER.gender === "male" ? MarsIcon : VenusIcon}
-          content={USER.pronouns}
-        />
+        <div className="grid gap-x-12 gap-y-2.5 sm:grid-cols-2">
+          <JobItem
+            title={USER.jobs[1].title}
+            company={USER.jobs[1].company}
+            website={USER.jobs[1].website}
+          />
+
+          <IntroItem>
+            <IntroItemIcon>
+              {USER.gender === "male" ? <MarsIcon /> : <VenusIcon />}
+            </IntroItemIcon>
+            <IntroItemContent aria-label={`Pronouns: ${USER.pronouns}`}>
+              {USER.pronouns}
+            </IntroItemContent>
+          </IntroItem>
+
+          <IntroItem>
+            <IntroItemIcon>
+              <MapPinIcon />
+            </IntroItemIcon>
+            <IntroItemContent>
+              <IntroItemLink
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(USER.address)}`}
+                aria-label={`Location: ${USER.address}`}
+              >
+                {USER.address}
+              </IntroItemLink>
+            </IntroItemContent>
+          </IntroItem>
+
+          <CurrentLocalTimeItem timeZone={USER.timeZone} />
+
+          <PhoneItem phoneNumber={USER.phoneNumber} />
+
+          <PhoneItem phoneNumber={USER.secondPhoneNumber} />
+
+          <EmailItem email={USER.email} />
+
+          <IntroItem>
+            <IntroItemIcon>
+              <GlobeIcon />
+            </IntroItemIcon>
+            <IntroItemContent>
+              <IntroItemLink
+                href={USER.website}
+                aria-label={`Personal website: ${urlToName(USER.website)}`}
+              >
+                {urlToName(USER.website)}
+              </IntroItemLink>
+            </IntroItemContent>
+          </IntroItem>
+        </div>
       </PanelContent>
     </Panel>
   );

@@ -2,12 +2,11 @@ import type { Testimonial } from "../types/testimonials";
 
 export const TESTIMONIALS_1: Testimonial[] = [
   {
-    authorAvatar: "/images/forrof.svg",
+    authorAvatar: "/images/experience/forrof.svg",
     authorName: "Faraz Mahmood",
     authorBio: "Founder @forrof.io",
     url: "https://www.forrof.io",
-    quote:
-      "Your attention to detail and commitment to delivering quality work are truly commendable",
+    quote: "Attention to detail and quality work are truly commendable",
     theme: true,
   },
   {
@@ -17,7 +16,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
     authorBio: "Free Online Typing Game",
     url: "https://rallytyper.com",
     quote:
-      "Abdul solved our unclear deployment setup and built a complete admin dashboard with CMS. His problem-solving skills are exceptional!",
+      "Built our admin dashboard with CMS. Exceptional problem-solving skills!",
   },
   {
     authorAvatar:
@@ -26,24 +25,24 @@ export const TESTIMONIALS_1: Testimonial[] = [
     authorBio: "Messaging Platform",
     url: "https://dev.khrimisay.com",
     quote:
-      "Fixed critical PWA cookie issues and login bugs that had been blocking us for weeks. Great debugging skills and reliable developer.",
+      "Fixed critical PWA bugs that blocked us for weeks. Great debugging skills!",
   },
   {
     authorAvatar:
       "https://robohash.org/SpaceFacts?set=set3&bgset=bg1&size=64x64",
-    authorName: "Space Facts Explorer Client",
+    authorName: "Space Facts Client",
     authorBio: "iOS Educational App",
     url: "https://apps.apple.com/us/app/space-facts-explorer/id6749238944",
     quote:
-      "Turned my 9-year-old's dream into reality! Handled everything from code migration to App Store deployment. My son loves sharing it with friends!",
+      "Turned my 9-year-old's dream into reality! My son loves sharing it with friends.",
   },
   {
     authorAvatar: "https://robohash.org/Fynosign?set=set4&bgset=bg2&size=64x64",
-    authorName: "Fynosign Team",
+    authorName: "Fynosign Client",
     authorBio: "E-Signature Platform",
     url: "https://fynosign.com",
     quote:
-      "Built our entire SaaS platform end-to-end. Solved the hardest challenge of PDF signing workflows with legal compliance. Production-ready and scalable!",
+      "Built our entire SaaS platform. Solved the hardest PDF signing challenge. Production-ready!",
   },
   {
     authorAvatar: "https://robohash.org/TruerEHR?set=set1&bgset=bg2&size=64x64",
@@ -51,7 +50,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
     authorBio: "Healthcare Dashboard",
     url: "https://ehr-dashboard-nine.vercel.app",
     quote:
-      "Excellent frontend work with complex API integrations. Set up authentication smoothly and delivered stable patient management features.",
+      "Excellent frontend work with complex APIs. Delivered stable patient management features.",
   },
   {
     authorAvatar: "https://robohash.org/Fitreps?set=set2&bgset=bg1&size=64x64",
@@ -59,7 +58,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
     authorBio: "Fitness Platform",
     url: "https://www.fitreps.com",
     quote:
-      "Redesigned our subscription UI from boring to modern. Even created dark mode from scratch when Figma design didn't include it. Great attention to detail!",
+      "Redesigned our UI from boring to modern. Even created dark mode from scratch!",
   },
 ];
 
@@ -71,7 +70,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
     authorBio: "Horse Stall Calculator",
     url: "https://bedding-calculator.netlify.app",
     quote:
-      "Delivered exactly what I needed with pure HTML/CSS/JS. Made the complex calculations simple and the design fully responsive. Very practical tool!",
+      "Made complex calculations simple with pure HTML/CSS/JS. Fully responsive!",
   },
   {
     authorAvatar:
@@ -80,7 +79,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
     authorBio: "Employment Analytics",
     url: "https://zas-dashboard-v12n.vercel.app",
     quote:
-      "Transformed 100k+ rows of Spanish labor statistics into clear insights. Handled huge datasets efficiently and made complex data accessible.",
+      "Transformed 100k+ rows into clear insights. Made complex data accessible.",
   },
   {
     authorAvatar:
@@ -89,7 +88,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
     authorBio: "Real Estate Due Diligence",
     url: "/internal-project",
     quote:
-      "Rebuilt our CSV/Excel module to handle complex industry datasets. Drastically reduced upload errors and improved data accuracy for our brokers.",
+      "Rebuilt our CSV module. Drastically reduced upload errors for our brokers.",
   },
   {
     authorAvatar:
@@ -98,7 +97,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
     authorBio: "Affiliate Marketing Dashboard",
     url: "/internal-project",
     quote:
-      "Cleaned up our messy codebase and integrated all APIs seamlessly. The dashboard is now much more maintainable and user-friendly.",
+      "Cleaned up our messy codebase. Dashboard is now much more maintainable.",
   },
   {
     authorAvatar: "https://robohash.org/EdTech?set=set3&bgset=bg1&size=64x64",
@@ -106,7 +105,7 @@ export const TESTIMONIALS_2: Testimonial[] = [
     authorBio: "Learning Management System",
     url: "/internal-project",
     quote:
-      "Refactored our complex multi-step auth flow with Redux Toolkit. Eliminated props drilling and made the registration system much cleaner.",
+      "Refactored our auth flow with Redux. Made registration much cleaner.",
   },
   {
     authorAvatar: "https://robohash.org/LoopIQ?set=set4&bgset=bg2&size=64x64",
@@ -114,6 +113,6 @@ export const TESTIMONIALS_2: Testimonial[] = [
     authorBio: "Healthcare Management",
     url: "https://www.loopiq.xyz",
     quote:
-      "Solid frontend engineer who delivers clean, scalable components. Great collaboration on API integration and production deployments.",
+      "Delivers clean, scalable components. Great collaboration on production deployments.",
   },
 ];

@@ -4,7 +4,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "forrof",
     companyName: "Forrof.io",
-    companyLogo: "/images/forrof.svg",
+    companyLogo: "/images/experience/forrof.svg",
     positions: [
       {
         id: "forrof-fullstack-dev",

@@ -5,19 +5,47 @@ import { PhoneIcon } from "lucide-react";
 import { useIsClient } from "@/hooks/use-is-client";
 import { decodePhoneNumber, formatPhoneNumber } from "@/utils/string";
 
-import { IntroItem } from "./intro-item";
+import {
+  IntroItem,
+  IntroItemContent,
+  IntroItemIcon,
+  IntroItemLink,
+} from "./intro-item";
 
-export function PhoneItem({ phoneNumber }: { phoneNumber: string }) {
+type PhoneItemProps = {
+  phoneNumber: string;
+};
+
+export function PhoneItem({ phoneNumber }: PhoneItemProps) {
   const isClient = useIsClient();
   const phoneNumberDecoded = decodePhoneNumber(phoneNumber);
+  const isDubaiNumber = phoneNumberDecoded.startsWith("+971");
 
   return (
-    <IntroItem
-      icon={PhoneIcon}
-      content={
-        isClient ? formatPhoneNumber(phoneNumberDecoded) : "[Phone protected]"
-      }
-      href={isClient ? `tel:${phoneNumberDecoded}` : "#"}
-    />
+    <IntroItem>
+      <IntroItemIcon>
+        <PhoneIcon />
+      </IntroItemIcon>
+
+      <IntroItemContent>
+        <IntroItemLink
+          href={isClient ? `tel:${phoneNumberDecoded}` : "#"}
+          aria-label={
+            isClient
+              ? `Call ${formatPhoneNumber(phoneNumberDecoded)}`
+              : "Phone number"
+          }
+        >
+          {isClient
+            ? formatPhoneNumber(phoneNumberDecoded)
+            : "[Phone protected]"}
+        </IntroItemLink>
+        {isClient && isDubaiNumber && (
+          <span className="text-muted-foreground" aria-hidden="true">
+            {" // Dubai, UAE"}
+          </span>
+        )}
+      </IntroItemContent>
+    </IntroItem>
   );
 }

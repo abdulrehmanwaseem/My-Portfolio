@@ -1,37 +1,51 @@
-import type { LucideProps } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function IntroItem({
-  icon: Icon,
-  content,
-  href,
-}: {
-  icon: React.ComponentType<LucideProps>;
-  content: React.ReactNode;
-  href?: string;
-}) {
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
-    <div className="flex items-center gap-4 font-mono text-sm">
-      <div
-        className="flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background"
-        aria-hidden
-      >
-        <Icon className="pointer-events-none size-4 text-muted-foreground" />
-      </div>
+    <div
+      className={cn("flex items-center gap-4 font-mono text-sm", className)}
+      {...props}
+    />
+  );
+}
 
-      <p className="text-balance">
-        {href ? (
-          <a
-            className="underline-offset-4 hover:underline"
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {content}
-          </a>
-        ) : (
-          content
-        )}
-      </p>
-    </div>
+export function IntroItemIcon({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
+  return (
+    <div
+      className={cn(
+        "flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted ring-1 ring-edge ring-offset-1 ring-offset-background",
+        "[&_svg]:pointer-events-none [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-4",
+        className
+      )}
+      aria-hidden="true"
+      {...props}
+    />
+  );
+}
+
+export function IntroItemContent({
+  className,
+  ...props
+}: React.ComponentProps<"p">) {
+  return <p className={cn("text-balance", className)} {...props} />;
+}
+
+export function IntroItemLink({
+  className,
+  ...props
+}: React.ComponentProps<"a">) {
+  return (
+    <a
+      className={cn("underline-offset-4 hover:underline", className)}
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+    />
   );
 }

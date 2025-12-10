@@ -40,7 +40,9 @@ export default function TestimonialsMarqueeDemo1() {
                     <TestimonialAvatarRing />
                   </TestimonialAvatar>
 
-                  <TestimonialAuthorName href={item.url}>
+                  <TestimonialAuthorName
+                  // href={item.url}
+                  >
                     {item.authorName}
                     <TestimonialVerifiedBadge />
                   </TestimonialAuthorName>

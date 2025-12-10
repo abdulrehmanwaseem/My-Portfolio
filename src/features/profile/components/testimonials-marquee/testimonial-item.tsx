@@ -21,28 +21,30 @@ export function TestimonialItem({
   theme,
 }: TestimonialType) {
   return (
-    <Testimonial>
-      <TestimonialQuote>
-        <p>{quote}</p>
-      </TestimonialQuote>
+    <div className="block h-full transition-colors hover:bg-accent2">
+      <Testimonial>
+        <TestimonialQuote>
+          <p>{quote}</p>
+        </TestimonialQuote>
 
-      <TestimonialAuthor className="border-edge">
-        <TestimonialAvatar>
-          <TestimonialAvatarImg
-            theme={theme}
-            src={authorAvatar}
-            alt={authorName}
-          />
-          <TestimonialAvatarRing />
-        </TestimonialAvatar>
+        <TestimonialAuthor className="border-edge">
+          <TestimonialAvatar>
+            <TestimonialAvatarImg
+              theme={theme}
+              src={authorAvatar}
+              alt={authorName}
+            />
+            <TestimonialAvatarRing />
+          </TestimonialAvatar>
 
-        <TestimonialAuthorName href={url}>
-          {authorName}
-          <TestimonialVerifiedBadge />
-        </TestimonialAuthorName>
+          <TestimonialAuthorName href={url}>
+            {authorName}
+            <TestimonialVerifiedBadge />
+          </TestimonialAuthorName>
 
-        <TestimonialAuthorBio>{authorBio}</TestimonialAuthorBio>
-      </TestimonialAuthor>
-    </Testimonial>
+          <TestimonialAuthorBio>{authorBio}</TestimonialAuthorBio>
+        </TestimonialAuthor>
+      </Testimonial>
+    </div>
   );
 }
