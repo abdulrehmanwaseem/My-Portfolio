@@ -34,7 +34,7 @@ export const TESTIMONIALS_1: Testimonial[] = [
     authorBio: "iOS Educational App",
     url: "https://apps.apple.com/us/app/space-facts-explorer/id6749238944",
     quote:
-      "Turned my 9-year-old's dream into reality! My son loves sharing it with friends.",
+      "Turned my 9 year old's dream into reality! My son loves sharing it with friends.",
   },
   {
     authorAvatar: "https://robohash.org/Fynosign?set=set4&bgset=bg2&size=64x64",

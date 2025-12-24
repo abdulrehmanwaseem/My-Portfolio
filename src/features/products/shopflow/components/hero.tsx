@@ -33,13 +33,17 @@ export function ShopFlowHero() {
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button size="lg" asChild>
-            <Link href="#demo">
-              Watch Demo
+            <Link
+              href="https://shopflow-pos.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Live
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <Link href="#features">Explore Features</Link>
+            <Link href="#demo">Watch Demo</Link>
           </Button>
         </div>
 

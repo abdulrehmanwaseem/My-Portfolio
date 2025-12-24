@@ -163,6 +163,7 @@ export const metadata: Metadata = {
 
 ## Links
 
+- **Live Demo**: [https://shopflow-pos.vercel.app/](https://shopflow-pos.vercel.app/)
 - Contact: `/#contact`
 - Experience: `/#experience`
 - Demo section: `#demo`

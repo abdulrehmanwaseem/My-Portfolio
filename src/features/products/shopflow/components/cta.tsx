@@ -20,15 +20,20 @@ export function ShopFlowCTA() {
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild>
-                <Link href="/#contact">
-                  Get in Touch
-                  <Mail className="ml-2 h-4 w-4" />
+                <Link
+                  href="https://shopflow-pos.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Live Site
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
+
               <Button size="lg" variant="outline" asChild>
                 <Link href="/#experience">
                   View Experience
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <Mail className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
