@@ -2,6 +2,24 @@ import type { Certification } from "../types/certifications";
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    title: "JavaScript Essentials 2",
+    issuer: "Cisco Networking Academy",
+    issuerLogoURL: "/images/experience/cisco.jpg",
+    issueDate: "2025-12-23",
+    credentialID: "9cf646db",
+    credentialURL:
+      "https://www.credly.com/badges/9cf646db-c4d1-4bfc-a348-7b8fda722d98/linked_in_profile",
+  },
+  {
+    title: "Python Essentials 2",
+    issuer: "Cisco Networking Academy",
+    issuerLogoURL: "/images/experience/cisco.jpg",
+    issueDate: "2025-12-22",
+    credentialID: "dd6c1b93",
+    credentialURL:
+      "https://www.credly.com/badges/dd6c1b93-08a2-4c17-89e1-cdf443cd708a/linked_in_profile",
+  },
+  {
     title: "Python Essentials 1",
     issuer: "Cisco Networking Academy",
     issuerLogoURL: "/images/experience/cisco.jpg",
