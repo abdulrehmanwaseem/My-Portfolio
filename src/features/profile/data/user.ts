@@ -45,7 +45,7 @@ export const USER: User = {
 - **Passionate** about exploring new technologies and turning ideas into reality through polished, production-ready projects. Currently exploring **System Design** and aiming to venture into **AI**.
 - **Mission:** Creating software that delivers exceptional user experiences while constantly adapting to stay at the forefront of technology.
 `,
-  avatar: "/images/me.png",
+  avatar: "/images/me.jpg",
   ogImage: "/images/og-image-light.png",
   namePronunciationUrl: "/audio/abdulrehman.mp3",
   keywords: [
