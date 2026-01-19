@@ -328,22 +328,6 @@ export const TECH_STACK: TechStack[] = [
     theme: true,
   },
   {
-    key: "udemy",
-    title: "Udemy",
-    href: "https://www.udemy.com/",
-    categories: ["Others"],
-    iconUrl: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
-    theme: true,
-  },
-  {
-    key: "upwork",
-    title: "Upwork",
-    href: "https://www.upwork.com/",
-    categories: ["Others"],
-    iconUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Upwork-logo.svg",
-  },
-  {
     key: "fiverr",
     title: "Fiverr",
     href: "https://www.fiverr.com/",

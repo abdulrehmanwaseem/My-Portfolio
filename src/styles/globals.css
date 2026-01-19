@@ -326,6 +326,7 @@
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--border) transparent;
+    cursor: none !important;
   }
 
   [id] {
