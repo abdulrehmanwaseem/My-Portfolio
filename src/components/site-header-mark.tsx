@@ -4,7 +4,7 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-import { AbdulRehmanMark } from "./abdulrehman-mark";
+import { KhoaMark } from "./khoa-mark";
 
 const calcDistance = (el: HTMLElement) => {
   const rect = el.getBoundingClientRect();
@@ -39,7 +39,7 @@ function ChanhDaiMarkMotion() {
   }, []);
 
   return (
-    <AbdulRehmanMark
+    <KhoaMark
       data-visible={visible}
       className="translate-y-2 opacity-0 transition-[opacity,translate] duration-300 data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100"
     />
@@ -49,5 +49,5 @@ function ChanhDaiMarkMotion() {
 export function SiteHeaderMark() {
   const pathname = usePathname();
   const isHome = ["/", "/index"].includes(pathname);
-  return isHome ? <ChanhDaiMarkMotion /> : <AbdulRehmanMark />;
+  return isHome ? <ChanhDaiMarkMotion /> : <KhoaMark />;
 }

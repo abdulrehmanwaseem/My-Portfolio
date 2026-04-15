@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
-import { AbdulRehmanMark } from "@/components/abdulrehman-mark";
-import { AbdulRehmanWordmark } from "@/components/abdulrehman-wordmark";
+import { KhoaMark } from "@/components/khoa-mark";
+import { KhoaWordmark } from "@/components/khoa-wordmark";
 
 import { Panel, PanelHeader, PanelTitle } from "./panel";
 
@@ -25,7 +25,7 @@ export function Brand() {
           </div>
 
           <div className="screen-line-after flex items-center justify-center pr-8 after:z-1">
-            <AbdulRehmanMark className="h-8 w-auto sm:h-12" />
+            <KhoaMark className="h-8 w-auto sm:h-12" />
           </div>
 
           <div className="flex h-28 items-center justify-center border-r border-dashed border-edge bg-background">
@@ -35,7 +35,7 @@ export function Brand() {
           </div>
 
           <div className="screen-line-after flex items-center justify-center pr-8 after:z-1">
-            <AbdulRehmanWordmark className="h-18 lg:h-28" />
+            <KhoaWordmark className="h-18 lg:h-28" />
           </div>
         </div>
       </BrandContextMenu>
