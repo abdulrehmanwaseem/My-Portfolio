@@ -80,24 +80,7 @@ export const TECH_STACK: TechStack[] = [
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
-  {
-    key: "threejs",
-    title: "Three.js",
-    href: "https://threejs.org/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
-    theme: true,
-  },
-  {
-    key: "expressjs",
-    title: "Express.js",
-    href: "https://expressjs.com/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-    theme: true,
-  },
+
   {
     key: "nextjs2",
     title: "Next.js",
@@ -106,57 +89,6 @@ export const TECH_STACK: TechStack[] = [
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     theme: true,
-  },
-
-  {
-    key: "nestjs",
-    title: "NestJS",
-    href: "https://nestjs.com/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
-  },
-  {
-    key: "electron",
-    title: "Electron",
-    href: "https://www.electronjs.org/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
-  },
-  {
-    key: "bun",
-    title: "Bun",
-    href: "https://bun.sh/",
-    categories: ["Runtime Environment"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bun/bun-original.svg",
-  },
-  {
-    key: "react-native",
-    title: "React Native",
-    href: "https://reactnative.dev/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-
-  {
-    key: "expo",
-    title: "Expo",
-    href: "https://expo.dev/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg",
-    theme: true,
-  },
-  {
-    key: "redux",
-    title: "Redux",
-    href: "https://redux.js.org/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
   },
   {
     key: "wordpress",
@@ -167,15 +99,7 @@ export const TECH_STACK: TechStack[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
     theme: true,
   },
-  {
-    key: "pandas",
-    title: "Pandas",
-    href: "https://pandas.pydata.org/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
-    theme: true,
-  },
+
   {
     key: "tailwindcss",
     title: "Tailwind CSS",
@@ -278,14 +202,7 @@ export const TECH_STACK: TechStack[] = [
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
   },
-  {
-    key: "redis",
-    title: "Redis",
-    href: "https://redis.io/",
-    categories: ["Database"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
-  },
+
   {
     key: "prisma",
     title: "Prisma",
@@ -294,14 +211,7 @@ export const TECH_STACK: TechStack[] = [
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
   },
-  {
-    key: "cloudinary",
-    title: "Cloudinary",
-    href: "https://cloudinary.com/",
-    categories: ["Database"],
-    iconUrl:
-      "https://res.cloudinary.com/cloudinary-marketing/image/upload/f_auto,q_auto/v1599098500/creative_source/Logo/Cloud%20Glyph/cloudinary_cloud_glyph_blue_png.png",
-  },
+
   {
     key: "figma",
     title: "Figma",
@@ -327,14 +237,7 @@ export const TECH_STACK: TechStack[] = [
     iconUrl: "https://avatars.githubusercontent.com/u/9892522?s=200&v=4",
     theme: true,
   },
-  {
-    key: "fiverr",
-    title: "Fiverr",
-    href: "https://www.fiverr.com/",
-    categories: ["Others"],
-    iconUrl:
-      "https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/fiverr-128.png",
-  },
+
   {
     key: "stackoverflow",
     title: "Stack Overflow",
@@ -342,22 +245,5 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Others"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stackoverflow/stackoverflow-original.svg",
-  },
-
-  {
-    key: "render",
-    title: "Render",
-    href: "https://render.com/",
-    categories: ["Others"],
-    iconUrl: "https://avatars.githubusercontent.com/u/36424661?s=200&v=4",
-  },
-  {
-    key: "aws-ses",
-    title: "AWS SES",
-    href: "https://aws.amazon.com/ses/",
-    categories: ["Others"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-    theme: true,
   },
 ];

@@ -1,70 +1,62 @@
 import type { User } from "@/features/profile/types/user";
 
 export const USER: User = {
-  firstName: "Abdul Rehman",
-  lastName: "Waseem",
-  displayName: "Abdul Rehman",
-  username: "abdulrehmanwaseem",
+  firstName: "Khoa",
+  lastName: "Truong Nguyen Anh",
+  displayName: "Truong Nguyen Anh Khoa",
+  username: "nhkhoa.a",
   gender: "male",
   pronouns: "he/him",
-  bio: "Creating with code. Small details matter.",
-  timeZone: "Asia/Karachi",
-  flipSentences: [
-    "Fullstack Web Developer",
-    "AI Agent Engineer",
-    "Mobile App Developer",
-    "3D Web Developer",
-    "Desktop Application Developer",
-  ],
-  address: "Karachi City, Pakistan",
-  phoneNumber: "KzkyMzExODExNDgwNQ==", // E.164 format, base64 encoded (https://t.io.vn/
-  secondPhoneNumber: "Kzk3MSA1NSA1NjMgMzI4OQ==",
-  // base64-string-converter)
-  email: "Y29udGFjdEBhYmR1bHJlaG1hbndhc2VlbS5tZQ==", // base64 encoded
-  website: "https://abdulrehmanwaseem.me",
-  jobTitle: "Fullstack Developer",
+  bio: "AI Automation Developer | Building intelligent workflows",
+  timeZone: "Asia/Ho_Chi_Minh",
+  flipSentences: ["AI Automation Developer", "Freelancer", "Building Khoa AI"],
+  address: "Ho Chi Minh City, Vietnam",
+  phoneNumber: "Kzg0Nzk2ODAyMzk5", // E.164 format: +84 796 802 399, base64 encoded
+  secondPhoneNumber: "", // Optional: add second phone if needed
+  email: "d29yay5uaGtob2FAZ21haWwuY29t", // work.nhkhoa@gmail.com, base64 encoded
+  website: "https://nhkhoa.me",
+  jobTitle: "AI Automation Developer",
   jobs: [
     {
-      title: "Senior Fullstack Developer & 3D Web Specialist At",
-      company: "Forrof.io",
-      website: "https://forrof.io?ref=IN-926722",
+      title: "Founder & Developer",
+      company: "Khoa AI",
+      website: "https://www.facebook.com/profile.php?id=61573277976481",
     },
     {
-      title: "Founder",
-      company: "ShopFlow",
-      website: "/products/shopflow",
+      title: "Graduate",
+      company: "Van Lang University",
+      website: "https://vlu.edu.vn/",
     },
   ],
   about: `
-- **Fullstack Developer** with **4+ years of experience**, started coding at age 14; known for clean architecture and attention to detail.
-- Expertise in **MERN stack**, **Next.js**, **NestJS**, **React Native**, **Electron**, and **3D technologies**; building scalable web, mobile, desktop, and immersive 3D applications.
-- Now at **18 years old**, what some view as a limitation, I see as my greatest advantage—starting early gave me the freedom to learn, experiment and build a strong foundation combining practical experience with theoretical knowledge.
-- Creator of [ShopFlow](/products/shopflow): modern SaaS shop management system
-  - Built with **PERN stack** (PostgreSQL, Express, React, Node.js) and **Prisma ORM**
-  - Invoice management (purchases, sales, expenses), inventory tracking and payment status monitoring
-  - Real-time dashboard with financial insights and automated low-stock alerts
-- **Passionate** about exploring new technologies and turning ideas into reality through polished, production-ready projects. Currently exploring **System Design** and aiming to venture into **AI**.
-- **Mission:** Creating software that delivers exceptional user experiences while constantly adapting to stay at the forefront of technology.
+- **AI Automation Developer** recently graduated from Van Lang University with a passion for building intelligent workflows that save time and boost productivity
+- Now at **22 years old**, excited to build a career at the intersection of AI and practical business solutions
+- **Skills**: JavaScript/TypeScript, LangChain, OpenAI API, Claude Code, Workflow Automation tools (n8n, Zapier, Make.com)
+- **Mission**: Democratizing AI automation for everyone, one workflow at a time
 `,
   avatar: "/images/me.jpg",
   ogImage: "/images/og-image-light.png",
-  namePronunciationUrl: "/audio/abdulrehman.mp3",
+  namePronunciationUrl: "", // Add audio file for name pronunciation if available
   keywords: [
-    "abdul rehman",
-    "abdulrehmanwaseem",
-    "abdul rehman waseem",
+    "Trương Nguyễn Anh Khoa",
+    "Truong Nguyen Anh Khoa",
+    "nhkhoa.a",
+    "Khoa VLU",
+    "Khoa Van Lang",
+    "Khoa CNTT",
+    "Khoa HTTT",
+    "Khoa HTTT VLU",
+    "ai automation developer",
+    "ai developer vietnam",
+    "freelancer vietnam",
+    "automation developer",
     "fullstack developer",
     "mern stack developer",
     "react developer",
     "nextjs developer",
-    "react native developer",
-    "three.js developer",
-    "3d web developer",
-    "electron developer",
-    "desktop app developer",
-    "mobile app developer",
     "nodejs developer",
-    "nestjs developer",
+    "langchain developer",
+    "n8n automation",
   ],
-  dateCreated: "2025-10-12", // YYYY-MM-DD
+  dateCreated: "2026-04-15",
 };

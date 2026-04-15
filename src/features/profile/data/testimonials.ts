@@ -61,7 +61,6 @@ export const TESTIMONIALS_1: Testimonial[] = [
       "Redesigned our UI from boring to modern. Even created dark mode from scratch!",
   },
 ];
-
 export const TESTIMONIALS_2: Testimonial[] = [
   {
     authorAvatar:

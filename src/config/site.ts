@@ -3,7 +3,7 @@ import type { NavItem } from "@/types/nav";
 
 export const SITE_INFO = {
   name: USER.displayName,
-  url: process.env.APP_URL || "https://abdulrehmanwaseem.me",
+  url: process.env.APP_URL || "https://nhkhoa.me",
   ogImage: USER.ogImage,
   description: USER.bio,
   keywords: USER.keywords,
@@ -33,13 +33,13 @@ export const MAIN_NAV: NavItem[] = [
   // },
 ];
 
-export const GITHUB_USERNAME = "abdulrehmanwaseem";
-export const SOURCE_CODE_GITHUB_REPO = "abdulrehmanwaseem/My-Portfolio";
+export const GITHUB_USERNAME = "dev-nhkhoa";
+export const SOURCE_CODE_GITHUB_REPO = "dev-nhkhoa/My-Portfolio";
 export const SOURCE_CODE_GITHUB_URL =
-  "https://github.com/abdulrehmanwaseem/My-Portfolio";
+  "https://github.com/dev-nhkhoa/My-Portfolio";
 
 export const UTM_PARAMS = {
-  utm_source: "https://abdulrehmanwaseem.me",
+  utm_source: "https://nhkhoa.me",
   utm_medium: "portfolio_website",
   utm_campaign: "referral",
 };
