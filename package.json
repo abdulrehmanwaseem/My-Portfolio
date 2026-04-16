@@ -114,7 +114,7 @@
     "@types/react-dom": "19.2.2"
   },
   "engines": {
-    "node": "22.x",
+    "node": "24.x",
     "pnpm": ">=9"
   },
   "packageManager": "pnpm@10.25.0"
