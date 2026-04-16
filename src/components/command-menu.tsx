@@ -57,7 +57,7 @@ const MENU_LINKS: CommandLinkItem[] = [
   {
     title: "Portfolio",
     href: "/",
-    icon: KhoaMark,
+    iconImage: "/images/brand/ak-mark.png",
   },
   {
     title: "Blog",
@@ -314,7 +314,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
                 );
               }}
             >
-              <KhoaMark />
+              <KhoaMark className="size-6" />
               Copy Mark as SVG
             </CommandItem>
 

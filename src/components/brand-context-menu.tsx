@@ -31,7 +31,7 @@ export function BrandContextMenu({ children }: { children: React.ReactNode }) {
             toast.success("Copied Mark as SVG");
           }}
         >
-          <KhoaMark />
+          <KhoaMark className="size-6" />
           Copy Mark as SVG
         </ContextMenuItem>
 
