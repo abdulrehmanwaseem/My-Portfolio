@@ -55,7 +55,7 @@ export const TECH_STACK: TechStack[] = [
     href: "https://chatgpt.com/",
     categories: ["AI"],
     iconUrl:
-      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/ChatGPT-Color.svg",
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/OpenAI.svg",
     theme: true,
   },
   {
