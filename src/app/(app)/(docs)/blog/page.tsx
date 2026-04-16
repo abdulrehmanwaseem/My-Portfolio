@@ -1,11 +1,39 @@
 import type { Metadata } from "next";
 
+import { SITE_INFO } from "@/config/site";
 import { PostItem } from "@/features/blog/components/post-item";
 import { getAllPosts } from "@/features/blog/data/posts";
 
+const title = "Blog";
+const description =
+  "A collection of articles on development, design, and ideas.";
+
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "A collection of articles on development, design, and ideas.",
+  title,
+  description,
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/blog",
+    type: "website",
+    images: [
+      {
+        url: SITE_INFO.ogImage,
+        width: 1200,
+        height: 630,
+        alt: SITE_INFO.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [SITE_INFO.ogImage],
+  },
 };
 
 export default function Page() {

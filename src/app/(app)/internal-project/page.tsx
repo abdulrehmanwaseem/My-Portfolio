@@ -2,10 +2,38 @@ import { ArrowLeft, Building2, FileText, Lock, Shield } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { SITE_INFO } from "@/config/site";
+
+const title = "Internal Client Project";
+const description =
+  "This project is confidential and developed for internal use by our client. Due to NDA and privacy agreements, we cannot share the live URL.";
+
 export const metadata: Metadata = {
-  title: "Internal Client Project",
-  description:
-    "This project is confidential and developed for internal use by our client. Due to NDA and privacy agreements, we cannot share the live URL.",
+  title,
+  description,
+  alternates: {
+    canonical: "/internal-project",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/internal-project",
+    type: "article",
+    images: [
+      {
+        url: SITE_INFO.ogImage,
+        width: 1200,
+        height: 630,
+        alt: SITE_INFO.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [SITE_INFO.ogImage],
+  },
 };
 
 export default function InternalProjectPage() {
