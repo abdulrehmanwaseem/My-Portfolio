@@ -7,33 +7,50 @@ import { visit } from "unist-util-visit";
 import { Index } from "@/__registry__/index";
 import type { UnistNode, UnistTree } from "@/types/unist";
 
+const ALLOWED_DIRECTORIES = [
+  path.resolve(process.cwd(), "src/registry"),
+  path.resolve(process.cwd(), "src/lib"),
+  path.resolve(process.cwd(), "src/components"),
+];
+
+function isPathAllowed(filePath: string): boolean {
+  const resolvedPath = path.resolve(filePath);
+  return ALLOWED_DIRECTORIES.some((allowed) =>
+    resolvedPath.startsWith(allowed)
+  );
+}
+
 export function rehypeComponent() {
   // Thanks @shadcn/ui
   return async (tree: UnistTree) => {
     visit(tree, (node: UnistNode) => {
-      // src prop overrides both name and fileName.
-      const { value: srcPath } =
-        (getNodeAttributeByName(node, "src") as {
-          name: string;
-          value?: string;
-          type?: string;
-        }) || {};
-
       if (node.name === "ComponentSource") {
         const name = getNodeAttributeByName(node, "name")?.value as string;
+        const srcAttr = getNodeAttributeByName(node, "src") as
+          | {
+              name: string;
+              value?: string;
+              type?: string;
+            }
+          | undefined;
         const fileName = getNodeAttributeByName(node, "fileName")?.value as
           | string
           | undefined;
 
-        if (!name && !srcPath) {
+        if (!name && !srcAttr?.value) {
           return null;
         }
 
         try {
           let src: string;
 
-          if (srcPath) {
-            src = path.join(process.cwd(), srcPath);
+          if (srcAttr?.value) {
+            const srcPath = path.join(process.cwd(), srcAttr.value);
+            if (!isPathAllowed(srcPath)) {
+              console.error(`Blocked path traversal attempt: ${srcAttr.value}`);
+              return null;
+            }
+            src = srcPath;
           } else {
             const component = Index[name];
             src = fileName
