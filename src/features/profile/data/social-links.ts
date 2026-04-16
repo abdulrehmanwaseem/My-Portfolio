@@ -2,13 +2,13 @@ import type { SocialLink } from "../types/social-links";
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    icon: "/images/link-icons/linkedin.webp",
+    icon: "/images/link-icons/linkedin.svg",
     title: "LinkedIn",
     description: "@nhkhoa",
     href: "https://linkedin.com/in/nhkhoa",
   },
   {
-    icon: "/images/link-icons/github.webp",
+    icon: "/images/link-icons/github.svg",
     title: "GitHub",
     description: "@dev-nhkhoa",
     href: "https://github.com/dev-nhkhoa",
