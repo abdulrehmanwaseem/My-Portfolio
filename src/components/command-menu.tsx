@@ -6,14 +6,12 @@ import {
   BriefcaseBusinessIcon,
   CircleUserIcon,
   CornerDownLeftIcon,
-  DownloadIcon,
   LetterTextIcon,
   MessageCircleMoreIcon,
   MoonStarIcon,
   RssIcon,
   SunIcon,
   TextIcon,
-  TriangleDashedIcon,
   TypeIcon,
 } from "lucide-react";
 import Image from "next/image";
@@ -328,20 +326,6 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
             >
               <TypeIcon />
               Copy Logotype as SVG
-            </CommandItem>
-
-            <CommandItem
-              onSelect={() => handleOpenLink("/blog/chanhdai-brand")}
-            >
-              <TriangleDashedIcon />
-              Brand Guidelines
-            </CommandItem>
-
-            <CommandItem asChild>
-              <a href="https://assets.chanhdai.com/chanhdai-brand.zip" download>
-                <DownloadIcon />
-                Download Brand Assets
-              </a>
             </CommandItem>
           </CommandGroup>
 

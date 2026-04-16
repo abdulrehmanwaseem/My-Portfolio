@@ -6,7 +6,7 @@ This guide provides essential information for AI agents working with the https:/
 
 **https://nhkhoa.site** is a minimal, pixel-perfect dev portfolio, component registry, and blog built with modern web technologies. It serves as:
 
-- Personal portfolio for Nguyen Chanh Dai (@ncdai)
+- Personal portfolio for Truong Nguyen Anh Khoa (@nhkhoa.a)
 - Component registry using shadcn/ui system
 - Blog with MDX content
 - Showcase for custom React components

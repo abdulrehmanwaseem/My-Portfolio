@@ -55,7 +55,7 @@ export const TECH_STACK: TechStack[] = [
     href: "https://chatgpt.com/",
     categories: ["AI"],
     iconUrl:
-      "https://assets.chanhdai.com/images/tech-stack-icons/chatgpt-light.svg",
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/ChatGPT-Color.svg",
     theme: true,
   },
   {
@@ -117,7 +117,8 @@ export const TECH_STACK: TechStack[] = [
     title: "Python",
     href: "https://www.python.org/",
     categories: ["Coding"],
-    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/python.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
     key: "markdown",
@@ -152,7 +153,8 @@ export const TECH_STACK: TechStack[] = [
     title: "Node.js",
     href: "https://nodejs.org",
     categories: ["Coding"],
-    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/nodejs.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
     key: "tailwindcss",
@@ -209,7 +211,8 @@ export const TECH_STACK: TechStack[] = [
     title: "Docker",
     href: "https://www.docker.com/",
     categories: ["Coding"],
-    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/docker.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
 
   // Other Tools

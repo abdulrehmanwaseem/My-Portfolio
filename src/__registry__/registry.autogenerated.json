@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "ncdai",
-  "homepage": "https://chanhdai.com/components",
+  "name": "nhkhoa",
+  "homepage": "https://nhkhoa.site/components",
   "items": [
     {
       "name": "utils",
       "type": "registry:lib",
       "title": "Utility Functions",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "dependencies": [
         "clsx",
         "tailwind-merge"
@@ -50,7 +50,7 @@
       "name": "theme-switcher",
       "type": "registry:component",
       "title": "Theme Switcher",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "description": "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
       "dependencies": [
         "next-themes",
@@ -58,7 +58,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@nhkhoa/utils"
       ],
       "files": [
         {
@@ -66,18 +66,18 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/theme-switcher-component"
+      "docs": "https://nhkhoa.site/components/theme-switcher-component"
     },
     {
       "name": "flip-sentences",
       "type": "registry:component",
       "title": "Flip Sentences",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@nhkhoa/utils"
       ],
       "files": [
         {
@@ -90,13 +90,13 @@
       "name": "apple-hello-effect",
       "type": "registry:component",
       "title": "Apple Hello Effect",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "description": "Create a Xin chào and Hello writing effect inspired by Apple using Motion for React.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@nhkhoa/utils"
       ],
       "files": [
         {
@@ -104,19 +104,19 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/writing-effect-inspired-by-apple"
+      "docs": "https://nhkhoa.site/components/writing-effect-inspired-by-apple"
     },
     {
       "name": "wheel-picker",
       "type": "registry:component",
       "title": "Wheel Picker",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "description": "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
       "dependencies": [
         "@ncdai/react-wheel-picker"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@nhkhoa/utils"
       ],
       "files": [
         {
@@ -124,13 +124,13 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/react-wheel-picker"
+      "docs": "https://nhkhoa.site/components/react-wheel-picker"
     },
     {
       "name": "work-experience",
       "type": "registry:component",
       "title": "Work Experience",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "description": "Displays a list of work experiences with role details and durations.",
       "dependencies": [
         "react-markdown",
@@ -141,7 +141,7 @@
         "tw-animate-css"
       ],
       "registryDependencies": [
-        "@ncdai/utils",
+        "@nhkhoa/utils",
         "collapsible",
         "separator"
       ],
@@ -169,19 +169,19 @@
         "@import \"tw-animate-css\"": {},
         "@plugin @tailwindcss/typography": {}
       },
-      "docs": "https://chanhdai.com/components/work-experience-component"
+      "docs": "https://nhkhoa.site/components/work-experience-component"
     },
     {
       "name": "shimmering-text",
       "type": "registry:component",
       "title": "Shimmering Text",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "description": "Smooth shimmering text animation built with Motion.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@nhkhoa/utils"
       ],
       "files": [
         {
@@ -194,14 +194,14 @@
       "name": "slide-to-unlock",
       "type": "registry:component",
       "title": "Slide to Unlock",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "description": "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils",
-        "@ncdai/shimmering-text"
+        "@nhkhoa/utils",
+        "@nhkhoa/shimmering-text"
       ],
       "files": [
         {
@@ -209,16 +209,16 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/slide-to-unlock"
+      "docs": "https://nhkhoa.site/components/slide-to-unlock"
     },
     {
       "name": "testimonials-marquee",
       "type": "registry:component",
       "title": "Testimonials Marquee",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "nhkhoa <khoa@nhkhoa.site>",
       "description": "A testimonials marquee component for showcasing user feedback in a scrolling format.",
       "registryDependencies": [
-        "@ncdai/utils",
+        "@nhkhoa/utils",
         "@kibo-ui/marquee"
       ],
       "files": [
@@ -227,7 +227,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/testimonials-marquee"
+      "docs": "https://nhkhoa.site/components/testimonials-marquee"
     },
     {
       "name": "wheel-picker-block-01",
@@ -267,7 +267,7 @@
       "name": "work-experience-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/work-experience"
+        "@nhkhoa/work-experience"
       ],
       "files": [
         {
@@ -280,8 +280,8 @@
       "name": "slide-to-unlock-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock",
-        "@ncdai/use-sound"
+        "@nhkhoa/slide-to-unlock",
+        "@nhkhoa/use-sound"
       ],
       "files": [
         {
@@ -294,7 +294,7 @@
       "name": "slide-to-unlock-block-02",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock"
+        "@nhkhoa/slide-to-unlock"
       ],
       "files": [
         {
@@ -307,7 +307,7 @@
       "name": "slide-to-unlock-block-03",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock"
+        "@nhkhoa/slide-to-unlock"
       ],
       "files": [
         {
@@ -320,7 +320,7 @@
       "name": "testimonials-marquee-block-01",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/testimonials-marquee"
+        "@nhkhoa/testimonials-marquee"
       ],
       "files": [
         {
@@ -333,7 +333,7 @@
       "name": "testimonials-marquee-block-02",
       "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/testimonials-marquee"
+        "@nhkhoa/testimonials-marquee"
       ],
       "files": [
         {

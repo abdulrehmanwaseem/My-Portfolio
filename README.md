@@ -1,6 +1,6 @@
 # [nhkhoa](https://nhkhoa.site)
 
-A minimal, pixel-perfect dev portfolio, blog and products to showcase my work as a Fullstack developer.
+A minimal, pixel-perfect dev portfolio, blog and products to showcase my work as an AI Automation Developer.
 
 Check out the live site: [nhkhoa](https://nhkhoa.site)
 

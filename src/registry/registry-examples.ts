@@ -4,7 +4,7 @@ export const examples: Registry["items"] = [
   {
     name: "apple-hello-effect-vi-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/apple-hello-effect"],
+    registryDependencies: ["@nhkhoa/apple-hello-effect"],
     files: [
       {
         path: "examples/apple-hello-effect-vi-demo.tsx",
@@ -15,7 +15,7 @@ export const examples: Registry["items"] = [
   {
     name: "apple-hello-effect-en-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/apple-hello-effect"],
+    registryDependencies: ["@nhkhoa/apple-hello-effect"],
     files: [
       {
         path: "examples/apple-hello-effect-en-demo.tsx",
@@ -26,7 +26,7 @@ export const examples: Registry["items"] = [
   {
     name: "theme-switcher-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/theme-switcher"],
+    registryDependencies: ["@nhkhoa/theme-switcher"],
     files: [
       {
         path: "examples/theme-switcher-demo.tsx",
@@ -59,7 +59,7 @@ export const examples: Registry["items"] = [
   {
     name: "work-experience-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/work-experience"],
+    registryDependencies: ["@nhkhoa/work-experience"],
     files: [
       {
         path: "examples/work-experience-demo.tsx",
@@ -70,7 +70,7 @@ export const examples: Registry["items"] = [
   {
     name: "shimmering-text-demo",
     type: "registry:example",
-    registryDependencies: ["@ncdai/shimmering-text"],
+    registryDependencies: ["@nhkhoa/shimmering-text"],
     files: [
       {
         path: "examples/shimmering-text-demo.tsx",
@@ -81,7 +81,7 @@ export const examples: Registry["items"] = [
   {
     name: "slide-to-unlock-demo-01",
     type: "registry:example",
-    registryDependencies: ["@ncdai/slide-to-unlock", "@ncdai/use-sound"],
+    registryDependencies: ["@nhkhoa/slide-to-unlock", "@nhkhoa/use-sound"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-01.tsx",
@@ -92,7 +92,7 @@ export const examples: Registry["items"] = [
   {
     name: "slide-to-unlock-demo-02",
     type: "registry:example",
-    registryDependencies: ["@ncdai/slide-to-unlock"],
+    registryDependencies: ["@nhkhoa/slide-to-unlock"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-02.tsx",
@@ -103,7 +103,7 @@ export const examples: Registry["items"] = [
   {
     name: "slide-to-unlock-demo-03",
     type: "registry:example",
-    registryDependencies: ["@ncdai/slide-to-unlock"],
+    registryDependencies: ["@nhkhoa/slide-to-unlock"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-03.tsx",
@@ -114,7 +114,7 @@ export const examples: Registry["items"] = [
   {
     name: "testimonials-marquee-demo-01",
     type: "registry:example",
-    registryDependencies: ["@ncdai/testimonials-marquee"],
+    registryDependencies: ["@nhkhoa/testimonials-marquee"],
     files: [
       {
         path: "examples/testimonials-marquee-demo-01.tsx",
@@ -125,7 +125,7 @@ export const examples: Registry["items"] = [
   {
     name: "testimonials-marquee-demo-02",
     type: "registry:example",
-    registryDependencies: ["@ncdai/testimonials-marquee"],
+    registryDependencies: ["@nhkhoa/testimonials-marquee"],
     files: [
       {
         path: "examples/testimonials-marquee-demo-02.tsx",
