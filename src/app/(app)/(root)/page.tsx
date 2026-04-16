@@ -45,8 +45,8 @@ export default function Page() {
         <GitHubContributions />
         <Separator />
 
-        <TestimonialsMarquee />
-        <Separator />
+        {/* <TestimonialsMarquee />
+        <Separator /> */}
 
         <TeckStack />
         <Separator />

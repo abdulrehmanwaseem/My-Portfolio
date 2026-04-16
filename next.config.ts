@@ -4,7 +4,6 @@ import path from "path";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   transpilePackages: ["next-mdx-remote"],
-  allowedDevOrigins: ["abdulrehman-macbook.local"],
   turbopack: {
     root: path.join(__dirname, "."),
   },

@@ -12,9 +12,8 @@ export const USER: User = {
   flipSentences: ["AI Automation Developer", "Freelancer", "Building Khoa AI"],
   address: "Ho Chi Minh City, Vietnam",
   phoneNumber: "Kzg0Nzk2ODAyMzk5", // E.164 format: +84 796 802 399, base64 encoded
-  secondPhoneNumber: "", // Optional: add second phone if needed
   email: "d29yay5uaGtob2FAZ21haWwuY29t", // work.nhkhoa@gmail.com, base64 encoded
-  website: "https://nhkhoa.me",
+  website: "https://nhkhoa.site",
   jobTitle: "AI Automation Developer",
   jobs: [
     {
@@ -34,7 +33,7 @@ export const USER: User = {
 - **Skills**: JavaScript/TypeScript, LangChain, OpenAI API, Claude Code, Workflow Automation tools (n8n, Zapier, Make.com)
 - **Mission**: Democratizing AI automation for everyone, one workflow at a time
 `,
-  avatar: "/images/me.jpg",
+  avatar: "/images/me.png",
   ogImage: "/images/og-image-light.png",
   namePronunciationUrl: "", // Add audio file for name pronunciation if available
   keywords: [

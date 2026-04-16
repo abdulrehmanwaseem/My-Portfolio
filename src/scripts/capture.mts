@@ -9,7 +9,7 @@ const executablePath =
   process.env.CHROME_PATH ||
   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const url = process.env.URL || "http://localhost:1408";
-const outputDir = path.join(process.cwd(), ".abdulrehman/screenshots");
+const outputDir = path.join(process.cwd(), ".nhkhoa/screenshots");
 
 const SIZE = {
   // Full HD

@@ -1,7 +1,6 @@
-import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
+import { MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
 
 import { USER } from "@/features/profile/data/user";
-import { urlToName } from "@/utils/url";
 
 import { Panel, PanelContent } from "../panel";
 import { CurrentLocalTimeItem } from "./current-local-time-item";
@@ -61,23 +60,7 @@ export function Overview() {
 
           <PhoneItem phoneNumber={USER.phoneNumber} />
 
-          <PhoneItem phoneNumber={USER.secondPhoneNumber} />
-
           <EmailItem email={USER.email} />
-
-          <IntroItem>
-            <IntroItemIcon>
-              <GlobeIcon />
-            </IntroItemIcon>
-            <IntroItemContent>
-              <IntroItemLink
-                href={USER.website}
-                aria-label={`Personal website: ${urlToName(USER.website)}`}
-              >
-                {urlToName(USER.website)}
-              </IntroItemLink>
-            </IntroItemContent>
-          </IntroItem>
         </div>
       </PanelContent>
     </Panel>

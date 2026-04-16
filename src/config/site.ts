@@ -3,7 +3,7 @@ import type { NavItem } from "@/types/nav";
 
 export const SITE_INFO = {
   name: USER.displayName,
-  url: process.env.APP_URL || "https://nhkhoa.me",
+  url: process.env.APP_URL || "https://nhkhoa.site",
   ogImage: USER.ogImage,
   description: USER.bio,
   keywords: USER.keywords,
@@ -23,10 +23,10 @@ export const MAIN_NAV: NavItem[] = [
     title: "Blog",
     href: "/blog",
   },
-  {
-    title: "Products",
-    href: "/products/shopflow",
-  },
+  // {
+  //   title: "Products",
+  //   href: "/products/shopflow",
+  // },
   // {
   //   title: "Components",
   //   href: "/components",
@@ -39,7 +39,7 @@ export const SOURCE_CODE_GITHUB_URL =
   "https://github.com/dev-nhkhoa/My-Portfolio";
 
 export const UTM_PARAMS = {
-  utm_source: "https://nhkhoa.me",
+  utm_source: "https://nhkhoa.site",
   utm_medium: "portfolio_website",
   utm_campaign: "referral",
 };

@@ -20,38 +20,26 @@ export function ProfileHeader() {
           />
         </div>
 
-        <SimpleTooltip content="I'm from Pakistan">
-          {/* Flag of Pakistan */}
+        <SimpleTooltip content="I'm from Vietnam">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-0 -left-px h-8 sm:h-9"
+            className="absolute top-0 -left-px h-8 rounded-lg sm:h-9"
             shapeRendering="geometricPrecision"
             textRendering="geometricPrecision"
             imageRendering="optimizeQuality"
             fillRule="evenodd"
             clipRule="evenodd"
-            viewBox="0 0 513 357.071"
+            viewBox="0 0 36 36"
           >
-            <rect width="513" height="357.071" fill="#fff" />
-
-            <rect x="122.835" width="390.165" height="357.071" fill="#01411C" />
-
+            <rect width="513" height="357.071" fill="#DA251D" />
             <path
-              fill="#fff"
-              fillRule="nonzero"
-              d="M290.758 76.663C247.631 90.44 216.4 130.838 216.4 178.534c0 59.057 47.875 106.931 106.931 106.931 43.252 0 80.504-25.681 97.345-62.626a98.756 98.756 0 01-4.89 4.661c-40.459 35.966-102.416 32.322-138.381-8.138s-32.32-102.417 8.139-138.382a99.87 99.87 0 015.214-4.317zm71.563 21.855l45.044 50.672-66.225-14.516 62.11-27.179-34.273 58.495-6.656-67.472z"
-            />
-
-            <rect
-              fill="none"
-              stroke="#CCC"
-              strokeWidth=".64"
-              strokeMiterlimit="22.926"
-              x=".32"
-              y=".319"
-              width="512.359"
-              height="356.43"
-            />
+              fill="#DA251D"
+              d="M32 5H4a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z"
+            ></path>
+            <path
+              fill="#FF0"
+              d="M19.753 16.037L18 10.642l-1.753 5.395h-5.672l4.589 3.333l-1.753 5.395L18 21.431l4.589 3.334l-1.753-5.395l4.589-3.333z"
+            ></path>
           </svg>
         </SimpleTooltip>
       </div>

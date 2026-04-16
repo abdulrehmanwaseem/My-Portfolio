@@ -1,11 +1,106 @@
 import type { TechStack } from "../types/tech-stack";
 
 export const TECH_STACK: TechStack[] = [
+  // Automation Workflow
+  {
+    key: "n8n",
+    title: "n8n",
+    href: "https://n8n.io/",
+    categories: ["Automation Workflow"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/n8n-Color.svg",
+    theme: true,
+  },
+  {
+    key: "make",
+    title: "Make",
+    href: "https://www.make.com/",
+    categories: ["Automation Workflow"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/Make-Color.svg",
+    theme: true,
+  },
+  {
+    key: "openclaw",
+    title: "OpenClaw",
+    href: "https://www.openclaw.dev/",
+    categories: ["Automation Workflow"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/OpenClaw-Color.svg",
+    theme: true,
+  },
+
+  // AI
+  {
+    key: "claude",
+    title: "Claude",
+    href: "https://claude.ai/",
+    categories: ["AI"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/Claude-Color.svg",
+    theme: true,
+  },
+  {
+    key: "claudecode",
+    title: "Claude Code",
+    href: "https://claude.ai/",
+    categories: ["AI"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/ClaudeCode-Color.svg",
+    theme: true,
+  },
+  {
+    key: "chatgpt",
+    title: "ChatGPT",
+    href: "https://chatgpt.com/",
+    categories: ["AI"],
+    iconUrl:
+      "https://assets.chanhdai.com/images/tech-stack-icons/chatgpt-light.svg",
+    theme: true,
+  },
+  {
+    key: "githubcopilot",
+    title: "Github Copilot",
+    href: "https://github.com/features/copilot",
+    categories: ["AI"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/GithubCopilot.svg",
+    theme: true,
+  },
+  {
+    key: "langchain",
+    title: "LangChain",
+    href: "https://www.langchain.com/",
+    categories: ["AI"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/LangChain-Color.svg",
+    theme: true,
+  },
+  {
+    key: "huggingface",
+    title: "Hugging Face",
+    href: "https://huggingface.co/",
+    categories: ["AI"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/HuggingFace-Color.svg",
+    theme: true,
+  },
+  {
+    key: "comfyui",
+    title: "ComfyUI",
+    href: "https://github.com/comfyanonymous/ComfyUI",
+    categories: ["AI"],
+    iconUrl:
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/ComfyUI-Color.svg",
+    theme: true,
+  },
+
+  // Coding - Languages
   {
     key: "typescript",
     title: "TypeScript",
     href: "https://www.typescriptlang.org/",
-    categories: ["Language"],
+    categories: ["Coding"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
@@ -13,7 +108,7 @@ export const TECH_STACK: TechStack[] = [
     key: "js",
     title: "JavaScript",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    categories: ["Language"],
+    categories: ["Coding"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
@@ -21,90 +116,49 @@ export const TECH_STACK: TechStack[] = [
     key: "python",
     title: "Python",
     href: "https://www.python.org/",
-    categories: ["Language"],
+    categories: ["Coding"],
     iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/python.svg",
-  },
-  {
-    key: "html5",
-    title: "HTML5",
-    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    categories: ["Language"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    key: "css3",
-    title: "CSS3",
-    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    categories: ["Language"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  },
-  {
-    key: "sass",
-    title: "Sass",
-    href: "https://sass-lang.com/",
-    categories: ["Language"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-  },
-  {
-    key: "graphql",
-    title: "GraphQL",
-    href: "https://graphql.org/",
-    categories: ["Language"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-  },
-  {
-    key: "nodejs",
-    title: "Node.js",
-    href: "https://nodejs.org",
-    categories: ["Runtime Environment"],
-    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/nodejs.svg",
   },
   {
     key: "markdown",
     title: "Markdown",
     href: "https://www.markdownguide.org/",
-    categories: ["Language"],
+    categories: ["Coding"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg",
     theme: true,
   },
+
+  // Coding - Frameworks & Libraries
   {
     key: "react",
     title: "React",
     href: "https://react.dev/",
-    categories: ["Framework", "Library"],
+    categories: ["Coding"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
-
   {
     key: "nextjs2",
     title: "Next.js",
     href: "https://nextjs.org/",
-    categories: ["Framework", "Library"],
+    categories: ["Coding"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     theme: true,
   },
   {
-    key: "wordpress",
-    title: "WordPress",
-    href: "https://wordpress.org/",
-    categories: ["Framework", "Library"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
-    theme: true,
+    key: "nodejs",
+    title: "Node.js",
+    href: "https://nodejs.org",
+    categories: ["Coding"],
+    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/nodejs.svg",
   },
-
   {
     key: "tailwindcss",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
-    categories: ["Framework"],
+    categories: ["Coding"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
@@ -112,7 +166,7 @@ export const TECH_STACK: TechStack[] = [
     key: "shadcn-ui",
     title: "shadcn/ui",
     href: "https://ui.shadcn.com/",
-    categories: ["Library", "Component Library"],
+    categories: ["Coding"],
     iconUrl: "https://ui.shadcn.com/favicon.ico",
     theme: true,
   },
@@ -120,46 +174,33 @@ export const TECH_STACK: TechStack[] = [
     key: "radixui",
     title: "Radix UI",
     href: "https://www.radix-ui.com/",
-    categories: ["Library", "Component Library"],
+    categories: ["Coding"],
     iconUrl: "https://avatars.githubusercontent.com/u/75042455?s=200&v=4",
     theme: true,
-  },
-  {
-    key: "motion",
-    title: "Motion",
-    href: "https://motion.dev/",
-    categories: ["Library", "Animation"],
-    iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/motion.svg",
   },
   {
     key: "tanstack",
     title: "TanStack",
     href: "https://tanstack.com/",
-    categories: ["Library"],
+    categories: ["Coding"],
     iconUrl: "https://tanstack.com/favicon.ico",
     theme: true,
   },
   {
-    key: "react-router",
-    title: "React Router",
-    href: "https://reactrouter.com/",
-    categories: ["Library", "Navigation"],
+    key: "prisma",
+    title: "Prisma",
+    href: "https://www.prisma.io/",
+    categories: ["Coding"],
     iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg",
-    theme: true,
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
   },
-  // {
-  //   key: "react-navigation",
-  //   title: "React Navigation",
-  //   href: "https://reactnavigation.org/",
-  //   categories: ["Library", "Navigation"],
-  //   iconUrl: "https://reactnavigation.org/img/spiro.svg",
-  // },
+
+  // Coding - Infrastructure
   {
     key: "git",
     title: "Git",
     href: "https://git-scm.com/",
-    categories: ["Version Control"],
+    categories: ["Coding"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
@@ -167,83 +208,26 @@ export const TECH_STACK: TechStack[] = [
     key: "docker",
     title: "Docker",
     href: "https://www.docker.com/",
-    categories: ["Containerization"],
+    categories: ["Coding"],
     iconUrl: "https://assets.chanhdai.com/images/tech-stack-icons/docker.svg",
   },
-  {
-    key: "mysql",
-    title: "MySQL",
-    href: "https://www.mysql.com/",
-    categories: ["Database"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-  },
-  {
-    key: "postgres",
-    title: "PostgreSQL",
-    href: "https://www.postgresql.org/",
-    categories: ["Database"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  },
-  {
-    key: "mongodb",
-    title: "MongoDB",
-    href: "https://www.mongodb.com/",
-    categories: ["Database"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  },
-  {
-    key: "sqlite",
-    title: "SQLite",
-    href: "https://www.sqlite.org/",
-    categories: ["Database"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
-  },
 
+  // Other Tools
   {
-    key: "prisma",
-    title: "Prisma",
-    href: "https://www.prisma.io/",
-    categories: ["Database"],
+    key: "obsidian",
+    title: "Obsidian",
+    href: "https://obsidian.md/",
+    categories: ["Tools"],
     iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      "https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/Obsidian-Color.svg",
+    theme: true,
   },
-
   {
     key: "figma",
     title: "Figma",
     href: "https://www.figma.com/",
-    categories: ["Tools", "Design"],
+    categories: ["Tools"],
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  },
-  {
-    key: "chatgpt",
-    title: "ChatGPT",
-    href: "https://chatgpt.com/",
-    categories: ["Tools", "AI"],
-    iconUrl:
-      "https://assets.chanhdai.com/images/tech-stack-icons/chatgpt-light.svg",
-    theme: true,
-  },
-  {
-    key: "freecodecamp",
-    title: "freeCodeCamp",
-    href: "https://www.freecodecamp.org/",
-    categories: ["Others"],
-    iconUrl: "https://avatars.githubusercontent.com/u/9892522?s=200&v=4",
-    theme: true,
-  },
-
-  {
-    key: "stackoverflow",
-    title: "Stack Overflow",
-    href: "https://stackoverflow.com/",
-    categories: ["Others"],
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stackoverflow/stackoverflow-original.svg",
   },
 ];

@@ -1,10 +1,10 @@
-# AI Agent Guidelines for https://abdulrehmanwaseem.me
+# AI Agent Guidelines for https://nhkhoa.site
 
-This guide provides essential information for AI agents working with the https://abdulrehmanwaseem.me codebase - a Next.js dev portfolio, blog, and component registry website.
+This guide provides essential information for AI agents working with the https://nhkhoa.site codebase - a Next.js dev portfolio, blog, and component registry website.
 
 ## Project Overview
 
-**https://abdulrehmanwaseem.me** is a minimal, pixel-perfect dev portfolio, component registry, and blog built with modern web technologies. It serves as:
+**https://nhkhoa.site** is a minimal, pixel-perfect dev portfolio, component registry, and blog built with modern web technologies. It serves as:
 
 - Personal portfolio for Nguyen Chanh Dai (@ncdai)
 - Component registry using shadcn/ui system

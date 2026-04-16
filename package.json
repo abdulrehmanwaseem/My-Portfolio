@@ -1,8 +1,8 @@
 {
   "name": "my-portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A minimal, pixel-perfect developer portfolio, blog and products.",
-  "homepage": "https://abdulrehmanwaseem.me",
+  "homepage": "https://nhkhoa.site",
   "license": "MIT",
   "author": {
     "name": "Abdul Rehman",
@@ -11,14 +11,14 @@
   },
   "contributors": [
     {
-      "name": "Abdul Rehman",
-      "email": "contact@abdulrehmanwaseem.me",
-      "url": "https://github.com/abdulrehmanwaseem"
+      "name": "Truong Nguyen Anh Khoa",
+      "email": "work.nhkhoa@gmail.com",
+      "url": "https://github.com/dev-nhkhoa"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdulrehmanwaseem/My-Portfolio.git"
+    "url": "git+https://github.com/dev-nhkhoa/My-Portfolio.git"
   },
   "scripts": {
     "dev": "next dev -p 1408",

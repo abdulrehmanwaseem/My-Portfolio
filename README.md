@@ -1,8 +1,8 @@
-# [abdulrehmanwaseem](https://abdulrehmanwaseem.me)
+# [nhkhoa](https://nhkhoa.site)
 
 A minimal, pixel-perfect dev portfolio, blog and products to showcase my work as a Fullstack developer.
 
-Check out the live site: [abdulrehmanwaseem](https://abdulrehmanwaseem.me)
+Check out the live site: [nhkhoa](https://nhkhoa.site)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/be67ffb8-2511-4f5c-912e-270266ef928a">
