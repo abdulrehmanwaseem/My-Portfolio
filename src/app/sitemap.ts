@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // return [...routes, ...posts, ...products];
 
-  const routes = ["", "/blog"].map((route) => ({
+  const routes = ["", "/blog", "/internal-project"].map((route) => ({
     url: `${SITE_INFO.url}${route}`,
     lastModified: dayjs().toISOString(),
   }));

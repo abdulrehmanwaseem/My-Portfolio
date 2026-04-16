@@ -12,7 +12,6 @@ export default function robots(): MetadataRoute.Robots {
           "/_next/",
           "/api/",
           "/og/",
-          "/rss/",
           "/vcard/",
           "/llms.txt",
           "/llms-full.txt",
