@@ -15,6 +15,8 @@ function getWebSiteJsonLd(): WithContext<WebSite> {
     "@type": "WebSite",
     name: SITE_INFO.name,
     url: SITE_INFO.url,
+    description: SITE_INFO.description,
+    inLanguage: "en",
     alternateName: [USER.username],
   };
 }

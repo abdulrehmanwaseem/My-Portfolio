@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { SITE_INFO } from "@/config/site";
 import { PostItem } from "@/features/blog/components/post-item";
@@ -68,7 +69,14 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="h-4" />
+      <div className="screen-line-before flex justify-center py-4">
+        <Link
+          href="/#blog"
+          className="text-sm text-muted-foreground underline hover:text-foreground"
+        >
+          ← Back to Portfolio
+        </Link>
+      </div>
     </>
   );
 }

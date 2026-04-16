@@ -131,15 +131,12 @@ export default function InternalProjectPage() {
           </Link>
         </div>
 
-        {/* Testimonial Reference */}
         <div className="text-center text-sm text-muted-foreground">
-          See what clients say about my work in the{" "}
-          <Link
-            href="/#testimonials"
-            className="underline hover:text-foreground"
-          >
-            testimonials section
+          Explore more public case studies in the{" "}
+          <Link href="/#projects" className="underline hover:text-foreground">
+            projects section
           </Link>
+          .
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
+import { SITE_INFO } from "@/config/site";
 import { About } from "@/features/profile/components/about";
 import { Awards } from "@/features/profile/components/awards";
 import { Blog } from "@/features/profile/components/blog";
@@ -77,13 +78,15 @@ function getPageJsonLd(): WithContext<PageSchema> {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
+    url: SITE_INFO.url,
     dateCreated: dayjs(USER.dateCreated).toISOString(),
     dateModified: dayjs().toISOString(),
     mainEntity: {
       "@type": "Person",
       name: USER.displayName,
       identifier: USER.username,
-      image: USER.avatar,
+      url: SITE_INFO.url,
+      image: `${SITE_INFO.url}${USER.avatar}`,
     },
   };
 }

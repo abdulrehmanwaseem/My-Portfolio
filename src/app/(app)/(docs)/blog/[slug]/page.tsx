@@ -42,14 +42,17 @@ export async function generateMetadata({
     return notFound();
   }
 
-  const { title, description, image, createdAt, updatedAt } = post.metadata;
-
+  const { title, description, image, createdAt, updatedAt, tags } =
+    post.metadata;
   const postUrl = getPostUrl(post);
-  const ogImage = image || `/og/simple?title=${encodeURIComponent(title)}`;
+  const ogImage = getAbsoluteUrl(
+    image || `/og/simple?title=${encodeURIComponent(title)}`
+  );
 
   return {
     title,
     description,
+    keywords: tags,
     alternates: {
       canonical: postUrl,
     },
@@ -73,22 +76,33 @@ export async function generateMetadata({
 }
 
 function getPageJsonLd(post: Post): WithContext<PageSchema> {
+  const postUrl = getPostAbsoluteUrl(post);
+  const image = getPostImageAbsoluteUrl(post);
+
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.metadata.title,
     description: post.metadata.description,
-    image:
-      post.metadata.image ||
-      `/og/simple?title=${encodeURIComponent(post.metadata.title)}`,
-    url: `${SITE_INFO.url}${getPostUrl(post)}`,
+    image,
+    url: postUrl,
+    mainEntityOfPage: postUrl,
     datePublished: dayjs(post.metadata.createdAt).toISOString(),
     dateModified: dayjs(post.metadata.updatedAt).toISOString(),
+    articleSection: post.metadata.category,
+    keywords: post.metadata.tags,
     author: {
       "@type": "Person",
       name: USER.displayName,
       identifier: USER.username,
-      image: USER.avatar,
+      url: SITE_INFO.url,
+      image: getAbsoluteUrl(USER.avatar),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_INFO.name,
+      url: SITE_INFO.url,
+      logo: getAbsoluteUrl(USER.avatar),
     },
   };
 }
@@ -194,4 +208,24 @@ export default async function Page({
 
 function getPostUrl(post: Post) {
   return `/blog/${post.slug}`;
+}
+
+function getPostAbsoluteUrl(post: Post) {
+  return `${SITE_INFO.url}${getPostUrl(post)}`;
+}
+
+function getAbsoluteUrl(url: string) {
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    return url;
+  }
+
+  return `${SITE_INFO.url}${url.startsWith("/") ? url : `/${url}`}`;
+}
+
+function getPostImageAbsoluteUrl(post: Post) {
+  const image =
+    post.metadata.image ||
+    `/og/simple?title=${encodeURIComponent(post.metadata.title)}`;
+
+  return getAbsoluteUrl(image);
 }
