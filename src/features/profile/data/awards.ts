@@ -29,7 +29,7 @@ export const AWARDS: Award[] = [
     title: "Academic Scholarship — Academic Year 2024–2025",
     date: "2025",
     grade: "University",
-    description: `Awarded a **25% tuition scholarship** as one of **two student representatives** from the Information Systems for Digital Transformation program, recognized by the Faculty of Information Technology with a **GPA of 3.59** for the 2024–2025 academic year.
+    description: `Awarded a **25% tuition scholarship** as one of **two student representatives** from the Information Systems for Digital Transformation program, recognized by the Faculty of Information Technology with a **GPA of 3.58** for the 2024–2025 academic year.
 
 - Awarded based on academic performance and active extracurricular engagement.
 - A well-deserved recognition of sustained effort in both studies and outside activities.`,
