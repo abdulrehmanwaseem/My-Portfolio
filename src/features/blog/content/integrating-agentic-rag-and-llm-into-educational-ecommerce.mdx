@@ -1,0 +1,138 @@
+---
+title: "VnX Academy: Integrating Agentic RAG and LLM into Educational E-Commerce"
+description: "Discover how Agentic RAG and LLMs (GPT-4o, Gemini) are applied to personalize learning journeys and optimize user experiences on MOOC platforms."
+createdAt: "2026-05-03"
+updatedAt: "2026-05-03"
+image: "/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/kien-truc-he-thong-vnx-academy.jpg"
+category: "AI & EdTech"
+tags: ["Agentic RAG", "LLM", "Next.js", "Open edX", "AI", "E-learning"]
+pinned: true
+draft: false
+font: "outfit"
+---
+
+## 1. Introduction: From Academic Research to Real-World Impact
+
+This article documents the research and development journey of my Graduation Thesis alongside my partner, **Huynh Nguyen Duc Khanh**, under the dedicated guidance of **Ms. Nguyen Dac Quynh Mi (M.Sc.)**. Our core objective went beyond academic requirements; we aimed to build an intelligent digital knowledge distribution system, applying cutting-edge **Artificial Intelligence (AI)** techniques to a real-world business problem: **Educational Technology (EdTech)**.
+
+## 2. Context and Motivation: Solving the "Paradox of Choice"
+
+The explosion of online learning platforms (**E-learning**) has provided access to a vast ocean of knowledge but has also inadvertently led to **"information overload"**. Today's learners often face "decision paralysis" when confronted with a matrix of thousands of courses — a psychological phenomenon known as the **"Paradox of Choice"**.
+
+Our project, **"Integrating Large Language Models (LLM) into E-commerce Platforms to Enhance Customer Experience,"** was born to solve this. We focused on the **MOOCs (Massive Open Online Courses)** niche for several reasons:
+
+1.  **Robust Ecosystem:** Leveraging the deep learning management capabilities of **Open edX**.
+2.  **Practical Application:** Aligning with the "Smart University" and digital transformation initiatives at **Van Lang University**.
+3.  **Personalization:** LLMs provide 24/7 advisory solutions, something traditional support teams struggle to deliver timely and accurately at scale.
+
+## 3. Analyzing the Customer Journey and "Bottlenecks"
+
+From a Business Analyst's perspective, we analyzed the **Customer Journey** on traditional MOOC platforms.
+
+![MOOCs Customer Journey Map](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/hanh-trinh-khach-hang-moocs.png)
+
+The analysis revealed that the **Consideration stage** has the highest churn rate. This isn't just due to the number of courses, but because learners struggle to self-assess their **"Skill Gap"** — the distance between their current abilities and the requirements of the labor market.
+
+Traditional keyword-based queries often fail to capture true intent. For example, someone wanting to "switch to a programming career" needs a multi-step roadmap rather than a fragmented list of courses. This is where **Agentic RAG** acts as an "AI Academic Advisor" to bridge this gap.
+
+## 4. System Architecture: The Power of Integration
+
+We built a modern technology ecosystem designed for flexibility and scalability.
+
+### Tech Stack:
+
+- **Next.js 16 (App Router):** High-performance store-front with SEO optimization and robust Server Actions.
+- **Open edX:** The "Backbone" for course content management (CMS) and learning progress (LMS).
+- **PostgreSQL & pgvector:** Normalized data storage with vector similarity search (Cosine Similarity) for semantic retrieval.
+- **Groq & OpenAI GPT-4o/Llama-3:** Powerful reasoning and ultra-fast response times for Agentic tasks.
+- **Google Gemini & Embedding:** Multi-modal processing (images, video) and high-dimensional vector representations of text.
+- **n8n Workflow:** Automated ETL processes for data synchronization between the LMS and the Store-front.
+
+### 5-Layer Architecture:
+
+The system is designed with a 5-layer structure to optimize management and efficiency:
+
+![VnX Academy System Architecture](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/kien-truc-he-thong-vnx-academy.jpg)
+
+1.  **Access Layer:** Traffic coordination via Caddy Proxy.
+2.  **Client Layer:** Seamless Next.js user interface.
+3.  **Logic Layer:** Central hub for Server Actions and the AI Engine.
+4.  **Data Layer:** PostgreSQL powered by vector search.
+5.  **Service Layer:** Integration with external APIs, Gemini, and n8n workflows.
+
+## 5. Core Functional Modules
+
+### 5.1. E-Commerce Module
+
+The system operates as a full-featured educational e-commerce platform: intelligent search, shopping cart, checkout, and progress tracking.
+
+![VnX Academy E-commerce Module](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/phan-he-thuong-mai-dien-tu.jpg)
+
+<YouTubeEmbed
+  videoId="fqjXyiAwtCs"
+  title="VnX Academy E-commerce & Chatbot Demo"
+/>
+
+### 5.2. Learning Roadmap Module
+
+Inspired by roadmap.sh, we enable instructors to design practical career roadmaps. This helps learners position themselves on their professional growth path based on their experience and aspirations.
+
+![VnX Academy Roadmap Module](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/phan-he-lo-trinh-hoc-tap.jpg)
+
+<YouTubeEmbed videoId="94k0H3O2B5g" title="VnX Academy Learning Roadmap Demo" />
+
+### 5.3. AI HUB & Agentic RAG
+
+AI HUB is not just a typical chatbot; it is a complex **Agentic RAG** system. Unlike traditional RAG (which only retrieves and answers), Agentic RAG can plan, utilize tools (APIs, Vector DBs), and perform multi-step reasoning to solve complex requests.
+
+![VnX Academy AI Intelligence & RAG](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/phan-he-tri-tue-nhan-tao-rag.jpg)
+
+The AI Hub workflow is divided into 3 stages:
+
+1.  **Indexing:** Course data is synchronized via n8n, chunked, and vectorized using Embedding models before being stored in pgvector.
+2.  **Retrieval:** Upon receiving a query, the Agent analyzes intent and performs semantic search to extract the most relevant knowledge snippets.
+3.  **Generation:** The AI combines the retrieved context to synthesize accurate, coherent answers anchored to the system's actual data.
+
+- **Personalized Roadmap Creation:** The AI automatically assesses competence through quizzes and essays. Upon completion, the AI grades the work and proposes a personalized learning path, including both internal and external resources.
+
+<YouTubeEmbed videoId="8GOSnAoDsCs" title="VnX Academy AI HUB & RAG Demo" />
+
+- **CV Analysis:** The AI understands CV content to identify a user's current skill level, refining semantic search results and suggesting courses that align with their actual capabilities.
+
+<YouTubeEmbed videoId="N9yniuJcblM" title="AI CV Analysis Demo" />
+
+### 5.4. Career Suitability Assessment
+
+This module helps students determine their fit for various IT specializations through standardized questionnaires and weighted scoring mechanisms, providing accurate career trend suggestions.
+
+<YouTubeEmbed
+  videoId="Ss8YpClOI0k"
+  title="Career Suitability Assessment Demo"
+/>
+
+## 6. Competence-Based Education (CBE) Philosophy
+
+A key differentiator of VnX Academy is the application of **Competence-Based Education (CBE)** theory.
+
+Instead of focusing solely on course completion, the system applies the **"Backward Mapping"** principle: starting from the actual career goals of the labor market, the AI deconstructs them into skill outcomes and designs the optimal learning path. This ensures learners always see the direct connection between their studies and future career development.
+
+## 7. Administration and Operations
+
+The system provides a deep Dashboard for Instructors (managing course materials, adjusting fees) and Administrators (monitoring system health, revenue, and configuring AI parameters).
+
+<YouTubeEmbed videoId="JafEVaSpoPg" title="Admin & Instructor Dashboard Demo" />
+
+## 8. Summary: Achievements and Future Vision
+
+The project was successfully defended before the Thesis Committee at **Van Lang University**. Beyond being a graduation product, VnX Academy has proven the feasibility of using LLMs to automate needs analysis and decision support.
+
+This journey has provided my team and me with valuable lessons in **AI-First** architecture, problem-solving mindsets, and optimizing human-machine collaboration. We believe this is just the beginning of a new standard in digital knowledge distribution.
+
+![Thesis Defense - Individual Presentation](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/buoi-bao-ve-khoa-luan-ca-nhan.jpg)
+![Thesis Defense - VnX Academy Team](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/buoi-bao-ve-khoa-luan-nhom.jpg)
+
+_Images from the thesis defense at Van Lang University._
+
+Our future vision is to deploy this system in the real world, contributing to improved training quality and helping students access technology most effectively.
+
+**Thank you for following our journey.**

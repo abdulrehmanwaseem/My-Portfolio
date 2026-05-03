@@ -1,0 +1,136 @@
+---
+title: "VnX Academy - Agentic RAG cho nền tảng thương mại điện tử giáo dục"
+description: "Khám phá cách ứng dụng Agentic RAG và LLM (OpenAI GPT 120B, Gemini) để cá nhân hóa lộ trình học tập và tối ưu hóa trải nghiệm người dùng trên nền tảng MOOCs."
+createdAt: "2026-05-03"
+updatedAt: "2026-05-03"
+image: "/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/kien-truc-he-thong-vnx-academy.jpg"
+category: "AI & E-learning"
+tags: ["Agentic RAG", "LLM", "Next.js", "Open edX", "AI", "E-learning"]
+pinned: true
+draft: false
+font: "outfit"
+---
+
+## 1. Lời dẫn: Từ học thuật đến thực tiễn
+
+Bài viết này ghi lại hành trình nghiên cứu và phát triển Đồ án tốt nghiệp của tôi cùng cộng sự **Huỳnh Nguyễn Đức Khánh**, dưới sự dẫn dắt tận tâm của **Th.S Nguyễn Đắc Quỳnh Mi**. Mục tiêu cốt lõi không chỉ là hoàn thành một học phần, mà là hiện thực hóa một hệ thống phân phối tri thức số thông minh, ứng dụng những kỹ thuật tiên tiến nhất của **Trí tuệ nhân tạo (AI)** vào bài toán kinh doanh thực tế, cụ thể là lĩnh vực công nghệ giáo dục (**EdTech**).
+
+## 2. Bối cảnh và Động lực: Giải mã "Nghịch lý của sự lựa chọn"
+
+Thực trạng bùng nổ của các nền tảng học tập trực tuyến (**E-learning**) mang lại nguồn tri thức khổng lồ nhưng cũng vô tình tạo ra thách thức về tình trạng **"quá tải thông tin"**. Người học hiện nay thường rơi vào trạng thái "tê liệt trong ra quyết định" trước một ma trận hàng ngàn khóa học — một hiện tượng tâm lý học gọi là **"Nghịch lý của sự lựa chọn"** (Paradox of Choice).
+
+Đề tài chúng tôi lựa chọn: **"Tích hợp Mô hình ngôn ngữ lớn (LLM) vào nền tảng Thương mại điện tử nhằm nâng cao trải nghiệm khách hàng"** ra đời để giải quyết vấn đề này. Chúng tôi tập trung vào ngách **MOOCs (Massive Open Online Courses)** vì:
+
+1.  **Hệ sinh thái mạnh mẽ:** Tận dụng khả năng quản lý học tập chuyên sâu của **Open edX**.
+2.  **Tính thực tiễn cao:** Phù hợp với định hướng xây dựng mô hình "Đại học thông minh" và chuyển đổi số tại **Trường Đại học Văn Lang**.
+3.  **Khả năng cá nhân hóa:** LLM cung cấp giải pháp tư vấn 24/7, điều mà đội ngũ nhân viên truyền thống khó có thể đáp ứng kịp thời và chính xác trên quy mô lớn.
+
+## 3. Phân tích Hành trình Khách hàng và "Nút thắt cổ chai"
+
+Dưới góc độ Business Analyst, chúng tôi đã phân tích **Hành trình khách hàng (Customer Journey)** trên các nền tảng MOOCs truyền thống.
+
+![Bản đồ hành trình khách hàng MOOCs](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/hanh-trinh-khach-hang-moocs.png)
+
+Kết quả phân tích cho thấy: **Giai đoạn Cân nhắc (Consideration)** là nơi khách hàng có tỉ lệ rời bỏ cao nhất. Nguyên nhân không chỉ nằm ở số lượng khóa học, mà còn ở việc người học khó có thể tự đánh giá được **"Skill Gap"** (khoảng trống kỹ năng) giữa năng lực hiện tại và yêu cầu của thị trường lao động.
+
+Truy vấn truyền thống theo từ khóa thường thất bại trong việc nắm bắt ý định thực sự. Ví dụ, một người muốn "chuyển nghề sang lập trình" cần một lộ trình đa bước chứ không phải một danh sách khóa học rời rạc. Đây chính là điểm mà **Agentic RAG** sẽ đóng vai trò là một "Cố vấn học thuật AI" để thu hẹp khoảng cách này.
+
+## 4. Kiến trúc Hệ thống: Sức mạnh của sự kết hợp
+
+Chúng tôi xây dựng hệ sinh thái công nghệ hiện đại, đảm bảo tính linh hoạt và khả năng mở rộng.
+
+### Hệ sinh thái Công nghệ (Tech Stack):
+
+- **Next.js 16 (App Router):** Xây dựng Store-front mượt mà, tối ưu SEO và hỗ trợ Server Actions mạnh mẽ.
+- **Open edX:** Đóng vai trò là "Backbone" quản lý nội dung khóa học (CMS) và tiến trình học tập (LMS).
+- **PostgreSQL & pgvector:** Lưu trữ dữ liệu chuẩn hóa từ Open edX và thực hiện các phép toán tìm kiếm tương đồng vector (Cosine Similarity) cho tìm kiếm ngữ nghĩa.
+- **Groq & OpenAI GPT-4o/Llama-3:** Cung cấp khả năng suy luận mạnh mẽ và tốc độ phản hồi cực nhanh cho các tác vụ Agent.
+- **Google Gemini & Embedding:** Xử lý đa phương thức (hình ảnh, video) và chuyển đổi văn bản thành các đại diện vector đa chiều.
+- **n8n Workflow:** Tự động hóa quy trình đồng bộ dữ liệu (ETL) giữa LMS và Store-front.
+
+### Kiến trúc Đa tầng (5-Layer Architecture):
+
+Hệ thống được thiết kế theo cấu trúc 5 tầng để tối ưu hóa việc quản lý:
+
+![Sơ đồ kiến trúc hệ thống VnX Academy](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/kien-truc-he-thong-vnx-academy.jpg)
+
+1.  **Access Layer:** Điều phối lưu lượng qua Caddy Proxy.
+2.  **Client Layer:** Giao diện Next.js mượt mà.
+3.  **Logic Layer:** Trung tâm xử lý Server Actions và AI Engine.
+4.  **Data Layer:** PostgreSQL với sức mạnh tìm kiếm vector.
+5.  **Service Layer:** Tích hợp API ngoại vi, Gemini và n8n workflow.
+
+## 5. Các Phân hệ Chức năng Cốt lõi
+
+### 5.1. Phân hệ chức năng E-Commerce
+
+Hệ thống phải đảm bảo việc vận hành như một sàn thương mại điện tử giáo dục đầy đủ tính năng: tìm kiếm thông minh, giỏ hàng, thanh toán và quản lý tiến trình.
+
+![Phân hệ Thương mại điện tử VnX Academy](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/phan-he-thuong-mai-dien-tu.jpg)
+
+<YouTubeEmbed
+  videoId="fqjXyiAwtCs"
+  title="Demo E-commerce & Chatbot VnX Academy"
+/>
+
+### 5.2. Phân hệ chức năng lộ trình (Roadmap)
+
+Lấy ý tưởng từ trang roadmap.sh. Chúng tôi muốn giảng viên có thể thiết kế các lộ trình sự nghiệp thực tiễn, giúp người học định vị bản thân trên con đường phát triển nghề nghiệp dựa vào kinh nghiệm và trải nghiệm của họ.
+
+![Phân hệ Lộ trình học tập VnX Academy](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/phan-he-lo-trinh-hoc-tap.jpg)
+
+<YouTubeEmbed videoId="94k0H3O2B5g" title="Demo Lộ trình học tập VnX Academy" />
+
+AI HUB không chỉ là một chatbot thông thường, mà là một hệ thống **Agentic RAG** phức hợp. Khác với RAG truyền thống (chỉ truy xuất và trả lời), Agentic RAG có khả năng lập kế hoạch, sử dụng các công cụ (APIs, Vector DB) và thực hiện suy luận đa bước để giải quyết các yêu cầu phức tạp.
+
+![Phân hệ Trí tuệ nhân tạo VnX Academy](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/phan-he-tri-tue-nhan-tao-rag.jpg)
+
+Quy trình xử lý của AI Hub được chia làm 3 giai đoạn:
+
+1.  **Giai đoạn Indexing:** Dữ liệu khóa học được n8n đồng bộ, phân mảnh (Chunking) và vector hóa thông qua mô hình Embedding, sau đó lưu trữ vào pgvector.
+2.  **Giai đoạn Retrieval:** Khi nhận câu hỏi, Agent sẽ phân tích ý định và thực hiện tìm kiếm ngữ nghĩa để trích xuất các đoạn tri thức liên quan nhất.
+3.  **Giai đoạn Generation:** AI kết hợp ngữ cảnh đã truy xuất để tổng hợp câu trả lời chính xác, mạch lạc và "neo" sát vào dữ liệu thực tế của hệ thống.
+
+- **Tạo lộ trình cá nhân hóa:** AI tự động đánh giá năng lực qua các bài trắc nghiệm và tự luận. Sau khi người dùng hoàn thành, AI sẽ chấm điểm và đề xuất lộ trình học tập cá nhân hóa, bao gồm cả tài nguyên trong và ngoài hệ thống.
+
+<YouTubeEmbed videoId="8GOSnAoDsCs" title="Demo AI HUB & RAG VnX Academy" />
+
+- **Phân tích hồ sơ năng lực (CV Analysis):** AI có khả năng đọc hiểu nội dung CV để xác định trình độ hiện tại của người dùng, từ đó tinh chỉnh kết quả tìm kiếm ngữ nghĩa và gợi ý khóa học sát với năng lực thực tế.
+
+<YouTubeEmbed videoId="N9yniuJcblM" title="Demo Phân tích CV bằng AI" />
+
+### 5.4. Đánh giá Năng lực Hướng nghiệp
+
+Phân hệ này giúp sinh viên xác định mức độ phù hợp với các chuyên ngành CNTT thông qua bộ câu hỏi chuẩn hóa và cơ chế chấm điểm trọng số, từ đó đưa ra những gợi ý chính xác về xu hướng nghề nghiệp.
+
+<YouTubeEmbed
+  videoId="Ss8YpClOI0k"
+  title="Demo Career Suitability Assessment"
+/>
+
+## 6. Triết lý Giáo dục dựa trên Năng lực (CBE)
+
+Một trong những điểm tạo nên sự khác biệt của VnX Academy chính là việc vận dụng lý thuyết **Giáo dục dựa trên năng lực (Competence-Based Education)**.
+
+Thay vì chỉ tập trung vào việc hoàn thành khóa học, hệ thống áp dụng nguyên lý **"Ánh xạ ngược"**: Xuất phát từ mục tiêu nghề nghiệp thực tế của thị trường lao động, AI sẽ phân rã thành các chuẩn đầu ra kỹ năng, từ đó thiết kế lộ trình học tập tối ưu. Điều này giúp người học luôn nhìn thấy mối liên hệ trực tiếp giữa kiến thức đang học và sự phát triển sự nghiệp tương lai.
+
+## 7. Quản trị và Vận hành
+
+Hệ thống cung cấp Dashboard chuyên sâu cho Giảng viên (quản lý học liệu, điều chỉnh mức phí) và Quản trị viên (giám sát hệ thống, doanh thu, cấu hình các tham số AI).
+
+<YouTubeEmbed videoId="JafEVaSpoPg" title="Demo Admin & Instructor Dashboard" />
+
+## 8. Tổng kết: Thành quả và Tầm nhìn tương lai
+
+Dự án đã bảo vệ thành công tại Hội đồng khóa luận **Trường Đại học Văn Lang**. Không chỉ dừng lại ở một sản phẩm tốt nghiệp, VnX Academy đã chứng minh được tính khả thi trong việc ứng dụng LLM để tự động hóa quy trình phân tích nhu cầu và hỗ trợ ra quyết định.
+
+Hành trình này đã giúp tôi và đội ngũ đúc kết được những bài học quý giá về kiến trúc **AI-First**, tư duy giải quyết vấn đề và cách tối ưu hóa sự phối hợp giữa con người và máy móc. Chúng tôi tin rằng, đây chính là khởi đầu cho một chuẩn mực mới trong việc phân phối tri thức số.
+
+![Bảo vệ khóa luận - Thuyết trình cá nhân](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/buoi-bao-ve-khoa-luan-ca-nhan.jpg)
+![Bảo vệ khóa luận - Team VnX Academy](/images/blogs/tich-hop-agentic-rag-llm-vao-ecommerce-giao-duc/buoi-bao-ve-khoa-luan-nhom.jpg)
+
+_Hình ảnh buổi bảo vệ khóa luận tại Trường Đại học Văn Lang._
+
+Tầm nhìn tương lai của chúng tôi là triển khai thực tế hệ thống này, góp phần nâng cao chất lượng đào tạo và giúp sinh viên tiếp cận công nghệ một cách hiệu quả nhất.
+
+**Trân trọng cảm ơn các bạn đã theo dõi hành trình của chúng tôi.**
