@@ -187,7 +187,7 @@ export default async function Page({
         />
       </div>
 
-      <Prose className="px-4">
+      <Prose className="px-4" font={post.metadata.font}>
         <h1 className="screen-line-after mb-6 font-semibold">
           {post.metadata.title}
         </h1>

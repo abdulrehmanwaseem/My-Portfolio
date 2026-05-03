@@ -9,17 +9,37 @@ const Slot = SlotPrimitive.Slot;
 function Prose({
   className,
   asChild = false,
+  font,
   ...props
 }: React.ComponentProps<"div"> & {
   asChild?: boolean;
+  font?: string;
 }) {
   const Comp = asChild ? Slot : "div";
+
+  const fontClass = React.useMemo(() => {
+    switch (font) {
+      case "inter":
+        return "font-inter";
+      case "lora":
+        return "font-lora";
+      case "outfit":
+        return "font-outfit";
+      case "mono":
+        return "font-mono";
+      case "sans":
+        return "font-sans";
+      default:
+        return "";
+    }
+  }, [font]);
 
   return (
     <Comp
       data-slot="prose"
       className={cn(
-        "prose prose-sm max-w-none font-mono text-foreground prose-zinc dark:prose-invert",
+        "prose prose-sm max-w-none text-foreground prose-zinc dark:prose-invert",
+        fontClass || "font-mono",
         "prose-headings:font-sans prose-headings:font-semibold prose-headings:text-balance",
         "prose-h2:border-b prose-h2:border-edge prose-h2:pb-2 prose-h2:text-2xl",
         "prose-lead:text-base",

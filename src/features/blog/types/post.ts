@@ -10,6 +10,7 @@ export type PostMetadata = {
   tags?: string[];
   createdAt: string;
   updatedAt: string;
+  font?: string;
 };
 
 export type Post = {
