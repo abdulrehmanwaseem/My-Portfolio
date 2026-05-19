@@ -40,6 +40,7 @@
     "@bprogress/next": "^3.2.12",
     "@date-fns/tz": "^1.4.1",
     "@hookform/resolvers": "^4.1.0",
+    "@lobehub/icons": "^5.8.0",
     "@ncdai/react-wheel-picker": "^1.0.18",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",

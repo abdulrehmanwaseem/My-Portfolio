@@ -1,5 +1,7 @@
 import type { Certification } from "../types/certifications";
 
+
+
 export const CERTIFICATIONS: Certification[] = [
   // {
   //   title: "HydThon - AI Hackathon 2026 Participation",
@@ -11,10 +13,45 @@ export const CERTIFICATIONS: Certification[] = [
   //     "https://drive.google.com/file/d/1l3HiBKr5m-ypd8l5DlDwvCXWOc_YPg4P/view",
   // },
   {
+    title: "Google IT Automation with Python",
+    issuer: "Google",
+    issuerIconName: "google",
+    issueDate: "2026-05",
+    credentialID: "3UEQ871X8VTX",
+    credentialURL:
+      "https://www.coursera.org/account/accomplishments/specialization/3UEQ871X8VTX",
+  },
+  {
+    title: "AI Fluency for students",
+    issuer: "Anthropic",
+    issuerIconName: "anthropic",
+    issueDate: "2026-04",
+    credentialID: "ai-fluency-for-students",
+    credentialURL:
+      "https://verify.skilljar.com/c/o8ghyaaut32n",
+  },
+  {
+    title: "Google AI Professional Certificate",
+    issuer: "Google",
+    issuerIconName: "google",
+    issueDate: "2026-04",
+    credentialID: "google-ai-professional-certificate",
+    credentialURL:
+      "https://www.credly.com/badges/afb73ff9-4418-4622-9d80-f99b8fab96e5/linked_in_profile",
+  },
+  {
+    title: "Google AI Fundamentals",
+    issuer: "Google",
+    issuerIconName: "google",
+    issueDate: "2026-04",
+    credentialID: "foogle-ai-fundamentals",
+    credentialURL:
+      "https://www.credly.com/badges/b6cafd02-64b5-4c0c-9149-15c29599ae0d/linked_in_profile",
+  },
+  {
     title: "Lagacy JavaScript Algorithms and Data Structure V7",
     issuer: "FreeCodeCamp",
-    issuerLogoURL:
-      "https://images.icon-icons.com/2389/PNG/512/freecodecamp_logo_icon_145267.png",
+    issuerIconName: "freecodecamp",
     issueDate: "2023-03-25",
     credentialID: "javascript-algorithms-and-data-structures",
     credentialURL:
@@ -23,8 +60,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     title: "Introduction to Software Testing",
     issuer: "Coursera",
-    issuerLogoURL:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/960px-Coursera-Logo_600x600.svg.png?_=20201202074033",
+    issuerIconName: "coursera",
     issueDate: "2025-07-22",
     credentialID: "5AVR0EX0SRSG",
     credentialURL:
