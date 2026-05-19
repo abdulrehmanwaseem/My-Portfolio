@@ -1,15 +1,22 @@
-"use client";
+import { cn } from "@/lib/utils";
 
-import { useTheme } from "next-themes";
-
-export function KhoaWordmark(props: React.ComponentProps<"img">) {
-  const { resolvedTheme } = useTheme();
-  const src =
-    resolvedTheme === "dark"
-      ? "/images/brand/ak-logotype-dark.png"
-      : "/images/brand/ak-logotype.png";
-
-  return <img src={src} alt="AK Logotype" {...props} />;
+export function KhoaWordmark({ className, ...props }: React.ComponentProps<"img">) {
+  return (
+    <>
+      <img
+        src="/images/brand/ak-logotype.png"
+        alt="AK Logotype"
+        className={cn("block dark:hidden", className)}
+        {...props}
+      />
+      <img
+        src="/images/brand/ak-logotype-dark.png"
+        alt="AK Logotype"
+        className={cn("hidden dark:block", className)}
+        {...props}
+      />
+    </>
+  );
 }
 
 export function getWordmarkSVG(_color: string) {

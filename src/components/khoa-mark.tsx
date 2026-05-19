@@ -1,6 +1,4 @@
-"use client";
-
-import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
 
 type ImgProps = Omit<
   React.HTMLAttributes<HTMLElement> & {
@@ -16,14 +14,27 @@ type ImgProps = Omit<
   never
 >;
 
-export function KhoaMark(props: ImgProps) {
-  const { resolvedTheme } = useTheme();
-  const src =
-    resolvedTheme === "dark"
-      ? "/images/brand/ak-mark-dark.png"
-      : "/images/brand/ak-mark.png";
-
-  return <img src={src} alt="AK Mark" width={540} height={540} {...props} />;
+export function KhoaMark({ className, ...props }: ImgProps) {
+  return (
+    <>
+      <img
+        src="/images/brand/ak-mark.png"
+        alt="AK Mark"
+        width={540}
+        height={540}
+        className={cn("block dark:hidden", className)}
+        {...props}
+      />
+      <img
+        src="/images/brand/ak-mark-dark.png"
+        alt="AK Mark"
+        width={540}
+        height={540}
+        className={cn("hidden dark:block", className)}
+        {...props}
+      />
+    </>
+  );
 }
 
 export function getMarkSVG(_color: string) {
