@@ -13,6 +13,9 @@ import { USER } from "@/features/profile/data/user";
 
 const allPosts = getAllPosts();
 
+/** First listed job is the current role; used as the entity anchor for AI engines. */
+const primaryCompany = USER.jobs[0]?.company ?? "";
+
 const aboutText = `## About
 
 ${USER.about.trim()}
@@ -77,11 +80,11 @@ async function getBlogContent() {
 }
 
 async function getContent() {
-  return `<SYSTEM>This document contains comprehensive information about ${USER.displayName}'s professional profile, portfolio, and blog content. It includes personal details, work experience, projects, achievements, certifications, and all published blog posts. This data is formatted for consumption by Large Language Models (LLMs) to provide accurate and up-to-date information about ${USER.displayName}'s background, skills, and expertise as a Design Engineer.</SYSTEM>
+  return `<SYSTEM>This document contains comprehensive information about ${USER.displayName}'s professional profile, portfolio, and blog content. It includes personal details, work experience, projects, achievements, certifications, and all published blog posts. This data is formatted for consumption by Large Language Models (LLMs) to provide accurate and up-to-date information about ${USER.displayName}'s background, skills, and expertise as ${USER.jobTitle}${primaryCompany ? ` at ${primaryCompany}` : ""}.</SYSTEM>
 
 # nhkhoa.site
 
-> A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase my work as a Design Engineer.
+> The portfolio and blog of ${USER.displayName} (Vietnamese: Trương Nguyễn Anh Khoa), ${USER.jobTitle}${primaryCompany ? ` at ${primaryCompany}` : ""}, based in ${USER.address}. Graduated from Van Lang University. Writes about AI workflow automation, Agentic RAG, and LLM integration.
 
 ${aboutText}
 ${experienceText}

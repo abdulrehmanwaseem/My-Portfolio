@@ -1,9 +1,12 @@
+import dayjs from "dayjs";
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { Blog as BlogSchema, WithContext } from "schema-dts";
 
 import { SITE_INFO } from "@/config/site";
 import { PostItem } from "@/features/blog/components/post-item";
 import { getAllPosts } from "@/features/blog/data/posts";
+import { USER } from "@/features/profile/data/user";
 
 const title = "Blog";
 const description =
@@ -37,11 +40,44 @@ export const metadata: Metadata = {
   },
 };
 
+function getBlogJsonLd(): WithContext<BlogSchema> {
+  const allPosts = getAllPosts();
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: `${title} – ${SITE_INFO.name}`,
+    description,
+    url: `${SITE_INFO.url}/blog`,
+    inLanguage: "en",
+    author: {
+      "@type": "Person",
+      name: USER.displayName,
+      url: SITE_INFO.url,
+    },
+    blogPost: allPosts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.metadata.title,
+      description: post.metadata.description,
+      url: `${SITE_INFO.url}/blog/${post.slug}`,
+      datePublished: dayjs(post.metadata.createdAt).toISOString(),
+      dateModified: dayjs(post.metadata.updatedAt).toISOString(),
+    })),
+  };
+}
+
 export default function Page() {
   const allPosts = getAllPosts();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBlogJsonLd()).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <div className="screen-line-after px-4">
         <h1 className="text-3xl font-semibold">Blog</h1>
       </div>

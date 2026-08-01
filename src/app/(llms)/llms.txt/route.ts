@@ -1,11 +1,15 @@
 import { SITE_INFO } from "@/config/site";
 import { getAllPosts } from "@/features/blog/data/posts";
+import { USER } from "@/features/profile/data/user";
 
 const allPosts = getAllPosts();
 
+/** First listed job is the current role; used as the entity anchor for AI engines. */
+const primaryCompany = USER.jobs[0]?.company ?? "";
+
 const content = `# nhkhoa.site
 
-> A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase my work as a Design Engineer.
+> The portfolio and blog of ${USER.displayName} (Vietnamese: Trương Nguyễn Anh Khoa), ${USER.jobTitle}${primaryCompany ? ` at ${primaryCompany}` : ""}, based in ${USER.address}. Graduated from Van Lang University. Writes about AI workflow automation, Agentic RAG, and LLM integration.
 
 - [About](${SITE_INFO.url}/about.md): A quick intro to me, my tech stack, and how to connect.
 - [Experience](${SITE_INFO.url}/experience.md): Highlights from my career and key roles I've taken on.

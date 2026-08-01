@@ -49,6 +49,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.url),
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": `${SITE_INFO.url}/rss`,
+    },
   },
   title: {
     template: `%s – ${SITE_INFO.name}`,
