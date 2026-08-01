@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
 import { SITE_INFO } from "@/config/site";
+import { GraduationHero } from "@/features/graduation/components/graduation-hero";
 import { About } from "@/features/profile/components/about";
 import { Awards } from "@/features/profile/components/awards";
 import { Blog } from "@/features/profile/components/blog";
@@ -30,6 +31,9 @@ export default function Page() {
       />
 
       <div className="mx-auto md:max-w-3xl">
+        <GraduationHero />
+        <Separator />
+
         <ProfileCover />
         <ProfileHeader />
         <Separator />
