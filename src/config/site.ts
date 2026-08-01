@@ -24,10 +24,6 @@ export const MAIN_NAV: NavItem[] = [
     href: "/blog",
   },
   // {
-  //   title: "Products",
-  //   href: "/products/shopflow",
-  // },
-  // {
   //   title: "Components",
   //   href: "/components",
   // },

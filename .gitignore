@@ -40,6 +40,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-graphify-out
-
 rtk.exe
+# Harness core maintenance binary
+scripts/bin/harness
+scripts/bin/harness.exe
+
+.agents/
+.claude/
+.codegraph/
+.harness-core/
