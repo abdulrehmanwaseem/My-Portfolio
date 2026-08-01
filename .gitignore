@@ -49,3 +49,6 @@ scripts/bin/harness.exe
 .claude/
 .codegraph/
 .harness-core/
+
+# source images (export optimized webp into public/images/graduation/ instead)
+public/images/me-graduate.png
