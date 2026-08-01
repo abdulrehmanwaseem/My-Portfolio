@@ -52,6 +52,7 @@
     "framer-motion": "^12.27.0",
     "fumadocs-core": "^16.0.0",
     "geist": "^1.5.1",
+    "gsap": "^3.15.0",
     "jotai": "^2.12.5",
     "libphonenumber-js": "^1.12.4",
     "lucide-react": "^0.544.0",
