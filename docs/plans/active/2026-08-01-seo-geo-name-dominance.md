@@ -220,10 +220,13 @@ Phase 0 — Indexation
 
 Phase 1 — Host + deploy
 
-- [ ] Set apex as primary in Vercel; redirect www → apex
+- [x] Set apex as primary in Vercel; redirect www → apex (308) — done via
+      Vercel REST API `PATCH /v9/projects/:id/domains/:domain`; the CLI has no
+      command for redirect direction. Apex now 200 with 0 redirects, TTFB
+      1.46s → 0.24s.
 - [ ] Confirm `APP_URL` env is unset or apex
 - [ ] Merge + deploy `feat/graduation-update`
-- [ ] Verify apex returns 200 and canonical matches served host
+- [x] Verify apex returns 200 and canonical matches served host
 
 Phase 2 — Entity graph + AI access
 
