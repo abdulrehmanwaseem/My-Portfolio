@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { SITE_INFO } from "@/config/site";
+import { InvitationExperience } from "@/features/graduation/components/invitation-experience";
 import { InvitationLetter } from "@/features/graduation/components/invitation-letter";
 
 export const metadata: Metadata = {
@@ -17,5 +18,10 @@ export const metadata: Metadata = {
 };
 
 export default function InvitationPage() {
-  return <InvitationLetter />;
+  return (
+    <>
+      <InvitationExperience />
+      <InvitationLetter />
+    </>
+  );
 }
