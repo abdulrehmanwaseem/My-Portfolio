@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-01
 **Author:** Truong Nguyen Anh Khoa (with Claude)
-**Status:** Draft for review
+**Status:** Draft for review (v2 — frame-by-frame pivot)
 
 ## Context
 
@@ -12,145 +12,204 @@ five days out from this spec. Two user-facing deliverables:
 
 1. A **graduation hero** at the top of the homepage (retirable after the event).
 2. A **stunning `/invitation` page** — a warm, personal, bilingual invitation
-   letter fronted by an interactive Three.js experience with a sound layer.
+   letter fronted by a cinematic **scroll-scrubbed frame sequence** (Apple
+   AirPods technique) themed around the user's major (AI / Information Systems /
+   coding), with a sound layer.
 
 Repo prep (AGENTS merge, graphify→codegraph, ShopFlow removal) is already
 committed (`403d4c0`). This spec covers only the graduation work.
 
+## Pivot note (v1 → v2)
+
+v1 speced a Three.js point-cloud portrait (react-three-fiber). User chose to
+**replace the hero with a frame-by-frame scroll animation** themed around the
+major, accepting the tradeoff of losing the portrait-from-dots moment. **Three.js
+is dropped entirely.** The personal photo moves to the homepage hero and the
+letter, so it stays on the site.
+
 ## Scope
 
 **In scope (this round):**
-- Homepage `GraduationHero` panel (monochrome).
-- `/invitation` page: Three.js point-cloud experience (A+B), bilingual letter,
-  sound layer, calendar/maps/share actions.
-- Shared event constants; nav entry; optimized graduation photo.
+
+- Homepage `GraduationHero` panel (monochrome), featuring the graduation photo.
+- `/invitation` page: entry door → scroll-scrubbed cinematic frame sequence
+  (AI / IS / coding theme) → bilingual letter → event details → actions.
+- Asset-generation pipeline for the frame sequence (see below).
+- Sound layer; shared event constants; nav entry; optimized graduation photo.
 
 **Deferred (user will do later):**
+
 - Profile/job data edits (`user.ts`, `experiences.ts`) stay untouched. User
   chose "graduation first, job later."
 
 **Explicitly excluded:**
+
 - No RSVP / backend (5-day timeline; nowhere to store responses).
 - No color changes — strictly monochrome, matching the zinc/black-white system.
+- No Three.js / WebGL runtime engine.
 
 ## Design decisions (locked with user)
 
-| Decision | Choice |
-|---|---|
-| Restyle scope | Graduation hero at top; portfolio below unchanged; retirable |
-| Invitation tone | Warm, personal (not formal card, not party-loud) |
-| Language | Bilingual VI + EN (both hero and invitation) |
-| Interactive features | Add-to-Calendar, Maps, Share. **No RSVP.** |
-| Color | Monochrome only (no amber/gold) |
-| 3D concept | **A + B**: point-cloud portrait assemble + morph, then cap-toss confetti climax |
-| Sound | Entry-door unlock; designed tones + CC0 cheer/applause |
+| Decision             | Choice                                                                        |
+| -------------------- | ----------------------------------------------------------------------------- |
+| Restyle scope        | Graduation hero at top; portfolio below unchanged; retirable                  |
+| Invitation tone      | Warm, personal (not formal card, not party-loud)                              |
+| Language             | Bilingual VI + EN (both hero and invitation)                                  |
+| Interactive features | Add-to-Calendar, Maps, Share. **No RSVP.**                                    |
+| Color                | Monochrome only (no amber/gold)                                               |
+| Hero concept         | **Frame-by-frame scroll-scrub** cinematic sequence (no Three.js)              |
+| Theme                | AI / Information Systems / coding: neural net → code rain → cap → "2026"       |
+| Video production     | **AI-generated static scenes + real text overlay** (avoids AI-video weakness) |
+| Cap toss             | Baked into the scrubbed footage (not a runtime physics button)                |
+| Sound                | Entry-door unlock; designed tones + CC0 cheer/applause                        |
+| Photo                | Moves to homepage hero + letter (not in the hero animation)                   |
 
 ## The `/invitation` experience
 
 ### Narrative beats
 
 ```
-Beat 0  DOOR      Welcome screen: [Enter / Mở thiệp mời] + [View silently]
-                  The tap unlocks audio AND starts the scene.
-Beat 1  ARRIVE    Monochrome dot field drifts in 3D (site's grid motif).
-Beat 2  ASSEMBLE  ~12k points swarm chaos -> user's portrait
-                  (sampled from me-graduate.png; brightness = gray value).
-Beat 3  READ      Portrait holds; warm bilingual letter below.
-Beat 4  MORPH     Scroll-driven: portrait -> cap -> "2026" -> KhoaMark.
-Beat 5  CLIMAX    "Tung non! / Toss the cap!" -> mortarboard launches,
-                  bursts into monochrome paper confetti (physics).
-Beat 6  SETTLE    Confetti drifts down; scene rests on "2026" + mark.
+Beat 0  DOOR      Welcome screen: [Enter / Mở thiệp mời] + [View silently].
+                  The tap unlocks audio AND arms the scroll sequence.
+Beat 1  ARRIVE    First frame holds: monochrome dot/grid field (site motif).
+Beat 2  NETWORK   Scroll: dots grow into a neural network / knowledge graph
+                  (the user's major — AI / Information Systems).
+Beat 3  CODE      Scroll: network dissolves into falling code / data rain.
+Beat 4  CAP       Scroll: code coalesces into a graduation cap; cap tosses,
+                  bursts into monochrome paper confetti (baked in footage).
+Beat 5  RESOLVE   Confetti settles; real SVG "2026" + KhoaMark resolve on top.
+Beat 6  READ      Sequence unpins; warm bilingual letter + event details +
+                  actions scroll up as normal DOM.
 ```
 
-### Scene architecture (Three.js via react-three-fiber)
+### Rendering technique — scroll-scrubbed image sequence
 
-- **Single `BufferGeometry`**, ~12k points. All morph targets (portrait, cap,
-  "2026", mark) precomputed as equal-length position arrays. A shader
-  `uniform float progress` lerps between two target buffers on the GPU — no
-  per-frame CPU work.
-- **Portrait sampling** (`use-image-points.ts`): load a ~256px copy of the
-  photo, draw to an offscreen canvas, read pixels, keep those above a
-  brightness threshold, map to 3D positions + per-point gray. Runs once.
-- **Morph targets** (`morph-targets.ts`): cap = parametric mortarboard point
-  set; "2026" = text sampled to points via canvas; mark = KhoaMark path
-  sampled to points. All normalized to the same point count.
-- **Cap toss** (`cap-toss.tsx` + `confetti.tsx`): low-poly mortarboard mesh +
-  `InstancedMesh` confetti. Lightweight spring/gravity tween (no physics
-  engine). White + charcoal flecks only.
+Apple-AirPods pattern (well-trodden, no WebGL):
+
+- **~120–150 pre-rendered monochrome frames** as optimized WebP, drawn to a
+  single `<canvas>` sized to the viewport.
+- The sequence section is **pinned**; scroll progress maps to frame index
+  (`frameIndex = round(progress * (frameCount-1))`). Scroll down advances,
+  up reverses.
+- **GSAP + ScrollTrigger** for the pin + scrub (`scrub: 0.5`, `snap` to whole
+  frames). Chosen over a hand-rolled scroll handler for pin/scrub/reduced-motion
+  robustness; it is the de-facto standard for this effect.
+- **Text is NOT baked into frames.** "2026", the beat captions, and the KhoaMark
+  are **real SVG/DOM overlays** positioned over the canvas — pin-sharp,
+  perfectly monochrome, crisp at any DPR. This sidesteps AI video's two weak
+  spots (garbled text, incoherent multi-scene narrative).
+
+### Asset-generation pipeline (build-time, committed as static files)
+
+Produces the frames once; they ship as plain images. Not a runtime dependency.
+
+1. **Generate scenes** — `ai-image-generation` skill creates a few strong
+   monochrome key scenes: (a) neural-network / knowledge-graph forming,
+   (b) falling code / data rain, (c) a graduation cap. Grayscale, high-contrast,
+   on-brand with the dot-grid aesthetic.
+2. **Interpolate to motion** — `image-to-video` / `ai-video-generation` to move
+   between key scenes, OR ffmpeg crossfade/interpolation for controlled
+   transitions. Aim: one ~6s continuous monochrome clip.
+3. **Extract frames** — `ffmpeg -i clip.mp4 -vf fps=… frame-%03d.webp`, ~120–150
+   frames, downscaled to display size, compressed. Store under
+   `public/graduation/frames/`.
+4. **Overlay** — "2026" / captions / mark added at runtime as SVG, not in the
+   pixels.
+
+**Free / license-safe sources (researched 2026-08-01):**
+
+| Source                    | Type       | License reality                                             |
+| ------------------------- | ---------- | ----------------------------------------------------------- |
+| Own `ai-image-generation` | Images     | ✅ Bespoke monochrome scenes; primary path                  |
+| Pixabay                   | Video/img  | ✅ Free, **no attribution**, commercial OK — has "monochrome particle grid / dot surface" clips |
+| Pexels                    | Video      | ✅ Free, no attribution, commercial OK                       |
+| Mixkit / Coverr           | Video      | ✅ Free, no attribution                                      |
+| Vecteezy                  | Video      | ⚠️ Free tier often needs attribution / Pro — use with care  |
+| Quaternius / poly.pizza   | 3D (CC0)   | ✅ If a real cap model is ever needed                        |
+| Sketchfab                 | 3D         | ⚠️ Mostly CC-BY (credit) or NoAI — check per model          |
+
+> Cap can also be procedurally drawn (board + tassel) during scene generation —
+> zero licensing. External assets are fallback/reference only.
 
 ### Rendering guardrails
 
-- `@react-three/fiber` + `@react-three/drei`, mounted via `next/dynamic` with
-  `ssr: false` (App Router requirement for WebGL).
-- Particle budget: **~12k desktop / ~5k mobile**; DPR clamped to <=2.
-- Canvas pauses (`frameloop="never"`) when scrolled offscreen (IntersectionObserver).
-- **`prefers-reduced-motion`** -> `reduced-motion-fallback.tsx`: static
-  optimized portrait + letter, no canvas, sound defaults off.
-- **LCP protection:** letter text and event details are real SSR'd DOM. The 3D
-  canvas and audio load only after the entry-door tap. Page is fully
-  readable/shareable before WebGL boots.
+- Canvas sequence mounts via `next/dynamic` (`ssr: false`); GSAP/ScrollTrigger
+  are client-only.
+- **Frame preload** with progress; the entry door doubles as the loading gate
+  so scrubbing never starts before frames are ready.
+- **Budget:** ~120–150 WebP frames, downscaled + compressed; lazy-loaded after
+  the door tap so they never block first paint. Decode via `createImageBitmap`
+  / `img.decode()` off the main thread where supported.
+- **`prefers-reduced-motion`** → `reduced-motion-fallback.tsx`: show a single
+  static hero frame (or the photo), no pin, no scrub, sound off; letter reads
+  normally.
+- **LCP protection:** letter text and event details are real SSR'd DOM. Canvas
+  + frames + audio load only after the entry-door tap. Page is fully
+  readable/shareable before the sequence boots.
 
 ### Sound layer
 
 Browser policy: audio requires a user gesture. The **entry door** IS that
 gesture — no autoplay ambush.
 
-| Beat | Sound |
-|---|---|
-| Door tap | soft unlock chime |
-| Arrive | warm low ambient pad, loops under scene |
-| Assemble | rising granular shimmer -> settle swell |
-| Morph | subtle glass tick per target change |
-| Climax | upward whoosh -> warm crowd cheer + applause |
-| Confetti | light paper patter |
-| Settle | applause fades, ambient returns |
+| Beat     | Sound                                        |
+| -------- | -------------------------------------------- |
+| Door tap | soft unlock chime                            |
+| Arrive   | warm low ambient pad, loops under scene      |
+| Network  | rising granular shimmer as nodes connect     |
+| Code     | soft digital ticks / data patter             |
+| Cap      | upward whoosh → warm crowd cheer + applause  |
+| Resolve  | applause fades, ambient returns              |
 
 - Persistent 🔊/🔇 toggle, always visible; choice saved to localStorage.
 - Reuses existing `use-sound` hook pattern; files under
   `public/audio/graduation/`, compressed, lazy-loaded after the gesture.
 - Sources: designed UI tones + CC0 cheer/applause. Claude sources; user approves.
-- Independent volumes mixed over the ambient bed.
 
 ### Actions (static / client-only, no backend)
 
 - **Add to Calendar** (`invitation-actions.tsx`): generate `.ics` blob for
   download + Google Calendar template URL.
-- **Maps**: Google Maps link to Van Lang University.
+- **Maps**: Google Maps link to the venue (address below).
 - **Share**: Web Share API with copy-link fallback.
 
-### Letter copy (first draft — for user review)
+### Letter copy (user's draft + EN by Claude)
 
-> Bilingual, VI bold with EN muted beneath. Placeholder — user edits freely.
+> User wrote the VI lines and asked Claude for the English versions. Bilingual,
+> VI bold with EN muted beneath. User edits freely.
 
 **Heading:** Thư Mời Tốt Nghiệp / Graduation Invitation
 
-**Body (draft):**
+**Body:**
 
-> Sau bốn năm ở Văn Lang, mình sắp chạm tới cột mốc đầu tiên của hành trình.
-> *After four years at Van Lang, I'm about to reach the first milestone of my journey.*
+> Hi, mình là Khoa! Ngày 06 tháng 08 sắp tới đây là ngày tốt nghiệp của mình.
+> _Hi, I'm Khoa! This coming August 6th is my graduation day._
 >
-> Mình viết những dòng này để mời bạn — người đã đồng hành, dạy dỗ, và tin tưởng mình — đến chung vui trong ngày lễ tốt nghiệp.
-> *I'm writing to invite you — someone who has walked with me, taught me, and believed in me — to celebrate my graduation day.*
+> Mình trân trọng mời các bạn đến chung vui cùng mình trong ngày kỉ niệm này.
+> _I'd be honored to have you join me and share in this special milestone._
 >
-> Cảm ơn gia đình, thầy cô và bạn bè. Cột mốc này có phần của mọi người trong đó.
-> *Thank you to my family, teachers, and friends. This milestone has a piece of each of you in it.*
+> Cám ơn các bạn, sự hiện diện của các bạn sẽ là niềm vui rất lớn đối với mình.
+> _Thank you — your presence would mean the world to me._
 
 **Event block:**
+
 - 📅 10:00, Thứ Năm, 06.08.2026 / Thursday, 6 Aug 2026
-- 📍 Trường Đại học Văn Lang / Van Lang University
+- 📍 Trường Đại học Văn Lang (Cơ sở chính) / Van Lang University (Main Campus)
+- 🗺️ 69/68 Đ. Đặng Thuỳ Trâm, An Nhơn, Hồ Chí Minh 70000, Việt Nam
 
 ## Homepage `GraduationHero`
 
 New `Panel` inserted at the very top of `src/app/(app)/(root)/page.tsx`, above
 `ProfileCover`. Uses existing `Panel` / `screen-line` / hatch-pattern system.
+This is where the **graduation photo** lives.
 
 ```
 🎓  CLASS OF 2026
-[portrait]   Toi sap tot nghiep! / I'm graduating!
-             (countdown) 5 days to go  -> "Graduated!" after 06.08
-             10:00 - Thu, 06.08.2026
-             Dai hoc Van Lang
-             [ Xem thu moi / See invitation -> ]
+[photo]      Tôi sắp tốt nghiệp! / I'm graduating!
+             (countdown) 5 days to go  → "Graduated!" after 06.08
+             10:00 · Thu, 06.08.2026
+             Đại học Văn Lang
+             [ Xem thư mời / See invitation → ]
 ```
 
 - Countdown is the shared client component.
@@ -159,53 +218,64 @@ New `Panel` inserted at the very top of `src/app/(app)/(root)/page.tsx`, above
 ## Shared + housekeeping
 
 - **`src/features/graduation/data/graduation.ts`** — single source of truth:
-  date/time, venue, Maps URL, calendar payload, countdown target. Consumed by
-  hero, invitation, countdown, calendar action.
+  date/time, venue name + address, Maps URL, calendar payload, countdown target.
+  Consumed by hero, invitation, countdown, calendar action.
 - **Nav:** add "Invitation" to `MAIN_NAV` (`site.ts`) and `command-menu.tsx`
   (fills the slot cleared when ShopFlow was removed).
 - **Image:** generate optimized web copies of `me-graduate.png` (14.3 MB /
-  4096²) via Sharp — a ~1200px display image and a ~256px point-sample source.
-  Original kept untouched.
+  4096²) via Sharp — a ~1200px hero image (+ smaller responsive sizes). Original
+  kept untouched. **Build blocker until done.**
 
 ## File structure
 
 ```
-src/app/(app)/invitation/page.tsx          server: letter, metadata, OG, mounts scene
+src/app/(app)/invitation/page.tsx          server: letter, metadata, OG, mounts sequence
 src/features/graduation/
   data/graduation.ts                        shared event constants
   components/
-    graduation-hero.tsx                     homepage hero panel
+    graduation-hero.tsx                     homepage hero panel (photo + countdown)
     graduation-countdown.tsx                client countdown (shared)
     invitation-letter.tsx                   bilingual letter (server)
     invitation-actions.tsx                  calendar / maps / share (client)
-    entry-door.tsx                          welcome screen + audio unlock (client)
+    entry-door.tsx                          welcome screen + audio unlock + preload gate (client)
     sound-controller.tsx                    audio manager + mute toggle (client)
-    three/
-      portrait-scene.tsx                    r3f Canvas (dynamic, ssr:false)
-      use-image-points.ts                   photo -> points
-      morph-targets.ts                      cap / "2026" / mark point sets
-      cap-toss.tsx                          mortarboard launch
-      confetti.tsx                          instanced confetti
-      reduced-motion-fallback.tsx           static fallback
+    scroll-sequence.tsx                     pinned canvas + GSAP ScrollTrigger scrub (client, dynamic ssr:false)
+    sequence-overlay.tsx                    real SVG "2026" / captions / KhoaMark over canvas
+    reduced-motion-fallback.tsx             static frame + letter, no scrub
+public/graduation/frames/frame-000.webp …   pre-rendered sequence (build artifact)
+public/audio/graduation/…                    sound assets
+scripts/ (optional) build-frames.*           documents the ffmpeg extraction step
 ```
 
 ## New dependencies
 
-- `three`, `@react-three/fiber`, `@react-three/drei`
-- Available `threejs-*` skills will guide implementation.
+- `gsap` (ScrollTrigger) — pin + scroll scrub.
+- `ffmpeg` — **build-time only** for frame extraction (not a runtime dep).
+- Skills: `ai-image-generation`, `image-to-video` / `ai-video-generation`
+  for asset creation.
+- **No `three` / `@react-three/*`.**
 
 ## Testing / validation
 
-- `pnpm check-types` clean.
-- `pnpm build` succeeds (verify `ssr: false` dynamic import, no WebGL in SSR).
-- Manual: entry door unlocks audio; reduced-motion shows static fallback;
-  countdown flips after target; calendar `.ics` downloads; Maps + Share work;
-  mobile particle budget holds; page readable before canvas boots.
+- `pnpm check-types` clean; `pnpm build` succeeds (verify `ssr: false`, no
+  browser-only API in SSR).
+- Manual: entry door preloads frames then unlocks audio + scrub; scrubbing is
+  smooth both directions; "2026"/mark overlay is crisp; `prefers-reduced-motion`
+  shows the static fallback; countdown flips after target; `.ics` downloads;
+  Maps + Share work; mobile frame budget holds; page readable before sequence
+  boots.
 
 ## Risks
 
-- **5-day timeline** — 3D + sound is the bulk of effort. Hero + letter + actions
-  are the must-ship core; the point-cloud/confetti degrade to the static
-  fallback if needed, so the page is always shippable.
-- **14 MB source image** — must optimize before it ships (build blocker otherwise).
+- **5-day timeline** — asset generation (AI scenes → clip → frames) is the least
+  predictable step. Mitigation: hero + letter + actions are the must-ship core
+  and don't depend on the sequence; the sequence degrades to a single static
+  frame. Page is always shippable.
+- **AI asset quality** — multi-scene narrative + monochrome consistency may need
+  several generation passes. Real-text overlay removes the biggest failure mode
+  (garbled "2026"). If AI scenes underwhelm, fall back to CC0 Pixabay particle
+  footage or a procedural canvas render.
+- **Frame weight** — 120–150 images must be downscaled + compressed + lazy; a
+  naive export would bloat the page. Preload gated behind the door.
+- **14 MB source image** — must optimize before it ships (build blocker).
 - **Node 24 vs local 22** — warning only; not blocking.
