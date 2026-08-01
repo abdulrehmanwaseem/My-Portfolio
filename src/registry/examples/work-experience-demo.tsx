@@ -3,23 +3,21 @@ import { WorkExperience } from "@/registry/work-experience";
 
 const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
-    id: "khoa-ai",
-    companyName: "Khoa AI",
-    companyLogo: "https://api.dicebear.com/7.x/shapes/svg?seed=KhoaAI",
+    id: "vml",
+    companyName: "VML",
+    companyLogo: "https://api.dicebear.com/7.x/shapes/svg?seed=VML",
     positions: [
       {
-        id: "khoa-ai-freelancer",
-        title: "AI Automation Developer",
-        employmentPeriod: "01.2026 — present",
-        employmentType: "Freelance",
+        id: "vml-ai-workflow-automation-engineer",
+        title: "AI Workflow & Automation Engineer",
+        employmentPeriod: "06.2026 — present",
+        employmentType: "Full-time",
         icon: "code",
-        description: `- Focused on building a strong foundation in Automation and AI.
-- Developing the Khoa AI - Digital Twin project on Facebook Page.
-- Delivering AI-powered automation solutions for clients.`,
+        description: `- Building AI-powered workflows and automation for brand and commerce teams.
+- Designing agentic pipelines that connect marketing platforms end to end.`,
         skills: [
           "AI Automation",
           "Workflow Design",
-          "Digital Twin",
           "n8n",
           "Make",
           "Prompt Engineering",

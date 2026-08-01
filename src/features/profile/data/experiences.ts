@@ -2,27 +2,17 @@ import type { Experience } from "../types/experiences";
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: "freelance",
-    companyName: "Khoa AI",
+    id: "vml",
+    companyName: "VML",
     positions: [
       {
-        id: "khoa-ai-founder",
-        title: "Freelancer · AI Automation Developer",
+        id: "vml-ai-workflow-automation-engineer",
+        title: "AI Workflow & Automation Engineer",
         employmentPeriod: {
-          start: "01.2026",
+          start: "06.2026",
         },
-        employmentType: "Freelance",
+        employmentType: "Full-time",
         icon: "code",
-        description:
-          "- Focused on building a strong foundation in Automation and AI to grow as an AI Automation Developer.\n- Currently developing the Khoa AI - Digital Twin project on Facebook Page.",
-        skills: [
-          "AI Automation",
-          "Workflow Design",
-          "Digital Twin",
-          "n8n",
-          "Make",
-          "Prompt Engineering",
-        ],
         isExpanded: true,
       },
     ],
