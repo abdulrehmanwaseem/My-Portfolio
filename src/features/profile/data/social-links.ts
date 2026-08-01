@@ -13,4 +13,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
     description: "@dev-nhkhoa",
     href: "https://github.com/dev-nhkhoa",
   },
+  {
+    icon: "/images/link-icons/facebook.svg",
+    title: "Facebook",
+    description: "@nhkhoa.a",
+    href: "https://www.facebook.com/nhkhoa.a/",
+  },
+  {
+    icon: "/images/link-icons/instagram.svg",
+    title: "Instagram",
+    description: "@nhkhoa.a",
+    href: "https://www.instagram.com/nhkhoa.a/",
+  },
 ];

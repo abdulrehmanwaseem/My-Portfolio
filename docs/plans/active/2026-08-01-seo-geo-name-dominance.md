@@ -227,16 +227,19 @@ Phase 1 — Host + deploy
 
 Phase 2 — Entity graph + AI access
 
-- [ ] Unblock AI layer in `robots.ts`; add `Google-Extended: Allow`
-- [ ] Obtain Facebook + Instagram URLs from Khoa
-- [ ] Add FB + IG to `social-links.ts`
-- [ ] Expand `Person` schema (`sameAs`, `worksFor`, `alumniOf`, `alternateName`)
-- [ ] Fix profession/registry copy in both llms routes; derive from `USER`
-- [ ] Add `FAQPage` schema to homepage
-- [ ] Add `Blog` + `ItemList` schema to `/blog`
+- [x] Unblock AI layer in `robots.ts`; add `Google-Extended: Allow` — `0d005b1`
+- [ ] **Obtain Facebook + Instagram URLs from Khoa** ← blocking the goal's
+      cross-platform half; not present anywhere in the repo
+- [ ] Add FB + IG to `social-links.ts` (flows into `sameAs` automatically)
+- [x] Expand `Person` schema (`sameAs`, `worksFor`, `alumniOf`, `alternateName`,
+      `knowsAbout`, `address`, `nationality`) — `0d005b1`
+- [x] Fix profession/registry copy in both llms routes; derive from `USER` —
+      `0d005b1`
+- [x] Add `FAQPage` schema + visible FAQ section (6 questions) — `0d005b1`
+- [x] Add `Blog` schema to `/blog` — `0d005b1`
 - [ ] Create HTML `/about` page
-- [ ] Add RSS autodiscovery
-- [ ] Validate all schema in Rich Results Test
+- [x] Add RSS autodiscovery — `0d005b1`
+- [ ] Validate all schema in Rich Results Test (needs deploy first)
 
 Phase 3 — Content
 
