@@ -75,6 +75,9 @@ importers:
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      pullcord:
+        specifier: ^0.1.0
+        version: 0.1.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       radix-ui:
         specifier: ^1.4.3
         version: 1.4.3(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -4500,6 +4503,12 @@ packages:
 
   proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+
+  pullcord@0.1.0:
+    resolution: {integrity: sha512-v+3L1gP0+4jZWZV5y0lrTown+1xRGVIupd0wjNTbD8bQtatY6RQesA7/wT9Ge8eF/mLLVpK3Bw5Xjl1hRQWRxA==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
 
   pump@3.0.3:
     resolution: {integrity: sha512-todwxLMY7/heScKmntwQG8CXVkWUOdYxIvY2s0VWAAMh/nd8SoYiRaKjlr7+iCs984f2P8zvrfWcDDYVb73NfA==}
@@ -10147,6 +10156,14 @@ snapshots:
       - supports-color
 
   proxy-from-env@1.1.0: {}
+
+  pullcord@0.1.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+    dependencies:
+      motion: 12.18.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      react: 19.2.1
+      react-dom: 19.2.1(react@19.2.1)
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
 
   pump@3.0.3:
     dependencies:

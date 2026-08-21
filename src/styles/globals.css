@@ -109,6 +109,13 @@
 }
 
 :root {
+  /* PullCord: above the sticky site header (z-50) so the rope is not
+     occluded by its opaque background. Ink follows the theme via the token. */
+  --pullcord-top: 0px;
+  --pullcord-right: 7rem;
+  --pullcord-z: 60;
+  --pullcord-ink: var(--muted-foreground);
+
   /* white */
   --background: oklch(1 0 0);
 
@@ -451,6 +458,67 @@
 
   [data-highlighted-line] {
     @apply bg-code-highlight;
+  }
+
+  /* ── PullCord hint ──────────────────────────────────────────────────────
+     Offsets, sizes and the 16deg arrow tilt are feralui.dev's own values, so
+     this reads exactly like the hint on the component's demo page. Anchored
+     off the same custom properties as <PullCord/> so it follows the cord if
+     those move; --doodle over there is --muted-foreground here. */
+  .cord-hint {
+    position: fixed;
+    top: calc(var(--pullcord-top, 0px) + 172px);
+    right: calc(var(--pullcord-right, 7rem) + 52px);
+    z-index: calc(var(--pullcord-z, 5) - 1);
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    color: var(--muted-foreground);
+    white-space: nowrap;
+    pointer-events: none;
+    /* Waits out the cord's own drop-in (0.4s delay + 0.6s fall) so it does not
+       point at an empty ceiling. */
+    animation: cord-hint-in 0.5s 1.8s ease both;
+  }
+
+  .cord-hint-text {
+    font-family: var(--font-handwriting), "Segoe Script", "Bradley Hand",
+      cursive;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 0.95;
+    text-align: right;
+  }
+
+  /* The tilt is what makes the arrow sweep up into the knob instead of poking
+     at it flat. */
+  .cord-hint-arrow {
+    flex: none;
+    transform: rotate(16deg);
+    transform-origin: center;
+  }
+
+  @keyframes cord-hint-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cord-hint {
+      animation: none;
+    }
+  }
+
+  /* feralui.dev's own cutoff: below this the hint collides with page content,
+     and the cord is easy enough to spot on a small screen anyway. */
+  @media (width < 47.5rem) {
+    .cord-hint {
+      display: none;
+    }
   }
 }
 

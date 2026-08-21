@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Rehman Waseem - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page { size: A4; margin: 0; }
+
+    body {
+      font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif;
+      font-size: 8.5pt;
+      line-height: 1.42;
+      color: #333;
+      background: #b0b0b0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      margin: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; width: 100%; }
+      .no-print { display: none !important; }
+    }
+
+    /* ════════════════════════════════════════════════════
+       HEADER - Dark banner with name + contact
+       ════════════════════════════════════════════════════ */
+    .cv-header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 22pt 24pt 18pt 24pt;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16pt;
+    }
+
+    .cv-header-left {
+      flex: 1;
+    }
+
+    .cv-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 4pt;
+    }
+
+    .cv-name {
+      font-family: 'Raleway', sans-serif;
+      font-size: 26pt;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      line-height: 1.05;
+      margin-bottom: 3pt;
+    }
+
+    .cv-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9.5pt;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #aaa;
+    }
+
+    .cv-header-right {
+      flex-shrink: 0;
+      text-align: right;
+      font-size: 7.8pt;
+      line-height: 1.6;
+      color: #ccc;
+      padding-top: 6pt;
+    }
+
+    .cv-header-right .label {
+      font-weight: 700;
+      color: #fff;
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cv-header-right a:hover { color: #fff; }
+
+    /* ════════════════════════════════════════════════════
+       PROFESSIONAL SUMMARY - below header
+       ════════════════════════════════════════════════════ */
+    .summary-bar {
+      background: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+      padding: 10pt 24pt;
+    }
+
+    .summary-bar h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+      margin-bottom: 5pt;
+    }
+
+    .summary-bar p {
+      font-size: 7.8pt;
+      line-height: 1.55;
+      color: #444;
+    }
+
+    /* ════════════════════════════════════════════════════
+       BODY - Two column layout
+       ════════════════════════════════════════════════════ */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 175pt 1fr;
+      min-height: calc(297mm - 120pt);
+      flex: 1;
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    .cv-left {
+      background: #fafafa;
+      border-right: 1px solid #e5e5e5;
+      padding: 14pt 14pt 18pt 24pt;
+      min-height: 100%;
+    }
+
+    .sidebar-section {
+      margin-bottom: 14pt;
+    }
+
+    .sidebar-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 8.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+      margin-bottom: 6pt;
+      padding-bottom: 3pt;
+      border-bottom: 2px solid #1a1a1a;
+    }
+
+    /* Education */
+    .edu-item { margin-bottom: 6pt; }
+    .edu-degree { font-weight: 700; font-size: 8pt; color: #1a1a1a; }
+    .edu-school { font-size: 7.5pt; color: #555; }
+    .edu-period { font-size: 7pt; color: #888; }
+
+    /* Certifications */
+    .cert-list { list-style: none; }
+    .cert-list li {
+      position: relative;
+      padding-left: 9pt;
+      margin-bottom: 2.5pt;
+      font-size: 7.5pt;
+      color: #444;
+    }
+    .cert-list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    /* Technical Proficiency */
+    .tech-group { margin-bottom: 6pt; }
+    .tech-group.page-break {
+      break-before: page;
+      padding-top: 14pt;
+    }
+    .tech-group-title {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: #1a1a1a;
+      margin-bottom: 1.5pt;
+    }
+    .tech-group-items {
+      font-size: 7.3pt;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Awards */
+    .award-list { list-style: none; }
+    .award-list li {
+      position: relative;
+      padding-left: 9pt;
+      margin-bottom: 3pt;
+      font-size: 7.5pt;
+      color: #444;
+    }
+    .award-list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+    .award-list li strong {
+      color: #1a1a1a;
+    }
+
+    /* Skills list */
+    .skill-list { list-style: none; }
+    .skill-list li {
+      position: relative;
+      padding-left: 9pt;
+      margin-bottom: 2pt;
+      font-size: 7.3pt;
+      color: #555;
+    }
+    .skill-list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    /* ── RIGHT MAIN COLUMN ── */
+    .cv-right {
+      padding: 14pt 24pt 18pt 16pt;
+    }
+
+    .right-section {
+      margin-bottom: 14pt;
+    }
+
+    .right-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .right-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 8.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+      margin-bottom: 8pt;
+      padding-bottom: 3pt;
+      border-bottom: 2px solid #1a1a1a;
+    }
+
+    /* Experience items */
+    .exp-item {
+      display: grid;
+      grid-template-columns: 62pt 1fr;
+      gap: 8pt;
+      margin-bottom: 10pt;
+      page-break-inside: avoid;
+    }
+
+    .exp-date {
+      font-size: 7pt;
+      font-weight: 700;
+      color: #555;
+      text-transform: uppercase;
+      line-height: 1.55;
+      padding-top: 1pt;
+    }
+
+    .exp-content {}
+
+    .exp-role-company {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+      margin-bottom: 1pt;
+    }
+
+    .exp-location {
+      font-size: 7pt;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 3pt;
+    }
+
+    .exp-bullets { list-style: none; }
+    .exp-bullets li {
+      position: relative;
+      padding-left: 8pt;
+      margin-bottom: 1.5pt;
+      font-size: 7.5pt;
+      color: #444;
+      line-height: 1.45;
+    }
+    .exp-bullets li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #1a1a1a;
+      font-size: 7pt;
+    }
+
+    /* Projects */
+    .proj-item {
+      display: grid;
+      grid-template-columns: 62pt 1fr;
+      gap: 8pt;
+      margin-bottom: 7pt;
+    }
+
+    .proj-date {
+      font-size: 7pt;
+      font-weight: 700;
+      color: #555;
+      text-transform: uppercase;
+      padding-top: 1pt;
+    }
+
+    .proj-content {}
+
+    .proj-name {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 1pt;
+    }
+
+    .proj-desc {
+      font-size: 7.3pt;
+      color: #555;
+      line-height: 1.45;
+    }
+
+    .proj-tech {
+      font-size: 6.8pt;
+      color: #888;
+      font-style: italic;
+      margin-top: 1pt;
+    }
+
+    /* Print bar */
+    .print-bar {
+      text-align: center;
+      padding: 14pt;
+      background: #b0b0b0;
+    }
+    .print-bar button {
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      padding: 8pt 28pt;
+      font-size: 10pt;
+      font-weight: 700;
+      border-radius: 3pt;
+      cursor: pointer;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 1px;
+    }
+    .print-bar button:hover { background: #333; }
+  </style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button onclick="window.print()">PRINT / SAVE AS PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- ═══════════════════ HEADER ═══════════════════ -->
+  <header class="cv-header">
+    <div class="cv-header-left">
+      <div class="cv-label">Curriculum Vitae</div>
+      <h1 class="cv-name">ABDUL REHMAN<br/>WASEEM</h1>
+      <div class="cv-title">Full Stack Developer &amp; AI Agent Engineer</div>
+    </div>
+    <div class="cv-header-right">
+      <div><span class="label">Email</span><br/>contact@abdulrehmanwaseem.me</div>
+      <div style="margin-top:4pt"><span class="label">Portfolio</span><br/><a href="https://abdulrehmanwaseem.me">abdulrehmanwaseem.me</a></div>
+      <div style="margin-top:4pt"><span class="label">LinkedIn</span><br/><a href="https://www.linkedin.com/in/abdulrehmanwaseem/">linkedin.com/in/abdulrehmanwaseem</a></div>
+      <div style="margin-top:4pt"><span class="label">GitHub</span><br/><a href="https://github.com/abdulrehmanwaseem">github.com/abdulrehmanwaseem</a></div>
+      <div style="margin-top:4pt"><span class="label">Location</span><br/>Hyderabad, Pakistan (Remote)</div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════ SUMMARY BAR ═══════════════════ -->
+  <div class="summary-bar">
+    <h2>Professional Summary</h2>
+    <p>
+     Full-stack developer who started coding at <strong>14 y/o</strong>, bringing <strong>4+ years</strong> of hands on experience experience building scalable web, mobile, desktop and immersive 3D applications. Delivered <strong>20+ freelance projects</strong> across SaaS, healthcare, e-signature, real estate, insurance and workforce management domains. Expertise spans the MERN stack, Next.js, NestJS, React Native, Electron and Three.js. Published an <strong>NPM package</strong> for NestJS microservices and built production grade cross platform apps with Electron and React Native. <strong>Hackathon winner (HydThon AI 2026)</strong> and Top 5 finalist (SMIT Coding Night 2025, 200+ participants).
+    </p>
+    <p style="margin-top:4pt">
+      What some view as a limitation, I see as my greatest advantage starting early gave me the freedom to learn, experiment and build a strong foundation combining practical experience with theoretical knowledge. Passionate about exploring new technologies and turning ideas into reality through polished, production ready projects. Currently pursuing BS Computer Science, exploring System Design and aiming to venture into AI.
+    </p>
+    <p style="margin-top:4pt">
+    <strong>Mission:</strong> Build software that is easy to use and always improving with the latest technology.
+    </p>
+  </div>
+
+  <!-- ═══════════════════ BODY ═══════════════════ -->
+  <div class="cv-body">
+
+    <!-- ─── LEFT SIDEBAR ─── -->
+    <aside class="cv-left">
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Education</div>
+        <div class="edu-item">
+          <div class="edu-degree">BS Computer Science</div>
+          <div class="edu-school">University of Sindh</div>
+          <div class="edu-period">Jan 2026 &ndash; 2030</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">ICS (Computer Science)</div>
+          <div class="edu-school">FG Degree College Cant</div>
+          <div class="edu-period">Jul 2023 &ndash; Jun 2025</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Awards</div>
+        <ul class="award-list">
+          <li><strong>1st Place</strong> &ndash; HydThon AI Hackathon 2026, Hyderabad</li>
+          <li><strong>Top 5 / 200+</strong> &ndash; SMIT Coding Night Hackathon 2025</li>
+          <li><strong>2nd Position</strong> &ndash; FG Cantt Exhibition 2023, 3D Web Game</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Certifications</div>
+        <ul class="cert-list">
+          <li>JavaScript Essentials 2 &ndash; Cisco</li>
+          <li>Python Essentials 1 &amp; 2 &ndash; Cisco</li>
+          <li>DeepSeek &ndash; Analytics Vidhya</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Technical Proficiency</div>
+
+        <div class="tech-group">
+          <div class="tech-group-title">Frontend</div>
+          <div class="tech-group-items">React, Next.js, React Native, Expo, Three.js, R3F, Redux Toolkit, RTK Query, Tailwind CSS, shadcn/ui, Radix UI, Motion</div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-group-title">Backend</div>
+          <div class="tech-group-items">Node.js, Express.js, NestJS, FastAPI, GraphQL, REST APIs, WebSockets, Micro Services</div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-group-title">Databases</div>
+          <div class="tech-group-items">PostgreSQL, MongoDB, MySQL, Redis, SQLite, Prisma ORM</div>
+        </div>
+
+        <div class="tech-group page-break">
+          <div class="tech-group-title">Desktop &amp; 3D</div>
+          <div class="tech-group-items">Electron, Three.js, WebGL, GLSL Shaders, Rapier Physics, Blender</div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-group-title">DevOps &amp; Cloud</div>
+          <div class="tech-group-items">AWS EC2, AWS SES, Digital Ocean, Docker, Vercel, Render, CI/CD, Cloudinary, Git</div>
+        </div>
+
+        <div class="tech-group">
+          <div class="tech-group-title">Addons</div>
+          <div class="tech-group-items">React Native, Electron.js, Stripe, OAuth, Sentry, BullMQ, Keygen.sh</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Skills</div>
+        <ul class="skill-list">
+          <li>TypeScript / JavaScript / Python</li>
+          <li>System Design &amp; Architecture</li>
+          <li>Agile / Scrum / Remote Work</li>
+          <li>Jest / Puppeteer / Testing Library</li>
+          <li>Figma / UI&sol;UX Design</li>
+          <li>Sanity CMS / WordPress</li>
+          <li>SEO / WCAG Accessibility</li>
+          <li>Documentation / Technical Writing</li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- ─── RIGHT MAIN COLUMN ─── -->
+    <div class="cv-right">
+
+      <div class="right-section">
+        <div class="right-title">Work Experience</div>
+
+        <!-- Softnetic Labs -->
+        <div class="exp-item">
+          <div class="exp-date">Jan 2026<br/>Present</div>
+          <div class="exp-content">
+            <div class="exp-role-company">Full Stack Engineer @ Softnetic Labs</div>
+            <div class="exp-location">Remote &middot; Austin, Texas, United States</div>
+            <ul class="exp-bullets">
+              <li>Build and scale modern web and cross-platform applications using MERN stack, Next.js, NestJS, React Native, and Electron for startup and enterprise clients</li>
+              <li>Architect end-to-end features spanning system design, API development, and performance optimization, delivering production-ready solutions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pulcify -->
+        <div class="exp-item">
+          <div class="exp-date">Nov 2025<br/>Jan 2026</div>
+          <div class="exp-content">
+            <div class="exp-role-company">Full Stack Engineer @ Pulcify</div>
+            <div class="exp-location">Contract &middot; Remote &middot; Redhill, England, UK</div>
+            <ul class="exp-bullets">
+              <li>Led complete rebuild of JENOA (jenoa.com) from WordPress to Next.js with React Server Components, TypeScript, and Sanity CMS</li>
+              <li>Achieved 90+ Lighthouse scores via advanced SEO, WCAG 2.2 AA, GTM, GA4 analytics, consent mode, and event tracking integration</li>
+              <li>Managed CI/CD pipelines, multi-environment deployments; implemented E2E testing with Puppeteer and added full PWA support</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Forrof -->
+        <div class="exp-item">
+          <div class="exp-date">Jul 2025<br/>Nov 2025</div>
+          <div class="exp-content">
+            <div class="exp-role-company">Senior Fullstack Developer &amp; 3D Web Specialist @ Forrof.io</div>
+            <div class="exp-location">Full-time &middot; Remote &middot; United States</div>
+            <ul class="exp-bullets">
+              <li>Developed scalable SaaS applications and cross-platform solutions with MERN, Next.js, NestJS, React Native, and Electron</li>
+              <li>Implemented immersive 3D web experiences using Three.js, React Three Fiber, WebGL with custom shaders and physics simulations</li>
+              <li>Integrated third-party APIs and real-time features using WebSockets across distributed remote teams</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Freelance -->
+        <div class="exp-item">
+          <div class="exp-date">2024<br/>Present</div>
+          <div class="exp-content">
+            <div class="exp-role-company">Freelance Full-Stack Developer &amp; 3D Engineer</div>
+            <div class="exp-location">Remote &middot; 15+ Client Projects Delivered</div>
+            <ul class="exp-bullets">
+              <li><strong>Fynosign:</strong> Built e-signature SaaS with PDF signing (pdf-lib), Stripe billing, OAuth, Gemini AI; deployed on AWS EC2</li>
+              <li><strong>LoopIQ:</strong> Developed healthcare management frontend with React, Redux Toolkit, RTK Query; FastAPI backend integration</li>
+              <li><strong>Space Facts Explorer:</strong> Shipped React Native app to Apple App Store using Expo; managed full deployment lifecycle</li>
+              <li><strong>Zas Dashboard:</strong> Built employment analytics consuming Spanish labor APIs (100k+ rows) with interactive filters</li>
+              <li><strong>Oil Refinery:</strong> Built interactive 3D visualization with React Three Fiber, realistic lighting, water physics</li>
+              <li><strong>More:</strong> RallyTyper, Khrimisay, Fitreps, Truer EHR, Lead Smart, EdTech, Admin dashboards, PWA fixes, auth flows</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- POS -->
+        <div class="exp-item" style="break-before: page; padding-top: 14pt;">
+          <div class="exp-date">Jul 2024<br/>Jul 2025</div>
+          <div class="exp-content">
+            <div class="exp-role-company">POS Software Developer @ Self-Employed</div>
+            <div class="exp-location">Hyderabad, Sindh, Pakistan</div>
+            <ul class="exp-bullets">
+              <li>Built ShopFlow: SaaS shop management system with PERN stack, Prisma ORM, real-time dashboards, inventory tracking</li>
+              <li>Implemented invoice management, financial insights, automated low-stock alerts, and Handsontable data grids</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Instructor -->
+        <div class="exp-item">
+          <div class="exp-date">Apr 2024<br/>Jun 2025</div>
+          <div class="exp-content">
+            <div class="exp-role-company">Web Development Instructor</div>
+            <div class="exp-location">Part-time &middot; Online &amp; E.Zone Academy</div>
+            <ul class="exp-bullets">
+              <li>Taught HTML, CSS, JavaScript, and React.js through project-based learning; mentored university students</li>
+              <li>Conducted in-person workshops on freelancing careers, profile building, and client management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="right-section">
+        <div class="right-title">Key Projects</div>
+
+        <div class="proj-item">
+          <div class="proj-date">2023</div>
+          <div class="proj-content">
+            <div class="proj-name">ShopFlow &ndash; SaaS Shop Management System</div>
+            <div class="proj-desc">Full-stack POS with invoice management, real-time financial dashboards, inventory tracking, and cash flow monitoring.</div>
+            <div class="proj-tech">PERN Stack, Prisma, Redux Toolkit, Handsontable</div>
+          </div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-date">2024</div>
+          <div class="proj-content">
+            <div class="proj-name">NestJS Microservices Auto Decorators (NPM)</div>
+            <div class="proj-desc">Published automation library generating message patterns automatically for distributed NestJS systems.</div>
+            <div class="proj-tech">NestJS, TypeScript, Node.js &middot; npmjs.com</div>
+          </div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-date">2024</div>
+          <div class="proj-content">
+            <div class="proj-name">3D Zombie Invasion Game</div>
+            <div class="proj-desc">Browser-based 3D survival game with real-time physics, custom cameras, and post-apocalyptic environment.</div>
+            <div class="proj-tech">React Three Fiber, Rapier Physics, Three.js, TypeScript</div>
+          </div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-date">2024</div>
+          <div class="proj-content">
+            <div class="proj-name">Spotlight &ndash; React Native Social App</div>
+            <div class="proj-desc">Cross-platform social media app with Clerk auth, Convex backend, and NativeWind animations for iOS &amp; Android.</div>
+            <div class="proj-tech">React Native, Expo, Clerk, Convex, NativeWind</div>
+          </div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-date">2024</div>
+          <div class="proj-content">
+            <div class="proj-name">Blogs App (NestJS + GraphQL + Next.js)</div>
+            <div class="proj-desc">Full-stack blogging platform with JWT auth, 2FA, and strong modular type-safe architecture.</div>
+            <div class="proj-tech">NestJS, Prisma, GraphQL, Next.js, RTK Query</div>
+          </div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-date">2024</div>
+          <div class="proj-content">
+            <div class="proj-name">Electron License Distribution Kit</div>
+            <div class="proj-desc">Secure Electron app licensing boilerplate with Keygen.sh validation, Bytenode protection, and Sentry monitoring.</div>
+            <div class="proj-tech">Electron, React, Vite, Keygen.sh, Sentry</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

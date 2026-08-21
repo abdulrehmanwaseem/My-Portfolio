@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Provider as JotaiProvider } from "jotai";
 import { ThemeProvider } from "next-themes";
 
+import { PullCordTheme } from "@/components/pull-cord-theme";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 import { Toaster } from "./ui/sonner";
@@ -29,6 +30,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         >
           {children}
         </AppProgressProvider>
+        <PullCordTheme />
         <Toaster position="top-center" />
         <SmoothCursor />
         <Analytics />

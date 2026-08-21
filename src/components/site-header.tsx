@@ -9,7 +9,8 @@ import { cn } from "@/lib/utils";
 
 import { SiteHeaderMark } from "./site-header-mark";
 import { SiteHeaderWrapper } from "./site-header-wrapper";
-import { ToggleTheme } from "./toggle-theme";
+// Replaced by <PullCordTheme /> in providers.tsx
+// import { ToggleTheme } from "./toggle-theme";
 
 const BrandContextMenu = dynamic(() =>
   import("@/components/brand-context-menu").then((mod) => mod.BrandContextMenu)
@@ -57,9 +58,11 @@ export function SiteHeader() {
           <CommandMenu posts={posts} />
           <NavItemGitHub />
 
-          <span className="mx-2 flex h-4 w-px bg-border" />
+          {/* sm:hidden — without ToggleTheme this only divides MobileNav, which
+              is itself mobile-only, so it would otherwise dangle on desktop. */}
+          <span className="mx-2 flex h-4 w-px bg-border sm:hidden" />
 
-          <ToggleTheme />
+          {/* <ToggleTheme /> */}
           <MobileNav className="sm:hidden" items={MAIN_NAV} />
         </div>
       </div>
