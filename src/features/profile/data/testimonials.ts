@@ -1,4 +1,23 @@
-import type { Testimonial } from "../types/testimonials";
+import type { Testimonial, VideoTestimonial } from "../types/testimonials";
+
+export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
+  {
+    src: "/video/testimonial-edikit.mp4",
+    poster: "/images/testimonial-edikit-poster.jpg",
+    authorAvatar: "/images/edikit-avatar.png",
+    authorName: "Edikit",
+    authorBio: "Motion Graphics Platform",
+    url: "https://www.edikit.net",
+  },
+  {
+    src: "/video/testimonial-futurely.mp4",
+    poster: "/images/testimonial-futurely-poster.jpg",
+    authorAvatar: "/images/futurely-avatar.png",
+    authorName: "future.ly",
+    authorBio: "Documentary Film Charity",
+    url: "https://future.ly",
+  },
+];
 
 export const TESTIMONIALS_1: Testimonial[] = [
   {

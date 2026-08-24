@@ -45,6 +45,7 @@
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-handwriting: var(--font-handwriting), "Segoe Script", cursive;
 
   --shadow-popover: var(--shadow-popover);
 
@@ -458,6 +459,15 @@
 
   [data-highlighted-line] {
     @apply bg-code-highlight;
+  }
+
+  /* Yanking a rope is a poor fit for a thumb, so below sm the cord goes away
+     and the header shows <ToggleTheme/> instead. PullCord sets position/top/
+     z-index inline but never display, so this rule wins. */
+  @media (width < 40rem) {
+    .pullcord {
+      display: none;
+    }
   }
 
   /* ── PullCord hint ──────────────────────────────────────────────────────

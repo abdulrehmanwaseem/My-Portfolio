@@ -6,12 +6,13 @@ import { useCallback } from "react";
 import { META_THEME_COLORS } from "@/config/site";
 import { useMetaColor } from "@/hooks/use-meta-color";
 import { useSound } from "@/hooks/use-sound";
+import { cn } from "@/lib/utils";
 
 import { MoonIcon } from "./animated-icons/moon";
 import { SunMediumIcon } from "./animated-icons/sun-medium";
 import { Button } from "./ui/button";
 
-export function ToggleTheme() {
+export function ToggleTheme({ className }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
 
   const { setMetaColor } = useMetaColor();
@@ -32,6 +33,7 @@ export function ToggleTheme() {
     <Button
       variant="ghost"
       size="icon"
+      className={cn(className)}
       onClick={switchTheme}
       // onClick={() => {
       //   if (!document.startViewTransition) switchTheme();
