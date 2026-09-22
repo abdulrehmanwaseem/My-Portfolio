@@ -12,6 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const products = [
     {
+      url: `${SITE_INFO.url}/products/scrawlkit`,
+      lastModified: dayjs().toISOString(),
+    },
+    {
       url: `${SITE_INFO.url}/products/shopflow`,
       lastModified: dayjs().toISOString(),
     },

@@ -13,6 +13,16 @@ export const metadata: Metadata = {
 
 const products = [
   {
+    id: "scrawlkit",
+    name: "Scrawlkit",
+    description:
+      "Hand-drawn video templates for TikTok, Reels and Shorts. Type a few words, get an ink-on-paper MP4, rendered on AWS Lambda with Remotion.",
+    href: "/products/scrawlkit",
+    status: "Live",
+    tech: ["Next.js", "Remotion", "AWS Lambda", "Stripe"],
+    image: "/images/products/scrawlkit.png",
+  },
+  {
     id: "shopflow",
     name: "ShopFlow",
     description:

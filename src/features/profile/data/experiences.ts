@@ -2,6 +2,44 @@ import type { Experience } from "../types/experiences";
 
 export const EXPERIENCES: Experience[] = [
   {
+    id: "scrawlkit",
+    companyName: "Scrawlkit",
+    companyLogo: "/images/products/scrawlkit/icon.svg",
+    positions: [
+      {
+        id: "scrawlkit-founder",
+        title: "Founder",
+        employmentPeriod: {
+          start: "09.2026",
+        },
+        employmentType: "Self-Employed",
+        icon: "code",
+        description: `- Built and launched [scrawlkit.com](https://scrawlkit.com): hand-drawn video templates for TikTok, Reels and Shorts. Pick a template, type a few words, download an MP4.
+- Designed the ink-on-paper house style: eight templates in Remotion whose strokes are generated as rough SVG paths and redrawn frame by frame, so every render wobbles like a real pen.
+- Renders run on AWS Lambda through Remotion Lambda, with an in-app queue that keeps the account inside its concurrency limit and refunds a credit when a render fails.
+- Accounts and monthly render credits with Better Auth and Drizzle on Neon Postgres; confirmation and reset emails through Resend.
+- Subscriptions with Stripe Checkout, webhooks and the customer portal, verified by an end-to-end test that fast-forwards a Stripe test clock through a renewal.
+- Brand and in-template art generated with Higgsfield; error reports in Sentry; cookieless analytics.`,
+        skills: [
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Remotion",
+          "AWS Lambda",
+          "Tailwind CSS v4",
+          "Better Auth",
+          "Drizzle ORM",
+          "Neon Postgres",
+          "Stripe",
+          "Resend",
+          "Sentry",
+          "Product Design",
+        ],
+      },
+    ],
+    isCurrentEmployer: true,
+  },
+  {
     id: "forrof",
     companyName: "Forrof.io",
     companyLogo: "/images/experience/forrof.svg",

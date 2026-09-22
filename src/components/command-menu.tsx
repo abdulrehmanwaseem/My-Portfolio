@@ -73,6 +73,12 @@ const MENU_LINKS: CommandLinkItem[] = [
 
 const PRODUCT_LINKS: CommandLinkItem[] = [
   {
+    title: "Scrawlkit",
+    href: "/products/scrawlkit",
+    icon: Icons.react,
+    keywords: ["scrawlkit", "video", "templates", "remotion", "tiktok", "ink"],
+  },
+  {
     title: "ShopFlow",
     href: "/products/shopflow",
     icon: Icons.react,

@@ -12,6 +12,7 @@ export const USER: User = {
   flipSentences: [
     "Fullstack Web Developer",
     "AI Agent Engineer",
+    "Founder of Scrawlkit",
     "Mobile App Developer",
     "3D Web Developer",
     "Desktop Application Developer",
@@ -31,18 +32,18 @@ export const USER: User = {
     },
     {
       title: "Founder",
-      company: "ShopFlow",
-      website: "/products/shopflow",
+      company: "Scrawlkit",
+      website: "https://scrawlkit.com",
     },
   ],
   about: `
 - **Fullstack Developer** with **4+ years of experience**, started coding at age 14; known for clean architecture and attention to detail.
 - Expertise in **MERN stack**, **Next.js**, **NestJS**, **React Native**, **Electron**, and **3D technologies**; building scalable web, mobile, desktop, and immersive 3D applications.
 - Now at **18 years old**, what some view as a limitation, I see as my greatest advantage—starting early gave me the freedom to learn, experiment and build a strong foundation combining practical experience with theoretical knowledge.
-- Creator of [ShopFlow](/products/shopflow): modern SaaS shop management system
-  - Built with **PERN stack** (PostgreSQL, Express, React, Node.js) and **Prisma ORM**
-  - Invoice management (purchases, sales, expenses), inventory tracking and payment status monitoring
-  - Real-time dashboard with financial insights and automated low-stock alerts
+- Founder of [Scrawlkit](/products/scrawlkit): hand-drawn video templates for TikTok, Reels and Shorts, live at [scrawlkit.com](https://scrawlkit.com)
+  - Type a few words, get an ink-on-paper MP4; every stroke wobbles like a real pen, so no two renders match
+  - Built with **Next.js 16**, **Remotion** rendering on **AWS Lambda**, **Better Auth**, **Drizzle** on **Neon** and **Stripe** subscriptions
+  - Earlier product: [ShopFlow](/products/shopflow), a PERN stack shop management system
 - **Passionate** about exploring new technologies and turning ideas into reality through polished, production-ready projects. Currently exploring **System Design** and aiming to venture into **AI**.
 - **Mission:** Creating software that delivers exceptional user experiences while constantly adapting to stay at the forefront of technology.
 `,
@@ -53,6 +54,9 @@ export const USER: User = {
     "abdul rehman",
     "abdulrehmanwaseem",
     "abdul rehman waseem",
+    "scrawlkit",
+    "hand-drawn video templates",
+    "remotion developer",
     "fullstack developer",
     "mern stack developer",
     "react developer",

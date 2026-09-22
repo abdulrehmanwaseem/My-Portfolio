@@ -25,7 +25,7 @@ export const MAIN_NAV: NavItem[] = [
   },
   {
     title: "Products",
-    href: "/products/shopflow",
+    href: "/products",
   },
   // {
   //   title: "Components",
