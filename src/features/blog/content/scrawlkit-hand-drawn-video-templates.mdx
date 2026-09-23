@@ -67,7 +67,9 @@ Real video rendering needs Chromium and FFmpeg, which do not fit in a normal ser
 
 The constraint I did not expect was concurrency. A new AWS account is limited to ten Lambda functions at once, and a request to raise it was refused at first. Rather than let a third render fail, the app counts renders in flight, caps each at four chunks and one coordinator, and makes the browser wait and retry when every slot is taken. Two people can render at once; a third sees "in line behind other renders" for a minute. A failed render refunds its credit automatically.
 
-The strangest bug was on Windows. Remotion's site deploy compares local file paths with the keys already on S3, and on Windows the local paths use backslashes. Nothing inside a folder ever matched, so every deploy deleted the fonts and sounds the previous deploy had uploaded. Renders failed with a network error from the font loader until I worked out why. The deploy script now removes the site first and checks every file afterwards.
+The strangest bug was on Windows. Remotion's site deploy compares local file paths with the keys already on S3, and on Windows the local paths use backslashes. Nothing inside a folder ever matched, so every deploy deleted the fonts and sounds the previous deploy had uploaded. Renders failed with a network error from the font loader until I worked out why.
+
+I reported it as [remotion#11563](https://github.com/remotion-dev/remotion/issues/11563) with the two lines that caused it. Jonny Burger, who created Remotion, merged a fix the same day, and found a second place I had missed. Until that release lands my deploy script removes the site first and checks every file afterwards.
 
 ## Accounts, credits and billing
 
