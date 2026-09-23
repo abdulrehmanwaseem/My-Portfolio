@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Products - Abdul Rehman",
   description:
     "Explore my products and projects built with modern technologies.",
+  alternates: { canonical: "/products" },
 };
 
 const products = [

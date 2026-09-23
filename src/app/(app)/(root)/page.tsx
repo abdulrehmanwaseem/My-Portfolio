@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import type { Metadata } from "next";
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
 import { About } from "@/features/profile/components/about";
@@ -17,6 +18,10 @@ import { TeckStack } from "@/features/profile/components/teck-stack";
 import { TestimonialsMarquee } from "@/features/profile/components/testimonials-marquee";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Page() {
   return (

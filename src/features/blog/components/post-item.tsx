@@ -24,7 +24,7 @@ export function PostItem({
       )}
     >
       {post.metadata.image && (
-        <div className="relative select-none [&_img]:aspect-1200/630 [&_img]:rounded-xl">
+        <div className="relative select-none [&_img]:aspect-1200/630 [&_img]:rounded-xl [&_img]:object-cover">
           <Image
             src={post.metadata.image}
             alt={post.metadata.title}

@@ -11,9 +11,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/_next/",
           "/api/",
-          "/og/",
-          "/rss/",
-          "/vcard/",
+          "/og",
+          "/rss",
+          "/vcard",
           "/llms.txt",
           "/llms-full.txt",
           "/blog.mdx/",

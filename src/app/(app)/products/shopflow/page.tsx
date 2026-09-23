@@ -9,6 +9,7 @@ import {
 } from "@/features/products/shopflow/components";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/products/shopflow" },
   title: "ShopFlow - Complete Shop Management System",
   description:
     "A comprehensive PERN stack shop management system with real-time dashboards, inventory tracking, invoice management and financial analytics.",

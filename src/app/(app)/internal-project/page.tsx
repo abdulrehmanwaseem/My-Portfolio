@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Internal Client Project",
   description:
     "This project is confidential and developed for internal use by our client. Due to NDA and privacy agreements, we cannot share the live URL.",
+  // an NDA notice, nothing useful in a search result
+  robots: { index: false, follow: false },
 };
 
 export default function InternalProjectPage() {
