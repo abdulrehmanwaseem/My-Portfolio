@@ -2,6 +2,14 @@ import type { Certification } from "../types/certifications";
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    title: "Artificial Intelligence and Data Science (Batch 3)",
+    issuer: "Saylani Mass IT Training (SMIT)",
+    issuerLogoURL: "/images/experience/smit.jpg",
+    issueDate: "2026-08-31",
+    credentialID: "SMIT/2025/AI/B3/448349",
+    credentialURL: "/certificates/smit-ai-data-science-2026.pdf",
+  },
+  {
     title: "HydThon - AI Hackathon 2026 Participation",
     issuer: "Intrapreneur",
     issuerLogoURL: "/images/experience/intrapreneur.jpg",

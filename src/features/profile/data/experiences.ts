@@ -306,7 +306,7 @@ export const EXPERIENCES: Experience[] = [
         title: "University of Sindh",
         employmentPeriod: {
           start: "01.2026",
-          end: "2030",
+          end: "01.2029",
         },
         icon: "education",
         description: `- Currently studying for a Bachelor's degree in Computer Science.`,
