@@ -17,7 +17,7 @@ export const USER: User = {
     "3D Web Developer",
     "Desktop Application Developer",
   ],
-  address: "Hyderabad, Sindh, Pakistan",
+  address: "Hyderabad, Pakistan",
   phoneNumber: "KzkyMzExODExNDgwNQ==", // E.164 format, base64 encoded (https://t.io.vn/
   secondPhoneNumber: "Kzk3MSA1NSA1NjMgMzI4OQ==",
   // base64-string-converter)
