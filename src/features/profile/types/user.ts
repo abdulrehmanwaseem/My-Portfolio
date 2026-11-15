@@ -14,6 +14,8 @@ export type User = {
   flipSentences: string[];
   /** General location for display */
   address: string;
+  /** "lat,lng" the map link opens the place at: a text search for "Hyderabad, Pakistan" opens Hyderabad, India */
+  addressCoordinates: string;
   /** E.164 format, base64 encoded (https://t.io.vn/base64-string-converter) */
   phoneNumber: string;
   secondPhoneNumber: string;

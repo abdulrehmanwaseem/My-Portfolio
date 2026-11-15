@@ -49,7 +49,7 @@ export function Overview() {
             </IntroItemIcon>
             <IntroItemContent>
               <IntroItemLink
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(USER.address)}`}
+                href={`https://www.google.com/maps/place/${encodeURIComponent(USER.address)}/@${USER.addressCoordinates},12z`}
                 aria-label={`Location: ${USER.address}`}
               >
                 {USER.address}

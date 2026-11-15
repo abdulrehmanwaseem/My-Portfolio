@@ -18,6 +18,7 @@ export const USER: User = {
     "Desktop Application Developer",
   ],
   address: "Hyderabad, Pakistan",
+  addressCoordinates: "25.3792,68.3683", // Hyderabad, Sindh city centre (Wikipedia)
   phoneNumber: "KzkyMzExODExNDgwNQ==", // E.164 format, base64 encoded (https://t.io.vn/
   secondPhoneNumber: "Kzk3MSA1NSA1NjMgMzI4OQ==",
   // base64-string-converter)
